@@ -1,0 +1,34 @@
+{
+  "name": "paix-dieu",
+  "version": "1.0.0",
+  "description": "Paix Dieu Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AudeFi/hetic-p2019-05.git"
+  },
+  "author": "Group5",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AudeFi/hetic-p2019-05/issues"
+  },
+  "homepage": "https://github.com/AudeFi/hetic-p2019-05#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-if": "^2.0.0",
+    "gulp-cache": "^0.4.5",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2",
+    "run-sequence": "^1.2.2"
+  }
+}

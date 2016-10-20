@@ -1,0 +1,17 @@
+/** IMPORT HERE
+* ALL THE SEPARATED
+* SCSS FILES 
+*/
+
+/* Base */
+@import 'base/reset';
+
+/* Helpers */
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/functions';
+@import 'helpers/helpers';
+
+/* Layout */
+@import 'layout/header';
+@import 'layout/footer';
