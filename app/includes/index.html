@@ -7,35 +7,43 @@
     <!--build:css styles/style.min.css-->
     <link rel="stylesheet" href="css/main.css" media="screen" charset="utf-8">
     <!--endbuild-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css">
     <title>Paix Dieu</title>
   </head>
   <body>
 
-    <div class="main-menu">
-      <a href="#accueil">Accueil</a>
-      <a href="#histoire">Histoire</a>
-      <a href="#degustez">Dégustez</a>
+    <ul class="main-menu">
+      <li class='accueil swiper-pagination-switch active'>Accueil</li>
+      <li class='histoire swiper-pagination-switch'>Histoire</li>
+      <li class='degustez swiper-pagination-switch'>Dégustez</li>
+      <li class='next swiper-button-next'>Next</li>
+    </ul>
+
+  <!-- <div class="slider"> -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <section id="accueil" data-hash="accueil" class="page swiper-slide">
+        <h1>Accueil</h1>
+      </section>
+
+      <section id="histoire" data-hash="histoire" class="page histoire swiper-slide">
+        <!-- @@include('story.html') -->
+        <h1>Histoire</h1>
+        <h1>Histoire</h1>
+        <h1>Histoire</h1>
+        <h1>Histoire</h1>
+        <h3>Histoire</h3>
+      </section>
+
+      <section id="degustez" data-hash="degustez" class="page histoire swiper-slide">
+        <h1>Dégustez</h1>
+        <h4>Histoire</h4>
+      </section>
     </div>
-
-    <section id="accueil" class="page">
-      <h1>Accueil</h1>
-    </section>
-
-    <section id="histoire" class="page histoire">
-      <!-- @@include('story.html') -->
-      <h1>Histoire</h1>
-      <h1>Histoire</h1>
-      <h1>Histoire</h1>
-      <h1>Histoire</h1>
-      <h3>Histoire</h3>
-    </section>
-
-    <section id="degustez" class="page histoire">
-      <h1>Dégustez</h1>
-      <h4>Histoire</h4>
-    </section>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.jquery.min.js"></script>
 	<!--build:js script/main.min.js -->
 	<script src="scripts/test.js"></script>
 	<script src="scripts/main.js"></script>

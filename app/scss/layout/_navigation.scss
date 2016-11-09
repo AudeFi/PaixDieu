@@ -7,8 +7,9 @@ body{
   top:0;
   left:0;
 }
-.main-menu{
-  position: fixed;
+ul.main-menu {
+  /* position: fixed; */
+  position: absolute;
   top:0;
   left:0;
   height:40px;
@@ -16,35 +17,39 @@ body{
   display: block;
   width:100vw;
   z-index:20;
+  li {
+    display: inline;
+    border: 1px solid black;
+    cursor: pointer;
+    &.active {
+      border-color: white;
+    }
+  }
 }
+.swiper-container {
+    width: 100vw;
+    height: 100vh;
+}     
 section.page{
   overflow-y: scroll;
   width:100vw;
   height:100vh;
   padding-top: 50px;
-  display: block;
-  position: absolute;
-  top:0;
-  left: 0;
   &#accueil{
-      transform: translateX(0);
-      background-color:white;
+      background-color:green;
   }
   &#histoire{
-    transform: translateX(100vw);
     background-color:blue;
   }
   &#degustez{
-      transform: translateX(200vw);
       background-color:red;
   }
-}
 
+  h3 {
+    margin-top: 550px;
+  }
+  h4 {
+    margin-top: 1550px;
+  }
 
-
-h3 {
-  margin-top: 550px;
-}
-h4 {
-  margin-top: 1550px;
 }
