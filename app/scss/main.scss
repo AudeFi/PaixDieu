@@ -1,6 +1,6 @@
 /** IMPORT HERE
 * ALL THE SEPARATED
-* SCSS FILES 
+* SCSS FILES
 */
 
 /* Base */
@@ -13,5 +13,6 @@
 @import 'helpers/helpers';
 
 /* Layout */
+@import 'pages/story';
 @import 'layout/header';
 @import 'layout/footer';

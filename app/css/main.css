@@ -1,6 +1,6 @@
 /** IMPORT HERE
 * ALL THE SEPARATED
-* SCSS FILES 
+* SCSS FILES
 */
 /* Base */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -134,4 +134,141 @@ a {
   outline: none; }
 
 /* Helpers */
+@font-face {
+  font-family: 'KohinoorDevanagari-Medium';
+  src: url("../fonts/KohinoorDevanagari-Medium.otf") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'KohinoorDevanagari-Semibold';
+  src: url("../fonts/KohinoorDevanagari-Semibold.otf") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'KohinoorDevanagari-Regular';
+  src: url("../fonts/KohinoorDevanagari-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'KohinoorDevanagari-Bold';
+  src: url("../fonts/KohinoorDevanagari-Bold.otf") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'KohinoorDevanagari-Light';
+  src: url("../fonts/KohinoorDevanagari-Light.otf") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'KohinoorDevanagari-Medium';
+  src: url("KohinoorDevanagari-Medium.otf") format("otf");
+  font-weight: normal;
+  font-style: normal; }
+
+.big-title {
+  margin-left: 20px;
+  margin-left: 1.25rem;
+  margin-right: 20px;
+  margin-right: 1.25rem;
+  position: relative;
+  font-size: 26px;
+  font-size: 1.625rem;
+  font-family: Kohinoor Devanagari; }
+  .big-title::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    bottom: -0.625rem;
+    left: 0px;
+    left: 0rem;
+    width: 24px;
+    width: 1.5rem;
+    height: 5px;
+    height: 0.3125rem;
+    background-color: #d9af33; }
+
+p {
+  font-family: KohinoorDevanagari-Light;
+  margin-left: 20px;
+  margin-left: 1.25rem;
+  margin-right: 20px;
+  margin-right: 1.25rem; }
+
 /* Layout */
+body {
+  background-color: #211D1E;
+  color: white; }
+
+img {
+  position: relative; }
+  @media (min-width: 320px) {
+    img {
+      width: 50%;
+      margin-left: 40%; } }
+
+@media (min-width: 422px) {
+  #photo-maison {
+    margin-top: 10px;
+    margin-top: 0.625rem;
+    width: 50%;
+    margin-left: 40%; } }
+
+@media (min-width: 320px) {
+  .histoire-section1 {
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem; } }
+
+@media (min-width: 320px) {
+  #histoire-text1 {
+    position: relative;
+    margin-top: -40px;
+    margin-top: -2.5rem; } }
+
+@media (min-width: 422px) {
+  #histoire-text1 {
+    margin-left: 20px;
+    margin-left: 1.25rem;
+    margin-right: 100px;
+    margin-right: 6.25rem;
+    margin-top: -190px;
+    margin-top: -11.875rem; } }
+
+@media (min-width: 320px) {
+  #histoire-text1-2 {
+    display: none; } }
+
+@media (min-width: 422px) {
+  #histoire-text1-2 {
+    display: block;
+    position: relative;
+    margin-top: 100px;
+    margin-top: 6.25rem; } }
+
+@media (min-width: 320px) {
+  .histoire-section2 {
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem; } }
+
+@media (min-width: 320px) {
+  .title-2 {
+    margin-bottom: 30px;
+    margin-bottom: 1.875rem; } }
+
+@media (min-width: 320px) {
+  #histoire-text2 {
+    position: relative; } }
+
+@media (min-width: 320px) {
+  #histoire-text3 {
+    position: relative;
+    margin-top: -120px;
+    margin-top: -7.5rem;
+    margin-left: 20px;
+    margin-left: 1.25rem;
+    margin-right: 20px;
+    margin-right: 1.25rem; } }
