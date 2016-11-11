@@ -170,16 +170,14 @@ a {
   font-weight: normal;
   font-style: normal; }
 
-.big-title {
-  margin-left: 20px;
-  margin-left: 1.25rem;
-  margin-right: 20px;
-  margin-right: 1.25rem;
+.subtitle {
+  margin: 50px 20px 25px 20px;
+  margin: 3.125rem 1.25rem 1.5625rem 1.25rem;
   position: relative;
   font-size: 26px;
   font-size: 1.625rem;
   font-family: Kohinoor Devanagari; }
-  .big-title::before {
+  .subtitle::before {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -205,70 +203,47 @@ body {
   color: white; }
 
 img {
-  position: relative; }
-  @media (min-width: 320px) {
-    img {
-      width: 50%;
-      margin-left: 40%; } }
+  position: relative;
+  width: 50%;
+  margin-left: 40%; }
 
 @media (min-width: 422px) {
-  #photo-maison {
+  .photo-maison {
     margin-top: 10px;
     margin-top: 0.625rem;
     width: 50%;
     margin-left: 40%; } }
 
-@media (min-width: 320px) {
-  .histoire-section1 {
-    margin-bottom: 40px;
-    margin-bottom: 2.5rem; } }
+.story--abbey {
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem; }
 
-@media (min-width: 320px) {
-  #histoire-text1 {
-    position: relative;
-    margin-top: -40px;
-    margin-top: -2.5rem; } }
+.abbey__description {
+  position: relative;
+  margin-top: -40px;
+  margin-top: -2.5rem; }
+  @media (min-width: 422px) {
+    .abbey__description {
+      margin-left: 20px;
+      margin-left: 1.25rem;
+      margin-right: 100px;
+      margin-right: 6.25rem;
+      margin-top: -190px;
+      margin-top: -11.875rem; } }
 
-@media (min-width: 422px) {
-  #histoire-text1 {
-    margin-left: 20px;
-    margin-left: 1.25rem;
-    margin-right: 100px;
-    margin-right: 6.25rem;
-    margin-top: -190px;
-    margin-top: -11.875rem; } }
+.story--production {
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem; }
 
-@media (min-width: 320px) {
-  #histoire-text1-2 {
-    display: none; } }
+.prod_firstdescription {
+  position: relative; }
 
-@media (min-width: 422px) {
-  #histoire-text1-2 {
-    display: block;
-    position: relative;
-    margin-top: 100px;
-    margin-top: 6.25rem; } }
+.prod_seconddescription {
+  position: relative;
+  margin-left: 20px;
+  margin-left: 1.25rem;
+  margin-right: 20px;
+  margin-right: 1.25rem; }
 
-@media (min-width: 320px) {
-  .histoire-section2 {
-    margin-bottom: 40px;
-    margin-bottom: 2.5rem; } }
-
-@media (min-width: 320px) {
-  .title-2 {
-    margin-bottom: 30px;
-    margin-bottom: 1.875rem; } }
-
-@media (min-width: 320px) {
-  #histoire-text2 {
-    position: relative; } }
-
-@media (min-width: 320px) {
-  #histoire-text3 {
-    position: relative;
-    margin-top: -120px;
-    margin-top: -7.5rem;
-    margin-left: 20px;
-    margin-left: 1.25rem;
-    margin-right: 20px;
-    margin-right: 1.25rem; } }
+.numbers__highlight {
+  font-weight: bold; }

@@ -10,66 +10,62 @@
     <title>Paix Dieu</title>
   </head>
   <body>
-
-<section id="Histoire" class="page">
-  <div class="histoire-section1">
-    <h1 class="big-title title-1">
+<div id="story" class="page">
+  <section class="story--abbey">
+    <h2 class="subtitle">
       L'abbaye de la Paix Dieu
-    </h1>
-    <img src="../images/abbaye.png" id="photo-maison" alt="" />
-    <p id="histoire-text1">
-      Cette bière était autrefois produite à l'abbaye de la Paix Dieu, ou le
-      calendrier lunaire jouait un rôle central.
-    </p>
-    <p id="histoire-text1-2">
-      Il en résulte une triple de 10% onctueuse et pleine de caractère;
-       une bière artisanale dans la plus pure tradition des bières belges
-       d’abbaye. Un symbole vous aidera à repérer sous quelle lune votre bière
-       a été brassée.
-    </p>
-  </div>
-  <div class="histoire-section2">
-    <h1 class="big-title title-2">
+    </h2>
+    <div class="caca">
+      <img src="../images/abbaye.png" class="photo-maison" alt="photo de l'abbaye" />
+      <!-- abbey__description ou story- -abbey__description  -->
+      <p class="abbey__description">
+        Cette bière était autrefois produite à l'abbaye de la Paix Dieu, ou le
+        calendrier lunaire jouait un rôle central.
+      </p>
+    </div>
+  </section>
+
+  <section class="story--production">
+    <h2 class="subtitle">
       Fabrication ancestrale
-    </h1>
-    <p id="histoire-text2">
-      100% naturel
+    </h2>
+    <p class="production__description prod_firstdescription">
+      100% naturelle
       La Paix Dieu est le fruit d’un travail d’artisan, n’utilisant que des
       méthodes de fabrication à l’ancienne, presque identiques à celles
       utilisées par l’abbaye il y a plusieurs siècles. La Paix Dieu est ainsi
       préservée de toute filtration ou pasteurisation.
     </p>
-    <img src="../images/grain.png" alt="" />
-    <p>
+    <img src="../images/grain.png" alt="Grains blé houblon" />
+    <p class="production__description prod_seconddescription">
       La production est gérée par la Brasserie Caulier qui brasse des bières
       100% naturelles appliquant nos méthodes de fabrication artisanales.
-    </p>
-    <p>
+      <br>
       Le houblon, le malt et le sucre sont sélectionnés soigneusement auprès
       de producteurs locaux. L’eau est tirée directement du puits de la
       brasserie, et la levure est cultivée par nos soins.
     </p>
-  </div>
-  <div class="">
-    <h1 class="big-title">
+  </section>
+  <section class="story--numbers">
+    <h2 class="subtitle">
       En chiffres
-    </h1>
-    <img src="../images/bouteilles.png" alt="" />
-    <p id="histoire-text3">
-        10% de degré d'alcool. <br>
-        3 ans de conservation <br>
-        La couleur <br>
-        24 L'amertume <br> <br>
-        900.000 Litres produits/an <br>
+    </h2>
+    <img src="../images/bouteilles.png" alt="Bouteilles de Paix Dieu" />
+    <p class="numbers__description numbers-firstdescription">
+      <span class="numbers__highlight">10%</span> de degré d'alcool.<br>
+      <span class="numbers__highlight">3</span> ans de conservation.<br>
+      <span class="numbers__highlight">11</span> La couleur.<br>
+      <span class="numbers__highlight">24</span> L'amertume.
     </p>
-  </div>
-</section>
-
+    <p class="numbers__description numbers-seconddescription">
+      <span class="numbers__highlight">900.000</span> Litres produits/an.
+    </p>
+  </section>
+</div>
 
 	<!--build:js script/main.min.js -->
 	<script src="scripts/test.js"></script>
 	<script src="scripts/main.js"></script>
 	<!-- endbuild -->
   </body>
-
 </html>
