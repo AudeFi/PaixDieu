@@ -15,35 +15,48 @@
     <ul class="main-menu">
       <li class='accueil swiper-pagination-switch active'>Accueil</li>
       <li class='histoire swiper-pagination-switch'>Histoire</li>
-      <li class='degustez swiper-pagination-switch'>Dégustez</li>
+      <li class='deguster swiper-pagination-switch'>Déguster</li>
+      <li class='brassins swiper-pagination-switch'>Brassins</li>
+      <li class='contact swiper-pagination-switch'>Contact</li>
       <li class='next swiper-button-next'>Next</li>
     </ul>
 
   <!-- <div class="slider"> -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <section id="accueil" data-hash="accueil" class="page swiper-slide">
+      
+      <!-- @@include('home.html') -->
+      <!-- Uncomment this line and put the section bellow in your html page--> 
+      <section id="accueil" data-hash="accueil" class="page accueil swiper-slide">
         <h1>Accueil</h1>
       </section>
 
-      <section id="histoire" data-hash="histoire" class="page histoire swiper-slide">
-        <!-- @@include('story.html') -->
+      <!-- @@include('story.html') -->
+      <section data-hash="histoire" class="page histoire swiper-slide">
         <h1>Histoire</h1>
-        <h1>Histoire</h1>
-        <h1>Histoire</h1>
-        <h1>Histoire</h1>
-        <h3>Histoire</h3>
+      </section>
+      
+      <!-- @@include('map.html') -->
+      <section data-hash="deguster" class="page deguster swiper-slide">
+        <h1>Dégustez</h1>
       </section>
 
-      <section id="degustez" data-hash="degustez" class="page histoire swiper-slide">
-        <h1>Dégustez</h1>
-        <h4>Histoire</h4>
+      <!-- @@include('brassins.html') -->
+      <section data-hash="brassins" class="page brassins swiper-slide">
+        <h1>Brassins</h1>
       </section>
+
+      <!-- @@include('contact.html') -->
+      <section data-hash="contact" class="page contact swiper-slide">
+        <h1>Contact</h1>
+      </section>
+
     </div>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js"></script> -->
 	<!--build:js script/main.min.js -->
 	<script src="scripts/test.js"></script>
 	<script src="scripts/main.js"></script>

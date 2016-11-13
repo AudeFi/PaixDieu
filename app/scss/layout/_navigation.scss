@@ -30,26 +30,24 @@ ul.main-menu {
     width: 100vw;
     height: 100vh;
 }     
-section.page{
+section.swiper-slide{
   overflow-y: scroll;
   width:100vw;
   height:100vh;
   padding-top: 50px;
-  &#accueil{
+  &.accueil{
       background-color:green;
   }
-  &#histoire{
+  &.histoire{
     background-color:blue;
   }
-  &#degustez{
+  &.deguster{
       background-color:red;
   }
-
-  h3 {
-    margin-top: 550px;
+  &.brassins{
+      background-color:yellow;
   }
-  h4 {
-    margin-top: 1550px;
+  &.contact{
+      background-color:purple;
   }
-
 }
