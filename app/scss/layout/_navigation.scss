@@ -7,47 +7,104 @@ body{
   top:0;
   left:0;
 }
-ul.main-menu {
-  /* position: fixed; */
-  position: absolute;
-  top:0;
-  left:0;
-  height:40px;
-  color:black;
-  display: block;
-  width:100vw;
-  z-index:20;
-  li {
-    display: inline;
-    border: 1px solid black;
-    cursor: pointer;
-    &.active {
-      border-color: white;
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    /* background: rgba(255,255,255,0.8);  */
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(100,100,100,0.8);  
+}
+
+
+.swiper-container {
+  width: 100vw;
+  height: 100vh;
+
+  section.swiper-slide{
+    overflow-y: scroll;
+    width:100vw;
+    height:100vh;
+    padding-top: 50px;
+    &.accueil{
+        background-color:green;
+    }
+    &.histoire{
+      background-color:blue;
+    }
+    &.deguster{
+        background-color:red;
+    }
+    &.brassins{
+        background-color:pink;
+    }
+    &.contact{
+        background-color:purple;
     }
   }
 }
-.swiper-container {
-    width: 100vw;
-    height: 100vh;
-}     
-section.swiper-slide{
-  overflow-y: scroll;
-  width:100vw;
-  height:100vh;
-  padding-top: 50px;
-  &.accueil{
-      background-color:green;
+
+.swiper-controls {
+  .swiper-button-next {
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    pointer-events: visible;
+    opacity: 1;
+    background-image: none;
+    width: 40px; /* Don't forget to change the svg size */
+    height: 40px;
   }
-  &.histoire{
-    background-color:blue;
+
+  .swiper-button-next:hover ul.main-menu {
+    display: block;
   }
-  &.deguster{
-      background-color:red;
+
+  ul.main-menu {
+    display: none;
+    /* position: fixed; */
+    position: absolute;
+    top:0;
+    right:40px;
+    height:40px;
+    color:black;
+    width:100px;
+    z-index:20;
+    li {
+      /* display: inline; */
+      border: 1px solid black;
+      cursor: pointer;
+      &.active {
+        border-color: white;
+      }
+      &:hover {
+        border-color: grey;
+      }
+    }
   }
-  &.brassins{
-      background-color:yellow;
-  }
-  &.contact{
-      background-color:purple;
+
+  .swiper-pagination {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    .swiper-pagination-bullet {
+      border: 1px solid $color-yellow;
+      opacity: 1;
+      background: none;
+      width: 10px;
+      height: 10px;
+      margin-right: 3px;
+    }
+    .swiper-pagination-bullet-active {
+      border: 1px solid white;
+      background: white;
+      width: 13px;
+      height: 13px;
+    }
   }
 }

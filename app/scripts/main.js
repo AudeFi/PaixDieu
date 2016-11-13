@@ -7,7 +7,8 @@ var mySwiper = new Swiper ('.swiper-container', { // Init swiper
     direction: 'horizontal',
     loop: false,
     hashnav:true,
-    pagination:true,
+    pagination: '.swiper-pagination',
+    paginationType: 'bullets',
     nextButton: '.swiper-button-next'
 });
 
@@ -47,3 +48,6 @@ if (hash == undefined) {
 }
 $('.swiper-pagination-switch').removeClass('active');
 $('.swiper-pagination-switch.'+ hash ).addClass('active');
+
+// SWIPER CONTROLS
+/*$('.swiper-button-next')*/
