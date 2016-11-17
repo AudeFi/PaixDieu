@@ -30,7 +30,9 @@ window.onhashchange = function(){
 };
 //When I click on a section in the menu
 $('.swiper-pagination-switch').on("click", function () {
-    mySwiper.unlockSwipeToNext(); //After opening the menu, unlock the ability to swipe next
+    mySwiper.unlockSwipes(); //After opening the menu, unlock the ability to swipe next
+    $('ul.main-menu').toggle('pressed');
+    $menuState = "swipe";
     swipeEvent( $(this) );
 });
 
@@ -51,27 +53,6 @@ $('.swiper-pagination-switch').removeClass('active');
 $('.swiper-pagination-switch.'+ hash ).addClass('active');
 
 // SWIPER CONTROLS
-/*var pressTimer;
-$('.swiper-button-next').mouseup(function(){
-    if( $cancelclick ){
-        mySwiper.lockSwipeToNext(); // If we oppened the menu with a long press on next button, don't swipe to next slide
-    }
-    else {
-        mySwiper.unlockSwipeToNext(); // If we didn't open the menu, act normal and swipe next
-    }
-    clearTimeout(pressTimer);
-    return false;
-}).mousedown(function(){
-    $cancelclick = false;
-    pressTimer = window.setTimeout(function() { 
-        $('ul.main-menu').toggle('pressed');
-        console.log("long click");
-        $cancelclick = true;
-    },500);    
-    return false; 
-});
-*/
-
 
 //determine which events to use
 var startEventType = 'mousedown',
@@ -82,23 +63,29 @@ var startEventType = 'mousedown',
 
 //bind to determined event(s)
 var pressTimer;
+$menuState = "swipe";
+
 $('.swiper-button-next').bind(endEventType, function() {
-    if( $cancelclick ){
-        console.log("lock");
-        mySwiper.lockSwipeToNext(); // If we oppened the menu with a long press on next button, don't swipe to next slide
+    if( $menuState == "close"){
+        $menuState = "swipe";
     }
-    else {
-        console.log("not lock");
-        mySwiper.unlockSwipeToNext(); // If we didn't open the menu, act normal and swipe next
+    else if ( $menuState == "swipe" ) {
+        mySwiper.unlockSwipes(); // If we didn't open the menu, act normal and swipe next
+        mySwiper.slideNext();
     }
     clearTimeout(pressTimer);
     return false;
 }).bind(startEventType, function(){
-    $cancelclick = false;
-    pressTimer = window.setTimeout(function() { 
+    if ($menuState == "open") {
         $('ul.main-menu').toggle('pressed');
-        console.log("long click");
-        $cancelclick = true;
-    },500);    
+        mySwiper.unlockSwipes();
+        $menuState = "close";
+    } else {
+        pressTimer = window.setTimeout(function() { 
+            $('ul.main-menu').toggle('pressed');
+            $menuState = "open";
+            mySwiper.lockSwipes(); // If we oppened the menu with a long press on next button, don't swipe to next slide
+        },500); 
+    }
     return false; 
 });
