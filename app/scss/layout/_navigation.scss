@@ -32,7 +32,7 @@ body{
     height:100vh;
     padding-top: 50px;
     &.accueil{
-        background-color:green;
+        background-color:$background-color;
     }
     &.histoire{
       background-color:blue;
@@ -61,22 +61,26 @@ body{
     height: 40px;
   }
 
-  .swiper-button-next:hover ul.main-menu {
+  /* .swiper-button-next:hover ul.main-menu {
     display: block;
   }
-
+   */
   ul.main-menu {
     display: none;
     /* position: fixed; */
     position: absolute;
     top:0;
-    right:40px;
+    right:80px;
     height:40px;
     color:black;
     width:100px;
     z-index:20;
+    &.pressed{
+      display: block;
+    }
     li {
       /* display: inline; */
+      height: 25px;
       border: 1px solid black;
       cursor: pointer;
       &.active {
