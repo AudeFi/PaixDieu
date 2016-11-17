@@ -9,7 +9,7 @@ var mySwiper = new Swiper ('.swiper-container', { // Init swiper
     hashnav:true,
     pagination: '.swiper-pagination',
     paginationType: 'bullets',
-    nextButton: '.swiper-button-next'
+    /*nextButton: '.swiper-button-next'*/
 });
 
 // EVENTS
@@ -52,20 +52,17 @@ if (hash == undefined) {
 $('.swiper-pagination-switch').removeClass('active');
 $('.swiper-pagination-switch.'+ hash ).addClass('active');
 
-// SWIPER CONTROLS
 
-//determine which events to use
-var startEventType = 'mousedown',
-    endEventType   = 'mouseup';
-//If mobile
-    startEventType = 'touchstart';
-    endEventType   = 'touchend';
+
+// SWIPER CONTROLS
 
 //bind to determined event(s)
 var pressTimer;
 $menuState = "swipe";
 
-$('.swiper-button-next').bind(endEventType, function() {
+
+// ON MOBILE EVENT
+$('.swiper-button-next').bind('touchend', function() {
     if( $menuState == "close"){
         $menuState = "swipe";
     }
@@ -75,7 +72,35 @@ $('.swiper-button-next').bind(endEventType, function() {
     }
     clearTimeout(pressTimer);
     return false;
-}).bind(startEventType, function(){
+}).bind('touchstart', function(){
+    if ($menuState == "open") {
+        $('ul.main-menu').toggle('pressed');
+        mySwiper.unlockSwipes();
+        $menuState = "close";
+    } else {
+        pressTimer = window.setTimeout(function() { 
+            $('ul.main-menu').toggle('pressed');
+            $menuState = "open";
+            mySwiper.lockSwipes(); // If we oppened the menu with a long press on next button, don't swipe to next slide
+        },500); 
+    }
+    return false; 
+});
+
+
+// ON DESKTOP EVENT
+$('.swiper-button-next').mouseup(function(e) {
+    if( $menuState == "close"){
+        $menuState = "swipe";
+    }
+    else if ( $menuState == "swipe" ) {
+        mySwiper.unlockSwipes(); // If we didn't open the menu, act normal and swipe next
+        mySwiper.slideNext();
+    }
+    clearTimeout(pressTimer);
+    return false;
+}).mousedown(function(){
+    console.log($menuState);
     if ($menuState == "open") {
         $('ul.main-menu').toggle('pressed');
         mySwiper.unlockSwipes();
