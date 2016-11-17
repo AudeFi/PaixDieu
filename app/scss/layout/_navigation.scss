@@ -59,6 +59,21 @@ body{
     background-image: none;
     width: 40px; /* Don't forget to change the svg size */
     height: 40px;
+    svg:first-child {
+      display: block;
+    }
+    svg:last-child {
+      display: none;
+    }    
+  }
+
+  .swiper-button-next.pressed {
+    svg:first-child {
+      display: none;
+    }
+    svg:last-child {
+      display: block;
+    }
   }
 
   /* .swiper-button-next:hover ul.main-menu {

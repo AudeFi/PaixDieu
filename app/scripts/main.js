@@ -32,12 +32,12 @@ window.onhashchange = function(){
 $('.swiper-pagination-switch').on("click", function () {
     mySwiper.unlockSwipes(); //After opening the menu, unlock the ability to swipe next
     $('ul.main-menu').toggle('pressed');
+    $('.swiper-button-next').removeClass('pressed');
     $menuState = "swipe";
     swipeEvent( $(this) );
 });
 
 function swipeEvent($target) {
-    console.log("entered function");
     mySwiper.slideTo($target.index());
     $('.swiper-pagination-switch').removeClass('active');
     $target.addClass('active');
@@ -75,14 +75,16 @@ $('.swiper-button-next').bind('touchend', function() {
 }).bind('touchstart', function(){
     if ($menuState == "open") {
         $('ul.main-menu').toggle('pressed');
+        $('.swiper-button-next').removeClass('pressed');
         mySwiper.unlockSwipes();
         $menuState = "close";
     } else {
         pressTimer = window.setTimeout(function() { 
             $('ul.main-menu').toggle('pressed');
+            $('.swiper-button-next').addClass('pressed');
             $menuState = "open";
             mySwiper.lockSwipes(); // If we oppened the menu with a long press on next button, don't swipe to next slide
-        },500); 
+        },300); 
     }
     return false; 
 });
@@ -103,14 +105,16 @@ $('.swiper-button-next').mouseup(function(e) {
     console.log($menuState);
     if ($menuState == "open") {
         $('ul.main-menu').toggle('pressed');
+        $('.swiper-button-next').removeClass('pressed');
         mySwiper.unlockSwipes();
         $menuState = "close";
     } else {
         pressTimer = window.setTimeout(function() { 
             $('ul.main-menu').toggle('pressed');
+            $('.swiper-button-next').addClass('pressed');
             $menuState = "open";
             mySwiper.lockSwipes(); // If we oppened the menu with a long press on next button, don't swipe to next slide
-        },500); 
+        },300); 
     }
     return false; 
 });
