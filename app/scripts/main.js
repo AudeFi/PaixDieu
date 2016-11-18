@@ -26,13 +26,15 @@ window.onhashchange = function(){
     }
     else {
         swipeEvent($currentSwitch);
-    }    
+    }
+    $('.controls_pageTitle').html( $('.swiper-pagination-switch.active').text() );    
 };
 //When I click on a section in the menu
 $('.swiper-pagination-switch').on("click", function () {
     mySwiper.unlockSwipes(); //After opening the menu, unlock the ability to swipe next
-    $('ul.main-menu').toggle('pressed');
-    $('.swiper-button-next').removeClass('pressed');
+    $('.controls_menu').toggle('pressed');
+    $('.overlay').toggle();
+    $('.controls_nextBtn').removeClass('pressed');
     $menuState = "swipe";
     swipeEvent( $(this) );
 });
@@ -49,9 +51,10 @@ if (hash == undefined) {
     document.location.hash = 'accueil';
     hash = 'accueil';
 }
+
 $('.swiper-pagination-switch').removeClass('active');
 $('.swiper-pagination-switch.'+ hash ).addClass('active');
-
+$('.controls_pageTitle').html( $('.swiper-pagination-switch.active').text() );
 
 
 // SWIPER CONTROLS
@@ -62,7 +65,7 @@ $menuState = "swipe";
 
 
 // ON MOBILE EVENT
-$('.swiper-button-next').bind('touchend', function() {
+$('.controls_nextBtn').bind('touchend', function() {
     if( $menuState == "close"){
         $menuState = "swipe";
     }
@@ -74,14 +77,16 @@ $('.swiper-button-next').bind('touchend', function() {
     return false;
 }).bind('touchstart', function(){
     if ($menuState == "open") {
-        $('ul.main-menu').toggle('pressed');
-        $('.swiper-button-next').removeClass('pressed');
+        $('.controls_menu').toggle('pressed');
+        $('.overlay').toggle();
+        $('.controls_nextBtn').removeClass('pressed');
         mySwiper.unlockSwipes();
         $menuState = "close";
     } else {
         pressTimer = window.setTimeout(function() { 
-            $('ul.main-menu').toggle('pressed');
-            $('.swiper-button-next').addClass('pressed');
+            $('.controls_menu').toggle('pressed');
+            $('.overlay').toggle();
+            $('.controls_nextBtn').addClass('pressed');
             $menuState = "open";
             mySwiper.lockSwipes(); // If we oppened the menu with a long press on next button, don't swipe to next slide
         },300); 
@@ -91,7 +96,7 @@ $('.swiper-button-next').bind('touchend', function() {
 
 
 // ON DESKTOP EVENT
-$('.swiper-button-next').mouseup(function(e) {
+$('.controls_nextBtn').mouseup(function(e) {
     if( $menuState == "close"){
         $menuState = "swipe";
     }
@@ -104,14 +109,16 @@ $('.swiper-button-next').mouseup(function(e) {
 }).mousedown(function(){
     console.log($menuState);
     if ($menuState == "open") {
-        $('ul.main-menu').toggle('pressed');
-        $('.swiper-button-next').removeClass('pressed');
+        $('.controls_menu').toggle('pressed');
+        $('.overlay').toggle();
+        $('.controls_nextBtn').removeClass('pressed');
         mySwiper.unlockSwipes();
         $menuState = "close";
     } else {
         pressTimer = window.setTimeout(function() { 
-            $('ul.main-menu').toggle('pressed');
-            $('.swiper-button-next').addClass('pressed');
+            $('.controls_menu').toggle('pressed');
+            $('.overlay').toggle();
+            $('.controls_nextBtn').addClass('pressed');
             $menuState = "open";
             mySwiper.lockSwipes(); // If we oppened the menu with a long press on next button, don't swipe to next slide
         },300); 

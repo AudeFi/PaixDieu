@@ -30,7 +30,8 @@ body{
     overflow-y: scroll;
     width:100vw;
     height:100vh;
-    padding-top: 50px;
+    padding-top: 80px;
+    background-color:$background-color;
     &.accueil{
         background-color:$background-color;
     }
@@ -43,22 +44,53 @@ body{
     &.brassins{
         background-color:pink;
     }
-    &.contact{
-        background-color:purple;
-    }
   }
 }
 
-.swiper-controls {
-  .swiper-button-next {
-    position: fixed;
-    right: 30px;
-    top: 30px;
-    pointer-events: visible;
-    opacity: 1;
-    background-image: none;
+.controls {
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  height: 80px;
+  z-index: 2;
+
+  .controls_wrapper {
+    position: relative;
+  }
+
+  .swiper-pagination {
+    z-index: 2;
+  }
+  .swiper-pagination-bullet {
+      border: 1px solid $color-yellow;
+      opacity: 1;
+      background: none;
+      width: 10px;
+      height: 10px;
+      margin-right: 3px;
+  }
+  .swiper-pagination-bullet-active, .swiper-pagination-switch.active span {
+      border: 1px solid white;
+      background: white;
+      width: 13px;
+      height: 13px;
+  }
+
+  .controls_pageTitle {
+    position: absolute;
+    top: 26px;
+    font-size: 20px;
+    color:white;
+    z-index: 2;
+  }
+
+  .controls_nextBtn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
     width: 40px; /* Don't forget to change the svg size */
     height: 40px;
+    z-index: 4;
     svg:first-child {
       display: block;
     }
@@ -67,7 +99,7 @@ body{
     }    
   }
 
-  .swiper-button-next.pressed {
+  .controls_nextBtn.pressed {
     svg:first-child {
       display: none;
     }
@@ -76,54 +108,53 @@ body{
     }
   }
 
-  /* .swiper-button-next:hover ul.main-menu {
-    display: block;
-  }
-   */
-  ul.main-menu {
+  .controls_menu {
     display: none;
-    /* position: fixed; */
     position: absolute;
-    top:0;
-    right:80px;
+    right:60px;
+    top: 0px;
     height:40px;
-    color:black;
     width:100px;
-    z-index:20;
+    z-index:4;
     &.pressed{
       display: block;
     }
     li {
-      /* display: inline; */
-      height: 25px;
-      border: 1px solid black;
+      height: 30px;
+      text-align: right;
+      font-size: 20px;
+      color: #7a7778;
       cursor: pointer;
       &.active {
-        border-color: white;
+        color: white;
       }
       &:hover {
-        border-color: grey;
+        color: white;
+      }
+      &.histoire {
+        margin-right: -10px;
+      }
+      &.deguster {
+        margin-right: -30px;
+      }
+      &.brassins {
+        margin-right: -50px;
+      }
+      span {
+        margin-left: 15px;
       }
     }
   }
 
-  .swiper-pagination {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    .swiper-pagination-bullet {
-      border: 1px solid $color-yellow;
-      opacity: 1;
-      background: none;
-      width: 10px;
-      height: 10px;
-      margin-right: 3px;
-    }
-    .swiper-pagination-bullet-active {
-      border: 1px solid white;
-      background: white;
-      width: 13px;
-      height: 13px;
-    }
+  .overlay {
+    width:100vw;
+    height: 100vh;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    background-color:$background-color;
+    z-index: 3;
+    display: none;
   }
+  
 }
