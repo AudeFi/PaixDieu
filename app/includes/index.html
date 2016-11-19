@@ -27,7 +27,7 @@
   <div class="controls">
     <div class="controls_wrapper">
 
-      <div class='controls_menu close'>  
+      <div class='controls_menuClose'>  
         <div class="controls_pagination swiper-pagination"></div>
         <h1 class="controls_pageTitle"></h1>
 
@@ -39,7 +39,7 @@
         </svg>
       </div>
 
-      <div class="controls_menu open">
+      <div class="controls_menuOpen">
         <div class="controls_wrapper">
           <svg class="controls_button" width="40px" height="40px" viewBox="0 0 76 76">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-299.000000, -1786.000000)" fill="#DAB01F"><g transform="translate(299.000000, 1786.000000)"><g id="Group">
@@ -48,10 +48,10 @@
           </svg>
       
           <ul class="controls_mainPages">
-            <li class='accueil swiper-pagination-switch active'>Accueil<span class="swiper-pagination-bullet"></span></li>
-            <li class='histoire swiper-pagination-switch'>Histoire<span class="swiper-pagination-bullet"></span></li>
-            <li class='deguster swiper-pagination-switch'>Déguster<span class="swiper-pagination-bullet"></span></li>
-            <li class='brassins swiper-pagination-switch'>Brassins<span class="swiper-pagination-bullet"></span></li>
+            <li class='accueil swiper-pagination-switch active' data-indexnumber="0">Accueil<span class="swiper-pagination-bullet"></span></li>
+            <li class='histoire swiper-pagination-switch' data-indexnumber="1">Histoire<span class="swiper-pagination-bullet"></span></li>
+            <li class='deguster swiper-pagination-switch' data-indexnumber="2">Déguster<span class="swiper-pagination-bullet"></span></li>
+            <li class='brassins swiper-pagination-switch' data-indexnumber="3">Brassins<span class="swiper-pagination-bullet"></span></li>
           </ul>
 
           <ul class="controls_otherPages">
@@ -79,9 +79,7 @@
   </div>
 
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.jquery.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js"></script>
 	<!--build:js script/main.min.js -->
 	<script src="scripts/test.js"></script>
 	<script src="scripts/main.js"></script>

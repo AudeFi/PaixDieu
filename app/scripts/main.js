@@ -17,30 +17,40 @@ var mySwiper = new Swiper ('.swiper-container', { // Init swiper
 //When I swipe manually (the hash change and I change the active menu item)
 window.onhashchange = function(){ 
     var hash = document.location.hash.split('#')[1];
-    $currentSwitch = $('.swiper-pagination-switch.'+ hash );
+    var currentSwitch = document.querySelector('.swiper-pagination-switch.'+ hash );
 
     var backbutton = true; // back button options =! change url option (not the same event but I can't distinct them)
     if (backbutton == false) {
-        $('.swiper-pagination-switch').removeClass('active');
-        $currentSwitch.addClass('active');
+        removeActiveClass();
+        currentSwitch.classList.add('active');
     }
     else {
-        swipeEvent($currentSwitch);
+        swipeEvent(currentSwitch);
     }
-    $('.controls_pageTitle').html( $('.swiper-pagination-switch.active').text() );    
+    document.querySelector('.controls_pageTitle').innerHTML = document.querySelector('.swiper-pagination-switch.active').textContent;    
 };
 //When I click on a section in the menu
-$('.swiper-pagination-switch').on("click", function () {
-    mySwiper.unlockSwipes(); //After opening the menu, unlock the ability to swipe next
-    $('.controls_menu.open').toggle();
-    $menuState = "swipe";
-    swipeEvent( $(this) );
-});
+var allSwitcher = document.querySelectorAll('.swiper-pagination-switch');
+for (var i = 0; i < allSwitcher.length; i++) {
+    allSwitcher[i].addEventListener('click', function(){
+        mySwiper.unlockSwipes(); //After opening the menu, unlock the ability to swipe next
+        document.querySelector('.controls_menuOpen').classList.remove('openned');
+        menuState = "swipe";
+        swipeEvent( this );
+    });
+}
 
-function swipeEvent($target) {
-    mySwiper.slideTo($target.index());
-    $('.swiper-pagination-switch').removeClass('active');
-    $target.addClass('active');
+function swipeEvent(target) {
+    mySwiper.slideTo(target.dataset.indexnumber);
+    removeActiveClass();
+    target.classList.add('active');
+}
+
+function removeActiveClass() {
+    var allSwitcher = document.querySelectorAll('.swiper-pagination-switch');
+    for (var i = 0; i < allSwitcher.length; i++) {
+        allSwitcher[i].classList.remove('active');
+    }
 }
 
 // Get the position in the page at first connection on the website and update the menu current item
@@ -50,69 +60,50 @@ if (hash == undefined) {
     hash = 'accueil';
 }
 
-$('.swiper-pagination-switch').removeClass('active');
-$('.swiper-pagination-switch.'+ hash ).addClass('active');
-$('.controls_pageTitle').html( $('.swiper-pagination-switch.active').text() );
+removeActiveClass();
+document.querySelector('.swiper-pagination-switch.'+ hash ).classList.add('active');
+document.querySelector('.controls_pageTitle').innerHTML = document.querySelector('.swiper-pagination-switch.active').textContent;
 
 
 // SWIPER CONTROLS
 
 //bind to determined event(s)
 var pressTimer;
-$menuState = "swipe";
+var menuState = "swipe";
 
+var controlsButton = document.querySelectorAll('.controls_button');
+for (var i = 0; i < controlsButton.length; i++) {
+    // ON DESKTOP - MOUSE EVENT
+    /*controlsButton[i].addEventListener('mousedown', startingClickMenu );
+    controlsButton[i].addEventListener('mouseup', endingClickMenu );*/
+    // ON MOBILE - TOUCH EVENT
+    controlsButton[i].addEventListener('touchstart', startingClickMenu );
+    controlsButton[i].addEventListener('touchend', endingClickMenu );
+}
 
-// ON MOBILE EVENT
-$('.controls_button').bind('touchend', function() {
-    if( $menuState == "close"){
-        $menuState = "swipe";
+function startingClickMenu() {
+    if (menuState == "open") {
+        document.querySelector('.controls_menuOpen').classList.remove('openned');
+        mySwiper.unlockSwipes();
+        menuState = "close";
+    } else {
+        pressTimer = window.setTimeout(function() { 
+            document.querySelector('.controls_menuOpen').classList.add('openned');
+            menuState = "open";
+            mySwiper.lockSwipes(); // If we oppened the menu with a long press on next button, don't swipe to next slide
+        },300); 
     }
-    else if ( $menuState == "swipe" ) {
+    return false;
+}
+
+function endingClickMenu() {
+    if( menuState == "close"){
+        menuState = "swipe";
+    }
+    else if ( menuState == "swipe" ) {
         mySwiper.unlockSwipes(); // If we didn't open the menu, act normal and swipe next
         mySwiper.slideNext();
     }
     clearTimeout(pressTimer);
     return false;
-}).bind('touchstart', function(){
-    if ($menuState == "open") {
-        $('.controls_menu.open').toggle();
-        mySwiper.unlockSwipes();
-        $menuState = "close";
-    } else {
-        pressTimer = window.setTimeout(function() { 
-            $('.controls_menu.open').toggle();
-            $menuState = "open";
-            mySwiper.lockSwipes(); // If we oppened the menu with a long press on next button, don't swipe to next slide
-        },300); 
-    }
-    return false; 
-});
-
-
-// ON DESKTOP EVENT
-$('.controls_button').mouseup(function(e) {
-    if( $menuState == "close"){
-        $menuState = "swipe";
-    }
-    else if ( $menuState == "swipe" ) {
-        mySwiper.unlockSwipes(); // If we didn't open the menu, act normal and swipe next
-        mySwiper.slideNext();
-    }
-    clearTimeout(pressTimer);
-    return false;
-}).mousedown(function(){
-    console.log($menuState);
-    if ($menuState == "open") {
-        $('.controls_menu.open').toggle();
-        mySwiper.unlockSwipes();
-        $menuState = "close";
-    } else {
-        pressTimer = window.setTimeout(function() { 
-            $('.controls_menu.open').toggle();
-            $menuState = "open";
-            mySwiper.lockSwipes(); // If we oppened the menu with a long press on next button, don't swipe to next slide
-        },300); 
-    }
-    return false; 
-});
-
+}
