@@ -145,9 +145,12 @@ body{
     .controls_otherPages {
       position: absolute;
       left:0px;
-      bottom: 0px;
+      bottom: 30px;
       li {
         margin-top: 10px;
+      }
+      a {
+        text-decoration: none;
       }
     }
   }
