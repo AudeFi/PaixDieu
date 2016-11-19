@@ -32,9 +32,7 @@ window.onhashchange = function(){
 //When I click on a section in the menu
 $('.swiper-pagination-switch').on("click", function () {
     mySwiper.unlockSwipes(); //After opening the menu, unlock the ability to swipe next
-    $('.controls_menu').toggle('pressed');
-    $('.overlay').toggle();
-    $('.controls_nextBtn').removeClass('pressed');
+    $('.controls_menu.open').toggle();
     $menuState = "swipe";
     swipeEvent( $(this) );
 });
@@ -65,7 +63,7 @@ $menuState = "swipe";
 
 
 // ON MOBILE EVENT
-$('.controls_nextBtn').bind('touchend', function() {
+$('.controls_button').bind('touchend', function() {
     if( $menuState == "close"){
         $menuState = "swipe";
     }
@@ -77,16 +75,12 @@ $('.controls_nextBtn').bind('touchend', function() {
     return false;
 }).bind('touchstart', function(){
     if ($menuState == "open") {
-        $('.controls_menu').toggle('pressed');
-        $('.overlay').toggle();
-        $('.controls_nextBtn').removeClass('pressed');
+        $('.controls_menu.open').toggle();
         mySwiper.unlockSwipes();
         $menuState = "close";
     } else {
         pressTimer = window.setTimeout(function() { 
-            $('.controls_menu').toggle('pressed');
-            $('.overlay').toggle();
-            $('.controls_nextBtn').addClass('pressed');
+            $('.controls_menu.open').toggle();
             $menuState = "open";
             mySwiper.lockSwipes(); // If we oppened the menu with a long press on next button, don't swipe to next slide
         },300); 
@@ -96,7 +90,7 @@ $('.controls_nextBtn').bind('touchend', function() {
 
 
 // ON DESKTOP EVENT
-$('.controls_nextBtn').mouseup(function(e) {
+$('.controls_button').mouseup(function(e) {
     if( $menuState == "close"){
         $menuState = "swipe";
     }
@@ -109,16 +103,12 @@ $('.controls_nextBtn').mouseup(function(e) {
 }).mousedown(function(){
     console.log($menuState);
     if ($menuState == "open") {
-        $('.controls_menu').toggle('pressed');
-        $('.overlay').toggle();
-        $('.controls_nextBtn').removeClass('pressed');
+        $('.controls_menu.open').toggle();
         mySwiper.unlockSwipes();
         $menuState = "close";
     } else {
         pressTimer = window.setTimeout(function() { 
-            $('.controls_menu').toggle('pressed');
-            $('.overlay').toggle();
-            $('.controls_nextBtn').addClass('pressed');
+            $('.controls_menu.open').toggle();
             $menuState = "open";
             mySwiper.lockSwipes(); // If we oppened the menu with a long press on next button, don't swipe to next slide
         },300); 
