@@ -6,12 +6,21 @@ $color-yellow: #d9af33;
 $mobile-logo-margin: 50px 0 0 15px;
 $mobile-logo-width: 70%;
 
-/** home presentation **/
+/** home **/
+$background-size: 100%;
 $font-size-presentation: 29px;
 $font-family-presentation: Kohinoor Devanagari Light;
 $margin-top-presentation: 20px;
+$line-height-presentation: 35px;
+
+/** bottles img **/
+$margin-top-bottles: 60px;
+$bottles-width: 35%;
 
 /** discover button **/
+$button-discover-width: 85%;
 $font-size-button: 20px;
 $font-family-button: Kohinoor Devanagari SemiBold;
 $width-button-icon: 60%;
+$button-discover-padding: 8px;
+$button-discover-border-radius: 5px;

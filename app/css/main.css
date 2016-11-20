@@ -136,7 +136,8 @@ a {
 /* Helpers */
 /** global variables **/
 /** logo **/
-/** home presentation **/
+/** home **/
+/** bottles img **/
 /** discover button **/
 @font-face {
   font-family: 'KohinoorDevanagari-Medium';
@@ -213,31 +214,38 @@ body {
 
 .accueil__presentation {
   background-size: 100%;
-  background-image: url("/../images/abbey_mobile.jpg"); }
+  background-image: url("/../images/abbey_mobile.jpg");
+  background-repeat: no-repeat; }
 
 .accueil__presentation p {
   margin-top: 20px;
   margin-top: 1.25rem;
   font-size: 29px;
   font-size: 1.8125rem;
-  font-family: Kohinoor Devanagari Light; }
+  font-family: Kohinoor Devanagari Light;
+  line-height: 35px;
+  line-height: 2.1875rem; }
 
 .accueil__presentation--text {
   background: -webkit-linear-gradient(top, #211d1e, rgba(33, 29, 30, 0.1));
   background: linear-gradient(to bottom, #211d1e, rgba(33, 29, 30, 0.1)); }
 
+.accueil__presentation--bottles {
+  background: -webkit-linear-gradient(top, rgba(33, 29, 30, 0.1), #211d1e);
+  background: linear-gradient(to bottom, rgba(33, 29, 30, 0.1), #211d1e); }
+
 .accueil__presentation--bottles img {
   margin: auto;
-  margin-top: 80px;
-  margin-top: 5rem;
+  margin-top: 60px;
+  margin-top: 3.75rem;
   width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
 
 .accueil__presentation--discover {
-  background: -webkit-linear-gradient(bottom, #211d1e, rgba(33, 29, 30, 0.1));
-  background: linear-gradient(to top, #211d1e, rgba(33, 29, 30, 0.1)); }
+  background: -webkit-linear-gradient(top, #211d1e, rgba(33, 29, 30, 0.1));
+  background: linear-gradient(to bottom, #211d1e, rgba(33, 29, 30, 0.1)); }
 
 .button-flex {
   background-color: #d9af33;

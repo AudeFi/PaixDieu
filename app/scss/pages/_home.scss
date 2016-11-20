@@ -9,37 +9,43 @@ body {
 }
 
 .accueil__presentation {
-    background-size: 100%;
+    background-size: $background-size;
     background-image: url("/../images/abbey_mobile.jpg");
+    background-repeat: no-repeat;
 }
 
 .accueil__presentation p {
     margin-top: $margin-top-presentation;
     font-size: $font-size-presentation;
     font-family: $font-family-presentation;
+    line-height: $line-height-presentation;
 }
 
 .accueil__presentation--text {
     background: linear-gradient(to bottom, rgba(33, 29, 30, 1), rgba(33, 29, 30, 0.1));
 }
 
+.accueil__presentation--bottles {
+    background: linear-gradient(to bottom, rgba(33, 29, 30, 0.1), rgba(33, 29, 30, 1));
+}
+
 .accueil__presentation--bottles img {
     margin: auto;
-    margin-top: 80px;
-    width: 35%;
+    margin-top: $margin-top-bottles;
+    width: $bottles-width;
     display: flex;
 }
 
 .accueil__presentation--discover {
-   background: linear-gradient(to top, rgba(33, 29, 30, 1), rgba(33, 29, 30, 0.1)); 
+   background: linear-gradient(to bottom, rgba(33, 29, 30, 1), rgba(33, 29, 30, 0.1)); 
 }
 
 .button-flex {
     background-color: $color-yellow;
-    width: 85%;
+    width: $button-discover-width;
     margin: auto;
-    padding: 8px;
-    border-radius: 5px;
+    padding: $button-discover-padding;
+    border-radius: $button-discover-border-radius;
 }
 
 .button-flex, .flex-item:first-child {
