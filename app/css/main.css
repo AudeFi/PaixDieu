@@ -207,12 +207,20 @@ body {
   margin: 3.125rem 0 0 0.9375rem;
   width: 70%; }
 
+.accueil__presentation {
+  background-size: 100%;
+  background-image: url("/../images/abbey_mobile.jpg"); }
+
 .accueil__presentation p {
   margin-top: 20px;
   margin-top: 1.25rem;
   font-size: 29px;
   font-size: 1.8125rem;
   font-family: Kohinoor Devanagari Light; }
+
+.accueil__presentation--text {
+  background: -webkit-linear-gradient(top, #211d1e, rgba(33, 29, 30, 0.1));
+  background: linear-gradient(to bottom, #211d1e, rgba(33, 29, 30, 0.1)); }
 
 .accueil__presentation--bottles img {
   margin: auto;
@@ -224,6 +232,10 @@ body {
   display: flex; }
 
 .accueil__presentation--discover {
+  background: -webkit-linear-gradient(bottom, #211d1e, rgba(33, 29, 30, 0.1));
+  background: linear-gradient(to top, #211d1e, rgba(33, 29, 30, 0.1)); }
+
+.button-flex {
   background-color: #d9af33;
   width: 85%;
   margin: auto;

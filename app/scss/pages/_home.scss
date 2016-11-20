@@ -8,10 +8,19 @@ body {
     width: $mobile-logo-width;
 }
 
+.accueil__presentation {
+    background-size: 100%;
+    background-image: url("/../images/abbey_mobile.jpg");
+}
+
 .accueil__presentation p {
     margin-top: $margin-top-presentation;
     font-size: $font-size-presentation;
     font-family: $font-family-presentation;
+}
+
+.accueil__presentation--text {
+    background: linear-gradient(to bottom, rgba(33, 29, 30, 1), rgba(33, 29, 30, 0.1));
 }
 
 .accueil__presentation--bottles img {
@@ -22,6 +31,10 @@ body {
 }
 
 .accueil__presentation--discover {
+   background: linear-gradient(to top, rgba(33, 29, 30, 1), rgba(33, 29, 30, 0.1)); 
+}
+
+.button-flex {
     background-color: $color-yellow;
     width: 85%;
     margin: auto;
