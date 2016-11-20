@@ -4,21 +4,32 @@ body {
 }
 
 .accueil__logo img {
-    margin: $mobile-logo-margin;
-    width: $mobile-logo-width;
+    margin: 50px 0 0 15px;
+    width: 70%;
+
+    @media(min-width: 470px) {
+        margin: 15px 0 0 15px;
+        width: 40%;
+    }
 }
 
 .accueil__presentation {
-    background-size: $background-size;
+    background-size: 100%;
     background-image: url("/../images/abbey_mobile.jpg");
     background-repeat: no-repeat;
 }
 
 .accueil__presentation p {
-    margin-top: $margin-top-presentation;
-    font-size: $font-size-presentation;
-    font-family: $font-family-presentation;
-    line-height: $line-height-presentation;
+    margin-top: 20px;
+    font-size: 29px;
+    font-family: Kohinoor Devanagari Light;
+    line-height: 35px;
+
+    @media(min-width: 470px) {
+        margin-top: 15px;
+        font-size: 26px;
+        line-height: 30px;
+    }
 }
 
 .accueil__presentation--text {
@@ -27,25 +38,37 @@ body {
 
 .accueil__presentation--bottles {
     background: linear-gradient(to bottom, rgba(33, 29, 30, 0.1), rgba(33, 29, 30, 1));
+    margin-top: 60px;
+
+    @media(min-width: 470px) {
+        margin-top: 100px;
+    }
 }
 
 .accueil__presentation--bottles img {
     margin: auto;
-    margin-top: $margin-top-bottles;
-    width: $bottles-width;
+    width: 35%;
     display: flex;
+
+    @media(min-width: 470px) {
+        width: 30%;
+    }
 }
 
 .accueil__presentation--discover {
-   background: linear-gradient(to bottom, rgba(33, 29, 30, 1), rgba(33, 29, 30, 0.1)); 
+   background-color: $background-color;
 }
 
 .button-flex {
     background-color: $color-yellow;
-    width: $button-discover-width;
+    width: 85%;
     margin: auto;
-    padding: $button-discover-padding;
-    border-radius: $button-discover-border-radius;
+    padding: 8px;
+    border-radius: 5px;
+
+    @media(min-width: 470px) {
+        width: 65%;
+    }
 }
 
 .button-flex, .flex-item:first-child {
@@ -56,7 +79,11 @@ body {
 }
 
 .accueil__presentation--discover img {
-    width: $width-button-icon;
+    width: 60%;
+
+    @media(min-width: 470px) {
+        width: 50%;
+    }
 }
 
 .accueil__presentation--discover a {
@@ -66,6 +93,10 @@ body {
 .accueil__presentation--discover p {
     margin-top: 0;
     margin-left: 0;
-    font-size: $font-size-button;
-    font-family: $font-family-button;
+    font-size: 20px;
+    font-family: Kohinoor Devanagari SemiBold;
+
+    @media(min-width: 470px) {
+        font-size: 16px;
+    }
 }

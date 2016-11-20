@@ -134,11 +134,6 @@ a {
   outline: none; }
 
 /* Helpers */
-/** global variables **/
-/** logo **/
-/** home **/
-/** bottles img **/
-/** discover button **/
 @font-face {
   font-family: 'KohinoorDevanagari-Medium';
   src: url("../fonts/KohinoorDevanagari-Medium.otf") format("otf");
@@ -211,6 +206,11 @@ body {
   margin: 50px 0 0 15px;
   margin: 3.125rem 0 0 0.9375rem;
   width: 70%; }
+  @media (min-width: 470px) {
+    .accueil__logo img {
+      margin: 20px 0 0 15px;
+      margin: 1.25rem 0 0 0.9375rem;
+      width: 40%; } }
 
 .accueil__presentation {
   background-size: 100%;
@@ -225,6 +225,14 @@ body {
   font-family: Kohinoor Devanagari Light;
   line-height: 35px;
   line-height: 2.1875rem; }
+  @media (min-width: 470px) {
+    .accueil__presentation p {
+      margin-top: 15px;
+      margin-top: 0.9375rem;
+      font-size: 26px;
+      font-size: 1.625rem;
+      line-height: 30px;
+      line-height: 1.875rem; } }
 
 .accueil__presentation--text {
   background: -webkit-linear-gradient(top, #211d1e, rgba(33, 29, 30, 0.1));
@@ -232,20 +240,22 @@ body {
 
 .accueil__presentation--bottles {
   background: -webkit-linear-gradient(top, rgba(33, 29, 30, 0.1), #211d1e);
-  background: linear-gradient(to bottom, rgba(33, 29, 30, 0.1), #211d1e); }
+  background: linear-gradient(to bottom, rgba(33, 29, 30, 0.1), #211d1e);
+  margin-top: 60px;
+  margin-top: 3.75rem; }
 
 .accueil__presentation--bottles img {
   margin: auto;
-  margin-top: 60px;
-  margin-top: 3.75rem;
   width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media (min-width: 470px) {
+    .accueil__presentation--bottles img {
+      width: 30%; } }
 
 .accueil__presentation--discover {
-  background: -webkit-linear-gradient(top, #211d1e, rgba(33, 29, 30, 0.1));
-  background: linear-gradient(to bottom, #211d1e, rgba(33, 29, 30, 0.1)); }
+  background-color: #211D1E; }
 
 .button-flex {
   background-color: #d9af33;
@@ -255,6 +265,9 @@ body {
   padding: 0.5rem;
   border-radius: 5px;
   border-radius: 0.3125rem; }
+  @media (min-width: 470px) {
+    .button-flex {
+      width: 65%; } }
 
 .button-flex, .flex-item:first-child {
   display: -webkit-box;
@@ -273,6 +286,9 @@ body {
 
 .accueil__presentation--discover img {
   width: 60%; }
+  @media (min-width: 470px) {
+    .accueil__presentation--discover img {
+      width: 50%; } }
 
 .accueil__presentation--discover a {
   text-decoration: none; }
@@ -283,6 +299,10 @@ body {
   font-size: 20px;
   font-size: 1.25rem;
   font-family: Kohinoor Devanagari SemiBold; }
+  @media (min-width: 470px) {
+    .accueil__presentation--discover p {
+      font-size: 16px;
+      font-size: 1rem; } }
 
 body {
   overflow: hidden;
