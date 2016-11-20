@@ -1,0 +1,159 @@
+body{
+  overflow: hidden;
+  width:100vw;
+  height:100vh;
+  display: block;
+  position: relative;
+  top:0;
+  left:0;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    /* background: rgba(255,255,255,0.8);  */
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(100,100,100,0.8);
+}
+
+
+.swiper-container {
+  width: 100vw;
+  height: 100vh;
+
+  section.swiper-slide{
+    overflow-y: scroll;
+    width:100vw;
+    height:100vh;
+    padding-top: 80px;
+    background-color:$background-color;
+    &.accueil{
+        background-color:$background-color;
+    }
+    &.histoire{
+    }
+    &.deguster{
+        background-color:red;
+    }
+    &.brassins{
+        background-color:pink;
+    }
+  }
+}
+
+
+.controls {
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  height: 80px;
+  z-index: 2;
+
+  /* GLOBAL */
+  .controls_wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-pagination-bullet {
+    border: 1px solid $color-yellow;
+    opacity: 1;
+    background: none;
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+  }
+  .swiper-pagination-bullet-active, .swiper-pagination-switch.active span {
+    border: 1px solid white;
+    background: white;
+    width: 13px;
+    height: 13px;
+  }
+  .controls_button {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 40px; /* Don't forget to change the svg size */
+      height: 40px;
+  }
+
+
+  /* CLOSE */
+  .controls_menuClose {
+    .swiper-pagination {
+      z-index: 2; /* Overwrite swiper properties by default*/
+    }
+    .controls_pageTitle {
+      position: absolute;
+      top: 26px;
+      font-size: 20px;
+      color:white;
+      z-index: 2;
+    }
+  }
+
+  /* OPEN */
+  .controls_menuOpen {
+    display: none;
+    width:100vw;
+    height: 100vh;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    padding: 20px;
+    /* background-color:$background-color; */
+    background-color: rgba(33,29,30,0.9);
+    font-size: 20px;
+    color: #7a7778;
+    z-index: 3;
+    .controls_mainPages {
+      position: absolute;
+      right:60px;
+      top: 0px;
+      height:40px;
+      width:100px;
+      li {
+        height: 30px;
+        text-align: right;
+        cursor: pointer;
+        &.active {
+          color: white;
+        }
+        &:hover {
+          color: white;
+        }
+        &.histoire {
+          margin-right: -10px;
+        }
+        &.deguster {
+          margin-right: -30px;
+        }
+        &.brassins {
+          margin-right: -50px;
+        }
+        span {
+          margin-left: 15px;
+        }
+      }
+    }
+    .controls_otherPages {
+      position: absolute;
+      left:0px;
+      bottom: 30px;
+      li {
+        margin-top: 10px;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+    &.openned {
+      display: block;
+    }
+  }
+}

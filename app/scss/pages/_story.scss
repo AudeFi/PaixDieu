@@ -8,29 +8,34 @@ body {
   color: white;
 }
 img {
-  position: relative;
     width: 50%;
     margin-left: 45%;
 }
 
+p{
+  font-size: 16px;
+  @media(min-width: 480px) {
+    font-size: 26px;
+    }
+    @media(min-width: 768px) {
+      font-size: 20px !important;
+      }
+}
+
 .story{
-    margin-bottom: 0px;
-    @media(min-width: 470px) {
+    @media(min-width: 480) {
       margin-bottom: 20px;
       }
-      @media(min-width: 770px) {
+      @media(min-width: 768px) {
         margin-bottom: 80px;
         }
 }
 
 .story-abbey{
-  @media(min-width: 470px) {
+  @media(min-width: 480) {
     margin-bottom: 60px;
     }
-  @media(min-width: 570px) {
-    margin-bottom: 90px;
-    }
-    @media(min-width: 770px) {
+    @media(min-width: 768px) {
       margin-bottom: 180px;
       }
 }
@@ -55,92 +60,94 @@ img {
     background-color: #d9af33; }
 
 .story__image-abbey{
+  border-radius: 30%;
+  width: 45%;
+
+  margin-top: -6%;
 }
+
+// .story__image-bg{
+//   background-size: 80% auto;
+//   background-image:url(../images/bg.png);
+//   background-position:right top;
+//   background-repeat:no-repeat;
+//
+// }
 
 .story__image-grain{
     position: relative;
-    width: 50%;
-    margin-left: 40%;
-    @media(min-width: 470px) {
-      margin-left: 8%;
-      float: right;
+    width: 60%;
+    margin-left: 20%;
+    @media(min-width: 480px) {
+      border-radius: 50%;
       margin-top: 10px;
       }
+
 }
 
-.story__image-bouteille{
+.story__image-bouteilles{
   position: relative;
     width: 50%;
     margin-left: 40%;
+    margin-bottom: 5%;
 }
 
-.story__text-abbaye{
+
+.story__text-abbey{
 position: relative;
-margin-top: -40px;
-  @media(min-width: 470px) {
-    margin-right: 250px;
-    margin-top: -160px;
+margin-top: -10%;
+  @media(min-width: 480px) {
+    margin-right: 55%;
+    margin-top: -35%;
     font-size: 20px;
+    margin-bottom: 15%;
     }
-      @media(min-width: 570px) {
-        margin-right: 300px;
-        margin-top: -180px;
-        font-size: 20px;
-        }
-        @media(min-width: 770px) {
-          margin-right: 450px;
-          margin-top: -240px;
+        @media(min-width: 768px) {
+          margin-right: 55%;
+          margin-top: -35%;
           font-size: 20px;
           }
 }
 
 .story__text-grain_1{
   position: relative;
-  @media(min-width: 570px) {
+  @media(min-width: 480px){
     font-size: 20px;
-    }
+  }
 }
 
 .story__text-grain_2{
   position: relative;
   margin-left: 20px;
   margin-right: 20px;
-  @media(min-width: 470px) {
-    font-size: 16px;
+  @media(min-width: 480px) {
+    font-size: 20px;
+    margin-bottom:10%;
     }
-    @media(min-width: 570px) {
-      font-size: 20px;
-      }
-
 }
 
 .story__text-bouteille{
   position: relative;
-  margin-top: -150px;
-  @media(min-width: 470px) {
+  margin-top: -45%;
+  @media(min-width: 480px) {
     font-size: 20px;
-    margin-top: -180px;
+    margin-top: -40%;
     }
-    @media(min-width: 570px) {
-      font-size: 20px;
-      margin-top: -195px;
-      }
-      @media(min-width: 770px) {
-        margin-top: -220px;
+      @media(min-width: 768px) {
+        margin-top: -43%;
+        font-size: 25px;
         }
 }
 
 .story__text-bouteille_litre{
   position: relative;
   margin-top: 30px;
-    @media(min-width: 470px) {
+    @media(min-width: 480px) {
       font-size: 20px;
       }
-    @media(min-width: 570px) {
-      font-size: 20px;
-      }
-      @media(min-width: 770px) {
-        // margin-bottom: 180px;
+      @media(min-width: 768px) {
+        margin-top: 10%;
+        font-size: 25px;
         }
 }
 
