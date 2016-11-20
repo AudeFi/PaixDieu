@@ -1,0 +1,113 @@
+
+/**
+* Vars
+*/
+$font-stack: "Kohinoor Devanagari", "KohinoorDevanagari-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$background-color: #211d1e;
+$background-item-color: #d9af33;
+$text-color: white;
+
+/**
+* Global
+*/
+html {
+    font-size: 16px;
+    background-color: $background-color;
+    color: $text-color;
+    font-family: $font-stack;
+}
+
+body {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 30px;
+}
+
+/**
+* Title
+*/
+h2.subtitle {
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: .625rem;
+    margin-left: 1rem;
+    text-decoration : none;
+}
+.subtitle_underline{
+    position: absolute;
+    display: block;
+    width: 6%;
+    padding : 5px 0 0 0;
+    border-bottom : 4px solid $background-item-color;
+}
+
+/**
+* Inputs
+*/
+form {
+
+    margin: 2rem auto;
+
+    .form__group {
+        display: block;
+        position: relative;
+        margin: 1rem auto;
+        margin-left: 5%;
+        width: calc(100% - 3rem);
+        border: 1px solid;
+        border-radius: 10px;
+        opacity: 0.51;
+    }  
+}
+
+#form__statut-individual__input, 
+#form__statut-professional__input{
+    outline-width: 50px;
+    outline-color: red;
+    outline-style: auto;
+    clip: rect(1px, 1px, 1px, 1px);
+    //    opacity: 0.51;
+}
+
+.form__statut-individual__label,
+.form__statut-professional__label, 
+.form__email__label, 
+.form__message__label,
+.form__submit__label{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-right: 18px;
+//    opacity: 0.51;
+}
+
+.form__statut-individual__input:checked + .form__statut-individual__label, 
+.form__statut-professional__input:checked + .form__statut-professional__label{
+    border: 1px solid;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.form__statut-individual__input:focus + .form__statut-individual__label, 
+.form__statut-professional__input:focus + .form__statut-professional__label, 
+.form__email__input:focus + .form__email__label, 
+.form__message__textarea:focus + .form__message__label,
+.form__submit__input:focus + .form__submit__label{
+    opacity: 1;
+}
+
+.form__message__textarea {
+    min-height: 7rem;
+}
+
+#form__submit__input{
+    border: none;
+    font-weight: 800;
+    background-color: $background-item-color;
+    padding: 1rem 0 1rem 0;
+    height: 3em;
+    white-space: nowrap;
+    border-radius: 10px;
+}
