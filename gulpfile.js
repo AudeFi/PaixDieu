@@ -82,7 +82,7 @@ gulp.task('useref', function(){
     // Minifies only if it's a JavaScript file
     .pipe(gulpIf('*.js', uglify()))
     // Minifies only if it's a CSS file
-    .pipe(gulpIf('*.css', cssnano()))
+    .pipe(gulpIf('*.css', cssnano({zindex: false})))
     .pipe(gulp.dest('dist'))
 });
 
@@ -102,6 +102,13 @@ gulp.task('fonts', function() {
   .pipe(gulp.dest('dist/fonts'))
 });
 
+// Copy the html files to the /dist folder
+gulp.task('htmlDuplicate', function() {
+  return gulp.src('app/*.html')
+  .pipe(gulp.dest('dist'))
+});
+
+
 /* Clean the /dist folder*/
 gulp.task('clean:dist', function() {
   return del.sync('dist');
@@ -118,7 +125,7 @@ gulp.task('default', function (callback) {
 /* Build task which compiles scss, html includes, js, minify css & js & images */
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
-    ['fileinclude', 'sass', 'images', 'fonts'], 'useref',
+    ['fileinclude', 'sass', 'images', 'fonts', 'htmlDuplicate'], 'useref',
     callback
   )
 });
