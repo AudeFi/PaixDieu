@@ -18,6 +18,9 @@ img {
     @media(min-width: 470px) {
       margin-bottom: 20px;
       }
+      @media(min-width: 770px) {
+        margin-bottom: 80px;
+        }
 }
 
 .story-abbey{
@@ -27,6 +30,9 @@ img {
   @media(min-width: 570px) {
     margin-bottom: 90px;
     }
+    @media(min-width: 770px) {
+      margin-bottom: 180px;
+      }
 }
 
 .story__subtitle {
@@ -69,19 +75,23 @@ img {
 }
 
 .story__text-abbaye{
-  position: relative;
-  margin-top: -40px;
-@media(min-width: 470px) {
-  margin-right: 250px;
-  margin-top: -160px;
-  font-size: 20px;
-  }
-
-  @media(min-width: 570px) {
-    margin-right: 300px;
-    margin-top: -180px;
+position: relative;
+margin-top: -40px;
+  @media(min-width: 470px) {
+    margin-right: 250px;
+    margin-top: -160px;
     font-size: 20px;
     }
+      @media(min-width: 570px) {
+        margin-right: 300px;
+        margin-top: -180px;
+        font-size: 20px;
+        }
+        @media(min-width: 770px) {
+          margin-right: 450px;
+          margin-top: -240px;
+          font-size: 20px;
+          }
 }
 
 .story__text-grain_1{
@@ -98,9 +108,9 @@ img {
   @media(min-width: 470px) {
     font-size: 16px;
     }
-  @media(min-width: 570px) {
-    font-size: 20px;
-    }
+    @media(min-width: 570px) {
+      font-size: 20px;
+      }
 
 }
 
@@ -111,21 +121,27 @@ img {
     font-size: 20px;
     margin-top: -180px;
     }
-  @media(min-width: 570px) {
-    font-size: 20px;
-    margin-top: -195px;
-    }
+    @media(min-width: 570px) {
+      font-size: 20px;
+      margin-top: -195px;
+      }
+      @media(min-width: 770px) {
+        margin-top: -220px;
+        }
 }
 
 .story__text-bouteille_litre{
   position: relative;
   margin-top: 30px;
-  @media(min-width: 470px) {
-    font-size: 20px;
-    }
-  @media(min-width: 570px) {
-    font-size: 20px;
-    }
+    @media(min-width: 470px) {
+      font-size: 20px;
+      }
+    @media(min-width: 570px) {
+      font-size: 20px;
+      }
+      @media(min-width: 770px) {
+        // margin-bottom: 180px;
+        }
 }
 
 .story__text-highlight{

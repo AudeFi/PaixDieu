@@ -214,6 +214,10 @@ img {
     .story {
       margin-bottom: 20px;
       margin-bottom: 1.25rem; } }
+  @media (min-width: 770px) {
+    .story {
+      margin-bottom: 80px;
+      margin-bottom: 5rem; } }
 
 @media (min-width: 470px) {
   .story-abbey {
@@ -224,6 +228,11 @@ img {
   .story-abbey {
     margin-bottom: 90px;
     margin-bottom: 5.625rem; } }
+
+@media (min-width: 770px) {
+  .story-abbey {
+    margin-bottom: 180px;
+    margin-bottom: 11.25rem; } }
 
 .story__subtitle {
   margin: 1.125rem 1.25rem 1.5625rem 1.25rem;
@@ -281,6 +290,14 @@ img {
       margin-top: -11.25rem;
       font-size: 20px;
       font-size: 1.25rem; } }
+  @media (min-width: 770px) {
+    .story__text-abbaye {
+      margin-right: 450px;
+      margin-right: 28.125rem;
+      margin-top: -240px;
+      margin-top: -15rem;
+      font-size: 20px;
+      font-size: 1.25rem; } }
 
 .story__text-grain_1 {
   position: relative; }
@@ -320,6 +337,10 @@ img {
       font-size: 1.25rem;
       margin-top: -195px;
       margin-top: -12.1875rem; } }
+  @media (min-width: 770px) {
+    .story__text-bouteille {
+      margin-top: -220px;
+      margin-top: -13.75rem; } }
 
 .story__text-bouteille_litre {
   position: relative;
