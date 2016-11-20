@@ -3,7 +3,7 @@ body {
   color: white;
 }
 
-.accueil__presentation img {
+.accueil__logo img {
     margin: $mobile-logo-margin;
     width: $mobile-logo-width;
 }
@@ -14,14 +14,14 @@ body {
     font-family: $font-family-presentation;
 }
 
-.accueil__bottles img {
+.accueil__presentation--bottles img {
     margin: auto;
     margin-top: 80px;
     width: 35%;
     display: flex;
 }
 
-.accueil__discover {
+.accueil__presentation--discover {
     background-color: $color-yellow;
     width: 85%;
     margin: auto;
@@ -29,22 +29,23 @@ body {
     border-radius: 5px;
 }
 
-.accueil__discover ul, .accueil__discover li:first-child {
+.button-flex, .flex-item:first-child {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.accueil__discover img {
+.accueil__presentation--discover img {
     width: $width-button-icon;
 }
 
-.accueil__discover a {
+.accueil__presentation--discover a {
     text-decoration: none;
 }
 
-.accueil__discover p {
+.accueil__presentation--discover p {
+    margin-top: 0;
     margin-left: 0;
     font-size: $font-size-button;
     font-family: $font-family-button;

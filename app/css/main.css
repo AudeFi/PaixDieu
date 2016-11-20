@@ -202,7 +202,7 @@ body {
   background-color: #211D1E;
   color: white; }
 
-.accueil__presentation img {
+.accueil__logo img {
   margin: 50px 0 0 15px;
   margin: 3.125rem 0 0 0.9375rem;
   width: 70%; }
@@ -214,7 +214,7 @@ body {
   font-size: 1.8125rem;
   font-family: Kohinoor Devanagari Light; }
 
-.accueil__bottles img {
+.accueil__presentation--bottles img {
   margin: auto;
   margin-top: 80px;
   margin-top: 5rem;
@@ -223,7 +223,7 @@ body {
   display: -ms-flexbox;
   display: flex; }
 
-.accueil__discover {
+.accueil__presentation--discover {
   background-color: #d9af33;
   width: 85%;
   margin: auto;
@@ -232,7 +232,7 @@ body {
   border-radius: 5px;
   border-radius: 0.3125rem; }
 
-.accueil__discover ul, .accueil__discover li:first-child {
+.button-flex, .flex-item:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -247,13 +247,14 @@ body {
       -ms-flex-align: center;
           align-items: center; }
 
-.accueil__discover img {
+.accueil__presentation--discover img {
   width: 60%; }
 
-.accueil__discover a {
+.accueil__presentation--discover a {
   text-decoration: none; }
 
-.accueil__discover p {
+.accueil__presentation--discover p {
+  margin-top: 0;
   margin-left: 0;
   font-size: 21px;
   font-size: 1.3125rem;
