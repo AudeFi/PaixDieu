@@ -1,3 +1,8 @@
+// block-name
+// block-name_modifier_name
+// block-name__element-name
+// block-name__element-name_modifier_name
+
 body {
   background-color: $background-color;
   color: white;
@@ -7,7 +12,31 @@ img {
     width: 50%;
     margin-left: 40%;
 }
-.photo-maison {
+
+.story {
+    margin-bottom: 0px;
+}
+
+.story__subtitle {
+  margin: 1.125rem 1.25rem 1.5625rem 1.25rem;
+  position: relative;
+  font-size: 26px;
+  font-size: 1.625rem;
+  font-family: Kohinoor Devanagari; }
+  .story__subtitle::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    bottom: -0.625rem;
+    left: 0px;
+    left: 0rem;
+    width: 24px;
+    width: 1.5rem;
+    height: 5px;
+    height: 0.3125rem;
+    background-color: #d9af33; }
+
+.story__image-abbey{
   @media (min-width: 422px) {
     margin-top: 10px;
     width: 50%;
@@ -15,43 +44,48 @@ img {
   }
 }
 
-.story--abbey {
-    margin-bottom: 40px;
-}
-
-.abbey__description {
-    position: relative;
-    margin-top: -40px;
-  @media(min-width: 422px) {
-    margin-left: 20px;
-    margin-right: 100px;
-
-    margin-top: -190px;
-  }
-}
-  // @media(min-width: 422px) {
-  //   display: block;
-  //   position: relative;
-  //   margin-top: 100px;
-  // }
-.story--production {
-    margin-bottom: 40px;
-}
-
-.production__description {
-
-}
-
-.prod_firstdescription {
+.story__image-grain{
   position: relative;
-  }
+    width: 50%;
+    margin-left: 40%;
+}
 
-.prod_seconddescription {
+.story__image-bouteille{
+  position: relative;
+    width: 50%;
+    margin-left: 40%;
+}
+
+.story__text-abbaye{
+  position: relative;
+  margin-top: -40px;
+@media(min-width: 422px) {
+  margin-left: 20px;
+  margin-right: 100px;
+  margin-top: -190px;
+  }
+}
+
+.story__text-grain_1{
+  position: relative;
+}
+
+.story__text-grain_2{
   position: relative;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.numbers__highlight{
+.story__text-bouteille{
+  position: relative;
+  margin-top: -150px;
+}
+
+.story__text-bouteille_litre{
+  position: relative;
+  margin-top: 30px;
+}
+
+.story__text-highlight{
   font-weight: bold;
 }

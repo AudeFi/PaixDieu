@@ -207,23 +207,53 @@ img {
   width: 50%;
   margin-left: 40%; }
 
+.story {
+  margin-bottom: 0px;
+  margin-bottom: 0rem; }
+
+.story__subtitle {
+  margin: 1.125rem 1.25rem 1.5625rem 1.25rem;
+  position: relative;
+  font-size: 26px;
+  font-size: 1.625rem;
+  font-family: Kohinoor Devanagari; }
+
+.story__subtitle::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  bottom: -0.625rem;
+  left: 0px;
+  left: 0rem;
+  width: 24px;
+  width: 1.5rem;
+  height: 5px;
+  height: 0.3125rem;
+  background-color: #d9af33; }
+
 @media (min-width: 422px) {
-  .photo-maison {
+  .story__image-abbey {
     margin-top: 10px;
     margin-top: 0.625rem;
     width: 50%;
     margin-left: 40%; } }
 
-.story--abbey {
-  margin-bottom: 40px;
-  margin-bottom: 2.5rem; }
+.story__image-grain {
+  position: relative;
+  width: 50%;
+  margin-left: 40%; }
 
-.abbey__description {
+.story__image-bouteille {
+  position: relative;
+  width: 50%;
+  margin-left: 40%; }
+
+.story__text-abbaye {
   position: relative;
   margin-top: -40px;
   margin-top: -2.5rem; }
   @media (min-width: 422px) {
-    .abbey__description {
+    .story__text-abbaye {
       margin-left: 20px;
       margin-left: 1.25rem;
       margin-right: 100px;
@@ -231,19 +261,25 @@ img {
       margin-top: -190px;
       margin-top: -11.875rem; } }
 
-.story--production {
-  margin-bottom: 40px;
-  margin-bottom: 2.5rem; }
-
-.prod_firstdescription {
+.story__text-grain_1 {
   position: relative; }
 
-.prod_seconddescription {
+.story__text-grain_2 {
   position: relative;
   margin-left: 20px;
   margin-left: 1.25rem;
   margin-right: 20px;
   margin-right: 1.25rem; }
 
-.numbers__highlight {
+.story__text-bouteille {
+  position: relative;
+  margin-top: -150px;
+  margin-top: -9.375rem; }
+
+.story__text-bouteille_litre {
+  position: relative;
+  margin-top: 30px;
+  margin-top: 1.875rem; }
+
+.story__text-highlight {
   font-weight: bold; }
