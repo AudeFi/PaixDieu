@@ -202,25 +202,37 @@ body {
   background-color: #211D1E;
   color: white; }
 
-h1 {
-  text-transform: uppercase;
-  font-size: 26px;
-  font-size: 1.625rem; }
+.accueil__presentation img {
+  margin: 50px 0 0 15px;
+  margin: 3.125rem 0 0 0.9375rem;
+  width: 70%; }
+
+.accueil__presentation p {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  font-size: 29px;
+  font-size: 1.8125rem;
+  font-family: Kohinoor Devanagari Light; }
 
 .accueil__bottles img {
-  width: 75%;
-  margin: auto; }
+  margin: auto;
+  margin-top: 80px;
+  margin-top: 5rem;
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .accueil__discover {
   background-color: #d9af33;
-  width: 75%;
+  width: 85%;
   margin: auto;
   padding: 8px;
   padding: 0.5rem;
   border-radius: 5px;
   border-radius: 0.3125rem; }
 
-.accueil__discover ul {
+.accueil__discover ul, .accueil__discover li:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -236,15 +248,15 @@ h1 {
           align-items: center; }
 
 .accueil__discover img {
-  width: 50%; }
+  width: 60%; }
 
 .accueil__discover a {
   text-decoration: none; }
 
 .accueil__discover p {
   margin-left: 0;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 21px;
+  font-size: 1.3125rem;
   font-family: Kohinoor Devanagari SemiBold; }
 
 body {
