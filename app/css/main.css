@@ -134,6 +134,10 @@ a {
   outline: none; }
 
 /* Helpers */
+/** global variables **/
+/** logo **/
+/** home presentation **/
+/** discover button **/
 @font-face {
   font-family: 'KohinoorDevanagari-Medium';
   src: url("../fonts/KohinoorDevanagari-Medium.otf") format("otf");
@@ -268,8 +272,8 @@ body {
 .accueil__presentation--discover p {
   margin-top: 0;
   margin-left: 0;
-  font-size: 21px;
-  font-size: 1.3125rem;
+  font-size: 20px;
+  font-size: 1.25rem;
   font-family: Kohinoor Devanagari SemiBold; }
 
 body {
