@@ -105,6 +105,7 @@ gulp.task('fonts', function() {
 // Copy the html files to the /dist folder
 gulp.task('htmlDuplicate', function() {
   return gulp.src('app/*.html')
+  .pipe(useref())
   .pipe(gulp.dest('dist'))
 });
 

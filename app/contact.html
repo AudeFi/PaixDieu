@@ -14,7 +14,7 @@
   <body>
   
     <section class="contact_wrapper">
-    
+
         <svg class="exitButton" width="40px" height="40px" viewBox="0 0 76 76">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-299.000000, -1786.000000)" fill="#DAB01F"><g transform="translate(299.000000, 1786.000000)"><g id="Group">
               <path d="M37.601,39.7553455 L48.8041821,50.5741327 L50.8878425,48.4164392 L40.2468834,38.1405845 L51.0139358,26.9909754 L48.8562248,24.9063151 L38.0891725,36.0559242 L37.601,36.5616801 L37.1128275,36.0559242 L26.3457752,24.9063151 L24.1880642,26.9909754 L34.9551166,38.1405845 L24.3141575,48.4164392 L26.3978179,50.5741327 L37.601,39.7553455 Z M37.75,0 C16.901,0 0,16.901 0,37.75 C0,58.599 16.901,75.5 37.75,75.5 C58.599,75.5 75.5,58.599 75.5,37.75 C75.5,16.901 58.598,0 37.75,0 Z" id="Combined-Shape"></path>
@@ -46,10 +46,16 @@
     </section>
 
     <script>
-      document.querySelector('.exitButton').addEventListener('click', function(){
-          window.history.back();
-      });
+        document.querySelector('.exitButton').addEventListener('click', function(){
+            window.history.back(); 
+            // If the user comes from another website, it won't work
+            // Need to simply go back to home page
+        });
     </script>
+    <!--build:js script/main.min.js -->
+    <script src="scripts/contact.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
   </body>
   
 </html>
