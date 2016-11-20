@@ -7,3 +7,37 @@ h1 {
     text-transform: uppercase;
     font-size: 26px;
 }
+
+.accueil__bottles img {
+    width: 75%;
+    margin: auto;
+}
+
+.accueil__discover {
+    background-color: $color-yellow;
+    width: 75%;
+    margin: auto;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.accueil__discover ul, .accueil__discover li:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.accueil__discover img {
+    width: $width-button-icon;
+}
+
+.accueil__discover a {
+    text-decoration: none;
+}
+
+.accueil__discover p {
+    margin-left: 0;
+    font-size: $font-size-button;
+    font-family: $font-family-button;
+}
