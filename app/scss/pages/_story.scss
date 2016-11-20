@@ -10,11 +10,21 @@ body {
 img {
   position: relative;
     width: 50%;
-    margin-left: 40%;
+    margin-left: 45%;
+
 }
 
-.story {
+.story{
     margin-bottom: 0px;
+    @media(min-width: 470px) {
+      margin-bottom: 20px;
+      }
+}
+
+.story-abbey{
+  @media(min-width: 470px) {
+    margin-bottom: 60px;
+    }
 }
 
 .story__subtitle {
@@ -37,17 +47,17 @@ img {
     background-color: #d9af33; }
 
 .story__image-abbey{
-  @media (min-width: 422px) {
-    margin-top: 10px;
-    width: 50%;
-    margin-left: 40%;
-  }
 }
 
 .story__image-grain{
-  position: relative;
+    position: relative;
     width: 50%;
     margin-left: 40%;
+    @media(min-width: 470px) {
+      margin-left: 8%;
+      float: right;
+      margin-top: 10px;
+      }
 }
 
 .story__image-bouteille{
@@ -59,10 +69,10 @@ img {
 .story__text-abbaye{
   position: relative;
   margin-top: -40px;
-@media(min-width: 422px) {
-  margin-left: 20px;
-  margin-right: 100px;
-  margin-top: -190px;
+@media(min-width: 470px) {
+  margin-right: 250px;
+  margin-top: -160px;
+  font-size: 20px;
   }
 }
 
@@ -74,16 +84,27 @@ img {
   position: relative;
   margin-left: 20px;
   margin-right: 20px;
+  @media(min-width: 470px) {
+    font-size: 16px;
+    }
 }
 
 .story__text-bouteille{
   position: relative;
   margin-top: -150px;
+  @media(min-width: 470px) {
+    font-size: 20px;
+    margin-top: -180px;
+    }
 }
 
 .story__text-bouteille_litre{
   position: relative;
   margin-top: 30px;
+  @media(min-width: 470px) {
+    font-size: 20px;
+
+    }
 }
 
 .story__text-highlight{
