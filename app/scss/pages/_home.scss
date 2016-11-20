@@ -8,6 +8,17 @@ h1 {
     font-size: 26px;
 }
 
+.accueil__presentation img {
+    margin: $logo-margin;
+    width: $logo-width;
+}
+
+.accueil__presentation p {
+    margin-top: $margin-top-presentation;
+    font-size: $font-size-presentation;
+    font-family: $font-family-presentation;
+}
+
 .accueil__bottles img {
     width: 75%;
     margin: auto;
@@ -15,7 +26,7 @@ h1 {
 
 .accueil__discover {
     background-color: $color-yellow;
-    width: 75%;
+    width: 85%;
     margin: auto;
     padding: 8px;
     border-radius: 5px;
