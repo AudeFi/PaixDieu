@@ -33,7 +33,6 @@ h2.subtitle {
     text-decoration : none;
 }
 .subtitle_underline{
-    position: absolute;
     display: block;
     width: 6%;
     padding : 5px 0 0 0;
@@ -49,7 +48,6 @@ form {
 
     .form__group {
         display: block;
-        position: relative;
         margin: 1rem auto;
         margin-left: 5%;
         width: calc(100% - 3rem);
@@ -61,36 +59,34 @@ form {
 
 #form__statut-individual__input, 
 #form__statut-professional__input{
-    outline-width: 50px;
-    outline-color: red;
-    outline-style: auto;
     clip: rect(1px, 1px, 1px, 1px);
-    //    opacity: 0.51;
+    position: absolute;
 }
 
 .form__statut-individual__label,
 .form__statut-professional__label, 
-.form__email__label, 
-.form__message__label,
-.form__submit__label{
-    display: inline-block;
+{
     padding: 0.5rem 1rem;
-    margin-right: 18px;
-//    opacity: 0.51;
+}
+
+.form__name__input,
+.form__email__input{
+    padding: 1rem 1rem;
+}
+
+.form__message__textarea{
+    padding: 0.5rem 1rem;
 }
 
 .form__statut-individual__input:checked + .form__statut-individual__label, 
 .form__statut-professional__input:checked + .form__statut-professional__label{
-    border: 1px solid;
-    border-radius: 10px;
     opacity: 1;
 }
 
-.form__statut-individual__input:focus + .form__statut-individual__label, 
-.form__statut-professional__input:focus + .form__statut-professional__label, 
-.form__email__input:focus + .form__email__label, 
-.form__message__textarea:focus + .form__message__label,
-.form__submit__input:focus + .form__submit__label{
+.form__name__input:focus, 
+.form__email__input:focus, 
+.form__message__textarea:focus
+{
     opacity: 1;
 }
 
@@ -105,5 +101,32 @@ form {
     padding: 1rem 0 1rem 0;
     height: 3em;
     white-space: nowrap;
-    border-radius: 10px;
+    opacity: 1;
+}
+
+/**
+* Validate Form
+*/
+form{
+    .correct {
+        border: 1px solid green;
+    }
+
+    .incorrect {
+        border: 1px solid red;
+    }
+}
+
+
+.tooltip {
+    font-size: 11px;
+    display: inline-block;
+    margin: 1rem auto;
+    margin-left: 5%;
+    padding: 0.1rem 0.1rem;
+    width: calc(100% - 3rem);
+    border: 1px solid red;
+    background-color: transparent;
+    color: red;
+    border-radius: 4px;
 }
