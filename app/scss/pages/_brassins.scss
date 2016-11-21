@@ -7,6 +7,7 @@
                 opacity: 0;
                 position: absolute;
                 left:0;
+                width: 100vw;
                 transition-property: transform opacity;
                 transition-duration: 0.8s;
                 .carousel_title{
@@ -30,13 +31,28 @@
                 }
                 .carousel_bottles{
                     height:200px;
+                    @media screen and (min-width: 800px) {
+                        height:300px;
+                        overflow: hidden
+                    }
                     display: block;
                     padding:20px 0;
+                    width:100vw;
+                    @media screen and (min-width: 800px) {
+                        width:52vw;
+                    }
+                    @media screen and (min-width: 1024px) {
+                        width:72vw;
+                    }
                     .carousel_background{
                         background-color: black;
                         height:180px;
+                        @media screen and (min-width: 800px) {
+                            height:280px;
+                            width:95%;
+
+                        }
                         margin:10px 0;
-                        width:100vw;
                         position: relative;
                         .carousel_item{
                             position:absolute;
@@ -59,6 +75,12 @@
                                     left: 25vw;
                                     z-index:1;
                                     opacity: 0;
+                                    @media screen and (min-width: 800px) {
+                                        left: 10vw;
+                                    }
+                                    @media screen and (min-width: 1024px) {
+                                        left: 18vw;
+                                    }
                                 }
                             }
                         }
@@ -69,6 +91,13 @@
                     transition-duration: 0.8s;
                     opacity: 0;
                     padding : 40px 1.25rem 0 1.25rem;
+                    @media screen and (min-width: 800px) {
+                        width: 50vw;
+                        float: right;
+                    }
+                    @media screen and (min-width: 1024px) {
+                        width: 30vw;
+                    }
                     ul{
                         text-align: center;
                         li{
@@ -113,6 +142,13 @@
                     transition-duration: 0.8s;
                     opacity: 0;
                     padding : 40px 1.25rem 80px 1.25rem;
+                    @media screen and (min-width: 800px) {
+                        width: 50vw;
+                        float: right;
+                    }
+                    @media screen and (min-width: 1024px) {
+                        width: 30vw;
+                    }
                     p{
                         color:white;
                     }
@@ -143,7 +179,7 @@
                                 &.carousel_mainImg{
                                     z-index:2;
                                     opacity: 0.6;
-                                    left: -5vw;
+                                    left: -2vw;
                                 }
                             }
                         }
@@ -165,6 +201,12 @@
                                     transform: scale(1);
                                     opacity: 1;
                                     left: 42vw;
+                                    @media screen and (min-width: 800px) {
+                                        left: 22vw;
+                                    }
+                                    @media screen and (min-width: 1024px) {
+                                        left: 34vw;
+                                    }
                                 }
                                 &.carousel_backImg{
                                     opacity: 1;
@@ -199,6 +241,12 @@
                                     z-index:2;
                                     opacity: 0.6;
                                     left: 87vw;
+                                    @media screen and (min-width: 800px) {
+                                        left: 44vw;
+                                    }
+                                    @media screen and (min-width: 1024px) {
+                                        left: 61vw;
+                                    }
                                 }
                             }
                         }
