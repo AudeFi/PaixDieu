@@ -34,6 +34,9 @@ body{
     background-color:$background-color;
     &.accueil{
         background-color:$background-color;
+        @media (min-width: 760px) {
+          background-color: #000;
+        }
     }
     &.histoire{
       background-color:blue;

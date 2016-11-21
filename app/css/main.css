@@ -218,19 +218,41 @@ body {
       margin: 2.8125rem 0 0 0.9375rem; } }
   @media (min-width: 760px) {
     .accueil__logo {
-      margin: 70px 0 0 30px;
-      margin: 4.375rem 0 0 1.875rem; } }
+      margin: 60px 0 0 30px;
+      margin: 3.75rem 0 0 1.875rem; } }
+  @media (min-width: 860px) {
+    .accueil__logo {
+      margin: 0 0 0 50px;
+      margin: 0 0 0 3.125rem; } }
 
 .accueil__logo img {
   width: 70%; }
   @media (min-width: 470px) {
     .accueil__logo img {
       width: 40%; } }
+  @media (min-width: 760px) {
+    .accueil__logo img {
+      width: 35%; } }
+  @media (min-width: 860px) {
+    .accueil__logo img {
+      width: 10%; } }
 
-.accueil__presentation {
+.accueil__content {
   background-size: 100%;
   background-image: url("/../images/abbey_mobile.jpg");
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; }
+  @media (min-width: 760px) {
+    .accueil__content {
+      background-size: 120%;
+      background-image: url("/../images/abbey.jpg"); } }
+  @media (min-width: 860px) {
+    .accueil__content {
+      background-size: 100%;
+      background-position: center;
+      margin: 0 30px;
+      margin: 0 1.875rem; } }
+
+.accueil__presentation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,10 +260,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  @media (min-width: 760px) {
+  @media (min-width: 860px) {
     .accueil__presentation {
-      background-size: 120%;
-      background-image: url("/../images/abbey.jpg"); } }
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
 
 .accueil__presentation p {
   margin-top: 20px;
@@ -263,14 +287,32 @@ body {
     .accueil__presentation p {
       margin: 15px 0 0 30px;
       margin: 0.9375rem 0 0 1.875rem;
-      font-size: 40px;
-      font-size: 2.5rem;
+      font-size: 30px;
+      font-size: 1.875rem;
       line-height: 40px;
       line-height: 2.5rem; } }
+  @media (min-width: 860px) {
+    .accueil__presentation p {
+      font-size: 26px;
+      font-size: 1.625rem;
+      line-height: 30px;
+      line-height: 1.875rem;
+      padding: 60px 0 0 40px;
+      padding: 3.75rem 0 0 2.5rem; } }
 
 .accueil__presentation--text {
   background: -webkit-linear-gradient(top, #211d1e, rgba(33, 29, 30, 0.1));
   background: linear-gradient(to bottom, #211d1e, rgba(33, 29, 30, 0.1)); }
+  @media (min-width: 370px) {
+    .accueil__presentation--text {
+      background: -webkit-linear-gradient(top, #211d1e, rgba(33, 29, 30, 0.2));
+      background: linear-gradient(to bottom, #211d1e, rgba(33, 29, 30, 0.2)); } }
+  @media (min-width: 860px) {
+    .accueil__presentation--text {
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+      background: -webkit-linear-gradient(left, #211d1e, rgba(33, 29, 30, 0.8));
+      background: linear-gradient(to right, #211d1e, rgba(33, 29, 30, 0.8)); } }
 
 .accueil__presentation--bottles {
   background: -webkit-linear-gradient(top, rgba(33, 29, 30, 0.1), #211d1e);
@@ -285,6 +327,13 @@ body {
     .accueil__presentation--bottles {
       margin-top: 130px;
       margin-top: 8.125rem; } }
+  @media (min-width: 860px) {
+    .accueil__presentation--bottles {
+      margin: 0;
+      padding: 55px 0 70px 135px;
+      padding: 3.4375rem 0 4.375rem 8.4375rem;
+      background: -webkit-linear-gradient(right, rgba(33, 29, 30, 0.1), rgba(33, 29, 30, 0.8));
+      background: linear-gradient(to left, rgba(33, 29, 30, 0.1), rgba(33, 29, 30, 0.8)); } }
 
 .accueil__presentation--bottles img {
   margin: auto;
@@ -295,9 +344,21 @@ body {
   @media (min-width: 470px) {
     .accueil__presentation--bottles img {
       width: 30%; } }
+  @media (min-width: 860px) {
+    .accueil__presentation--bottles img {
+      margin: 0;
+      opacity: 0.3; } }
 
-.accueil__presentation--discover {
-  background-color: #211D1E; }
+@media (min-width: 860px) {
+  .accueil__discover {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: -webkit-linear-gradient(left, #211d1e, rgba(33, 29, 30, 0.3));
+    background: linear-gradient(to right, #211d1e, rgba(33, 29, 30, 0.3)); } }
 
 .button-flex {
   background-color: #d9af33;
@@ -310,6 +371,17 @@ body {
   @media (min-width: 470px) {
     .button-flex {
       width: 65%; } }
+  @media (min-width: 860px) {
+    .button-flex {
+      background-color: transparent;
+      width: 100%;
+      border-style: solid;
+      border-width: 1px 1px 4px 1px;
+      border-width: 0.0625rem 0.0625rem 0.25rem 0.0625rem;
+      border-color: #d9af33;
+      border-radius: 0;
+      padding: 4px;
+      padding: 0.25rem; } }
 
 .button-flex, .flex-item:first-child {
   display: -webkit-box;
@@ -326,29 +398,37 @@ body {
       -ms-flex-align: center;
           align-items: center; }
 
-.accueil__presentation--discover img {
+.accueil__discover img {
   width: 50%; }
   @media (min-width: 760px) {
-    .accueil__presentation--discover img {
+    .accueil__discover img {
       width: 70%; } }
+  @media (min-width: 860px) {
+    .accueil__discover img {
+      width: 40%; } }
 
-.accueil__presentation--discover a {
+.accueil__discover a {
   text-decoration: none; }
 
-.accueil__presentation--discover p {
+.accueil__discover p {
   margin-top: 0;
   margin-left: 0;
   font-size: 17px;
   font-size: 1.0625rem;
   font-family: Kohinoor Devanagari SemiBold; }
   @media (min-width: 470px) {
-    .accueil__presentation--discover p {
+    .accueil__discover p {
       font-size: 20px;
       font-size: 1.25rem; } }
   @media (min-width: 760px) {
-    .accueil__presentation--discover p {
+    .accueil__discover p {
       font-size: 26px;
       font-size: 1.625rem; } }
+  @media (min-width: 860px) {
+    .accueil__discover p {
+      font-family: Kohinoor Devanagari Light;
+      font-size: 15px;
+      font-size: 0.9375rem; } }
 
 body {
   overflow: hidden;
@@ -385,6 +465,9 @@ body {
     background-color: #211D1E; }
     .swiper-container section.swiper-slide.accueil {
       background-color: #211D1E; }
+      @media (min-width: 760px) {
+        .swiper-container section.swiper-slide.accueil {
+          background-color: #000; } }
     .swiper-container section.swiper-slide.histoire {
       background-color: blue; }
     .swiper-container section.swiper-slide.deguster {
