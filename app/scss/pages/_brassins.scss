@@ -95,6 +95,19 @@
                         }
                     }
                 }
+                .carousel_shareButtons {
+                    z-index: 10;
+                    display: none;
+                    margin: 20px auto;
+                    width: 200px;
+                    iframe {
+                        display: none;
+                        vertical-align: bottom
+                    }
+                }
+                .carousel_shareButtons > *{
+                    z-index: 5;
+                }
                 .carousel_description{
                     transition-property: opacity;
                     transition-duration: 0.8s;
@@ -162,6 +175,13 @@
                 }
                 .carousel_icons{
                     opacity: 1;
+                }
+                .carousel_shareButtons {
+                    display: block;
+                    z-index: 5;
+                    iframe {
+                        display: inline;
+                    }
                 }
                 .carousel_description{
                     opacity: 1;

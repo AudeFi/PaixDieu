@@ -18,6 +18,8 @@ var mySwiper = new Swiper ('.swiper-container', { // Init swiper
 //When I swipe manually (the hash change and I change the active menu item)
 window.onhashchange = function(){ 
     var hash = document.location.hash.split('#')[1];
+    if (hash.indexOf("?") != -1 )
+        hash = hash.substring(0, hash.indexOf("?"));
     var currentSwitch = document.querySelector('.swiper-pagination-switch.'+ hash );
 
     var backbutton = true; // back button options =! change url option (not the same event but I can't distinct them)
@@ -28,6 +30,8 @@ window.onhashchange = function(){
     else {
         swipeEvent(currentSwitch);
     }
+    if (hash == "brassins")
+        urlParameters(paramBrassin);
     document.querySelector('.controls_pageTitle').innerHTML = document.querySelector('.swiper-pagination-switch.active').textContent;    
 };
 //When I click on a section in the menu
@@ -48,7 +52,6 @@ function swipeEvent(target) {
 }
 
 function removeClass(selector, className) {
-    console.log(selector);
     var allElements = document.querySelectorAll(selector);
     for (var i = 0; i < allElements.length; i++) {
         allElements[i].classList.remove(className);
@@ -64,11 +67,23 @@ function addClass(selector, className) {
 
 // Get the position in the page at first connection on the website and update the menu current item
 var hash = document.location.hash.split('#')[1];
-if (hash == undefined) {
+var paramBrassin = 1; // Default to first one
+if (hash == undefined) {  // If I don't have a specific slide, put #accueil
     document.location.hash = 'accueil';
     hash = 'accueil';
 }
+if (hash.indexOf("brassins?") != -1 ) { // If i have parameters on a specific bottle
+    console.log("yeeeeeeeeeeeeh");
+    paramBrassin = hash.substring(hash.indexOf("=") + 1); //Save parameter
+    hash = hash.substring(0, hash.indexOf("?")); // Get the hash without parameter
+    swipeEvent( document.querySelector('.swiper-pagination-switch.'+ hash ) ); // Force swipe to the page
+} else if (hash.indexOf("degustez?") != -1 ) { // If i have parameters on a specific bar
+    var paramBrasserie = hash.substring(hash.indexOf("=") + 1); //Save parameter
+    hash = hash.substring(0, hash.indexOf("?")); // Get the hash without parameter
+    swipeEvent( document.querySelector('.swiper-pagination-switch.'+ hash ) ); // Force swipe to the page
+}
 
+console.log(hash);
 removeClass('.swiper-pagination-switch', 'active');
 addClass('.swiper-pagination-switch.' + hash, 'active');
 document.querySelector('.controls_pageTitle').innerHTML = document.querySelector('.swiper-pagination-switch.active').textContent;
