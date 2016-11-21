@@ -22,7 +22,7 @@
                     <div class="carousel_background">
                         <div class="carousel_item">
                             <img class="carousel_backImg" src="images/caroussel/iconlunemars2016.png"></img>
-                            <img class="carousel_mainImg" src="images/caroussel/bouteille-03-2016.png" onclick="switchBottle(1)">
+                            <img class="carousel_mainImg" src="images/caroussel/bouteille-03-2016.png" data-indexNumber="1">
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                     <div class="carousel_background">
                         <div class="carousel_item">
                             <img class="carousel_backImg" src="images/caroussel/iconlunefevrier2016.png"></img>
-                            <img class="carousel_mainImg" src="images/caroussel/bouteille-02-2016.png" onclick="switchBottle(2)">
+                            <img class="carousel_mainImg" src="images/caroussel/bouteille-02-2016.png" data-indexNumber="2">
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                     <div class="carousel_background">
                         <div class="carousel_item">
                             <img class="carousel_backImg" src="images/caroussel/iconlunejanvier2016.png"></img>
-                            <img class="carousel_mainImg" src="images/caroussel/bouteille-01-2016.png" onclick="switchBottle(3)">
+                            <img class="carousel_mainImg" src="images/caroussel/bouteille-01-2016.png" data-indexNumber="3">
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                     <div class="carousel_background">
                         <div class="carousel_item">
                             <img class="carousel_backImg" src="images/caroussel/iconlunedecembre2015.png"></img>
-                            <img class="carousel_mainImg" src="images/caroussel/bouteille-12-2015.png" onclick="switchBottle(4)">
+                            <img class="carousel_mainImg" src="images/caroussel/bouteille-12-2015.png" data-indexNumber="4">
                         </div>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
                     <div class="carousel_background">
                         <div class="carousel_item">
                             <img class="carousel_backImg" src="images/caroussel/iconluneaout2014.png"></img>
-                            <img class="carousel_mainImg" src="images/caroussel/bouteille-08-2014.png" onclick="switchBottle(5)">
+                            <img class="carousel_mainImg" src="images/caroussel/bouteille-08-2014.png" data-indexNumber="5">
                         </div>
                     </div>
                 </div>
@@ -139,11 +139,15 @@
 
     <script type="text/javascript">
     var list_bottles = document.querySelector(".carousel_listProducts").children;
-    function switchBottle(num){
-        for(var i = 0; i < list_bottles.length; i++){
-            list_bottles[i].className = "carousel_product";
-        }
-        list_bottles[num - 1].className = "carousel_product active";
+    var list_clickTarget = document.querySelectorAll(".carousel_listProducts .carousel_mainImg");;
+    for(var i = 0; i < list_clickTarget.length; i++){
+        list_clickTarget[i].addEventListener('click', function(){
+            var index = this.dataset.indexnumber;
+            for(var i = 0; i < list_bottles.length; i++){
+                list_bottles[i].className = "carousel_product";
+            }
+            list_bottles[index - 1].className = "carousel_product active";
+        });
     }
     </script>
 </section>
