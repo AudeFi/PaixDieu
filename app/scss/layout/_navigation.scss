@@ -47,6 +47,12 @@ body{
   }
 }
 
+/* GLOBAL */
+.controls_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 
 .controlsMobile {
   position: fixed;
@@ -55,12 +61,6 @@ body{
   height: 80px;
   z-index: 2;
 
-  /* GLOBAL */
-  .controls_wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
   .swiper-pagination-bullet {
     border: 1px solid $color-yellow;
     opacity: 1;
@@ -173,7 +173,7 @@ body{
     .controls_nextPrev {
       position: absolute;
       top: 50%;
-      right: 20px;
+      right: 50px;
       margin-top: -15px
     }
     .swiper-button-prev, .swiper-button-next {
@@ -191,10 +191,14 @@ body{
     .swiper-button-disabled {
       opacity: 0.5;
     }
-    .controls_mainPages {
+
+    .controls_menuItems {
       z-index: 3;
       position: fixed;
       bottom: 30px;
+      width: 100%;
+    }
+    .controls_mainPages {
       width: 100%;
       font-size: 20px;
       text-align: center;
@@ -208,20 +212,25 @@ body{
           color: white;
         }
         &:hover {
-          color: white;
+          color: $color-yellow;
         }
       }
     }
-    .controls_contactLink {
+    .controls_otherPages {
       position: absolute;
-      z-index: 4;
-      bottom: 30px;
-      right: 45px;
-      &:active svg .svgColor, :focus svg .svgColor, svg .svgColor{
-        fill: $yellow-disabled;
+      right: 35px;
+      bottom: -15px;
+      font-size: 12px;
+      text-align: center;
+      li {
+        margin: 10px auto;
       }
-      &:hover svg .svgColor {
-        fill: $color-yellow;
+      a {
+        text-decoration: none;
+        color: $yellow-disabled;
+      }
+      a:hover{
+        color: $color-yellow;
       }
     }
   }
