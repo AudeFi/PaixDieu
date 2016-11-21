@@ -212,6 +212,14 @@ body {
     .accueil__logo {
       margin: 15px 0 0 15px;
       margin: 0.9375rem 0 0 0.9375rem; } }
+  @media (min-width: 370px) {
+    .accueil__logo {
+      margin: 45px 0 0 15px;
+      margin: 2.8125rem 0 0 0.9375rem; } }
+  @media (min-width: 760px) {
+    .accueil__logo {
+      margin: 70px 0 0 30px;
+      margin: 4.375rem 0 0 1.875rem; } }
 
 .accueil__logo img {
   width: 70%; }
@@ -222,7 +230,18 @@ body {
 .accueil__presentation {
   background-size: 100%;
   background-image: url("/../images/abbey_mobile.jpg");
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media (min-width: 760px) {
+    .accueil__presentation {
+      background-size: 120%;
+      background-image: url("/../images/abbey.jpg"); } }
 
 .accueil__presentation p {
   margin-top: 20px;
@@ -240,6 +259,14 @@ body {
       font-size: 1.625rem;
       line-height: 30px;
       line-height: 1.875rem; } }
+  @media (min-width: 760px) {
+    .accueil__presentation p {
+      margin: 15px 0 0 30px;
+      margin: 0.9375rem 0 0 1.875rem;
+      font-size: 40px;
+      font-size: 2.5rem;
+      line-height: 40px;
+      line-height: 2.5rem; } }
 
 .accueil__presentation--text {
   background: -webkit-linear-gradient(top, #211d1e, rgba(33, 29, 30, 0.1));
@@ -254,6 +281,10 @@ body {
     .accueil__presentation--bottles {
       margin-top: 80px;
       margin-top: 5rem; } }
+  @media (min-width: 760px) {
+    .accueil__presentation--bottles {
+      margin-top: 130px;
+      margin-top: 8.125rem; } }
 
 .accueil__presentation--bottles img {
   margin: auto;
@@ -297,9 +328,9 @@ body {
 
 .accueil__presentation--discover img {
   width: 50%; }
-  @media (min-width: 470px) {
+  @media (min-width: 760px) {
     .accueil__presentation--discover img {
-      /** width: 50%; **/ } }
+      width: 70%; } }
 
 .accueil__presentation--discover a {
   text-decoration: none; }
@@ -314,6 +345,10 @@ body {
     .accueil__presentation--discover p {
       font-size: 20px;
       font-size: 1.25rem; } }
+  @media (min-width: 760px) {
+    .accueil__presentation--discover p {
+      font-size: 26px;
+      font-size: 1.625rem; } }
 
 body {
   overflow: hidden;

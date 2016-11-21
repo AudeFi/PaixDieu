@@ -13,6 +13,14 @@ body {
     @media(min-width: 340px) {
         margin: 15px 0 0 15px;
     }
+
+    @media (min-width: 370px) {
+        margin: 45px 0 0 15px;
+    }
+
+    @media (min-width: 760px) {
+        margin: 70px 0 0 30px;
+    }
 }
 
 .accueil__logo img {
@@ -27,6 +35,13 @@ body {
     background-size: 100%;
     background-image: url("/../images/abbey_mobile.jpg");
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 760px) {
+        background-size: 120%;
+        background-image: url("/../images/abbey.jpg");
+    }
 }
 
 .accueil__presentation p {
@@ -40,6 +55,12 @@ body {
         font-size: 26px;
         line-height: 30px;
     }
+
+    @media (min-width: 760px) {
+        margin: 15px 0 0 30px;
+        font-size: 40px;
+        line-height: 40px;
+    }
 }
 
 .accueil__presentation--text {
@@ -52,6 +73,10 @@ body {
 
     @media(min-width: 340px) {
         margin-top: 80px;
+    }
+
+    @media(min-width: 760px) {
+        margin-top: 130px;
     }
 }
 
@@ -91,8 +116,8 @@ body {
 .accueil__presentation--discover img {
     width: 50%;
 
-    @media(min-width: 470px) {
-        /** width: 50%; **/
+    @media(min-width: 760px) {
+        width: 70%;
     }
 }
 
@@ -108,5 +133,9 @@ body {
 
     @media(min-width: 470px) {
         font-size: 20px;
+    }
+
+    @media(min-width: 760px) {
+        font-size: 26px;
     }
 }
