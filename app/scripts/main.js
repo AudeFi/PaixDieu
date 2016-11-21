@@ -48,7 +48,6 @@ function swipeEvent(target) {
 }
 
 function removeClass(selector, className) {
-    console.log(selector);
     var allElements = document.querySelectorAll(selector);
     for (var i = 0; i < allElements.length; i++) {
         allElements[i].classList.remove(className);
