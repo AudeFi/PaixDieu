@@ -266,13 +266,40 @@ p {
   height: 0.3125rem;
   background-color: #d9af33; }
 
-.story__subtitle-abbey {
-  margin: 14.125rem 1.25rem 1.5625rem 3.70rem;
-  position: absolute;
-  font-size: 26px;
-  font-size: 1.625rem;
-  font-weight: bold;
-  font-family: Kohinoor Devanagari; }
+@media (min-width: 320px) {
+  .story__subtitle-abbey {
+    margin: 1.125rem 1.25rem 1.5625rem 1.25rem;
+    position: relative;
+    font-size: 26px;
+    font-size: 1.625rem;
+    font-family: Kohinoor Devanagari; } }
+
+@media (min-width: 1200px) {
+  .story__subtitle-abbey {
+    margin: 14.125rem 1.25rem 1.5625rem 3.70rem;
+    position: absolute;
+    font-size: 26px;
+    font-size: 1.625rem;
+    font-weight: bold;
+    font-family: Kohinoor Devanagari; } }
+
+@media (min-width: 320px) {
+  .story__subtitle-abbey::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    bottom: -0.625rem;
+    left: 0px;
+    left: 0rem;
+    width: 24px;
+    width: 1.5rem;
+    height: 5px;
+    height: 0.3125rem;
+    background-color: #d9af33; } }
+
+@media (min-width: 1200px) {
+  .story__subtitle-abbey::before {
+    display: none; } }
 
 .story__image-abbey {
   border-radius: 30%;
