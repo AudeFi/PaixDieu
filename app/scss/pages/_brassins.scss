@@ -1,15 +1,15 @@
 .brassins{
     background-color:#211d1e !important;
-    .caroussel{
-        ul{
-            // —— Bottles ——
-            li.beer{
+    .carousel{
+        .carousel_listProducts{
+            /* —— Bottles —— */
+            li.carousel_product{
                 opacity: 0;
                 position: absolute;
                 left:0;
                 transition-property: transform opacity;
                 transition-duration: 0.8s;
-                .title{
+                .carousel_title{
                     transition-property: opacity;
                     transition-duration: 0.8s;
                     padding : 40px 1.25rem 0 1.25rem;
@@ -28,22 +28,22 @@
                         }
                     }
                 }
-                .bottles{
+                .carousel_bottles{
                     height:200px;
                     display: block;
                     padding:20px 0;
-                    .background{
+                    .carousel_background{
                         background-color: black;
                         height:180px;
                         margin:10px 0;
                         width:100vw;
                         position: relative;
-                        .item{
+                        .carousel_item{
                             position:absolute;
                             margin-top:-10px;
                             img{
                                 position: absolute;
-                                &.main{
+                                &.carousel_mainImg{
                                     height: 200px;
                                     z-index:2;
                                     left: 100vw;
@@ -51,7 +51,7 @@
                                     transition-duration: 0.5s;
                                     transform: scale(0.8);
                                 }
-                                &.back-img{
+                                &.carousel_backImg{
                                     transition-property: opacity;
                                     transition-duration: 0.8s;
                                     height:120px;
@@ -64,7 +64,7 @@
                         }
                     }
                 }
-                .icons{
+                .carousel_icons{
                     transition-property: opacity;
                     transition-duration: 0.8s;
                     opacity: 0;
@@ -74,7 +74,7 @@
                         li{
                             width:24%;
                             display: inline-block;
-                            .round{
+                            .carousel_round{
                                 float:left;
                                 margin: 0 10px;
                                 border : 2px solid #777576;
@@ -91,7 +91,7 @@
                         }
                     }
                 }
-                .description{
+                .carousel_description{
                     transition-property: opacity;
                     transition-duration: 0.8s;
                     opacity: 0;
@@ -101,14 +101,14 @@
                     }
                 }
             }
-            // —— Hidden Previous bottles ——
-            li.beer.active{
+            /* —— Hidden Previous bottles —— */
+            li.carousel_product.active{
                 opacity: 1;
-                .bottles{
-                    .background{
-                        .item{
+                .carousel_bottles{
+                    .carousel_background{
+                        .carousel_item{
                             img{
-                                &.main{
+                                &.carousel_mainImg{
                                     left: -20vw;
                                 }
                             }
@@ -116,14 +116,14 @@
                     }
                 }
             }
-            // —— Previous bottles ——
-            li.beer.active + li.beer{
+            /* —— Previous bottles —— */
+            li.carousel_product.active + li.carousel_product{
                 opacity: 1;
-                .bottles{
-                    .background{
-                        .item{
+                .carousel_bottles{
+                    .carousel_background{
+                        .carousel_item{
                             img{
-                                &.main{
+                                &.carousel_mainImg{
                                     z-index:2;
                                     opacity: 0.6;
                                     left: -5vw;
@@ -133,45 +133,45 @@
                     }
                 }
             }
-            // —— Active bottle ——
-            li.beer.active + li.beer + li.beer{
+            /* —— Active bottle —— */
+            li.carousel_product.active + li.carousel_product + li.carousel_product{
                 opacity: 1;
-                .title{
+                .carousel_title{
                     opacity: 1;
                 }
-                .bottles{
-                    .background{
-                        .item{
+                .carousel_bottles{
+                    .carousel_background{
+                        .carousel_item{
                             img{
-                                &.main{
+                                &.carousel_mainImg{
                                     z-index:3;
                                     transform: scale(1);
                                     opacity: 1;
                                     left: 42vw;
                                 }
-                                &.back-img{
+                                &.carousel_backImg{
                                     opacity: 1;
                                 }
                             }
                         }
                     }
                 }
-                .icons{
+                .carousel_icons{
                     opacity: 1;
                 }
-                .description{
+                .carousel_description{
                     opacity: 1;
                 }
             }
-            // —— Next bottles ——
-            li.beer.active + li.beer + li.beer + li.beer{
+            /* —— Next bottles —— */
+            li.carousel_product.active + li.carousel_product + li.carousel_product + li.carousel_product{
                 opacity: 1;
-                .bottles{
-                    .background{
+                .carousel_bottles{
+                    .carousel_background{
                         background:none;
-                        .item{
+                        .carousel_item{
                             img{
-                                &.main{
+                                &.carousel_mainImg{
                                     z-index:2;
                                     opacity: 0.6;
                                     left: 87vw;
