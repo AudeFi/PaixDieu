@@ -217,6 +217,11 @@ p {
     p {
       font-size: 20px !important;
       font-size: 1.25rem !important; } }
+  @media (min-width: 1200px) {
+    p {
+      font-size: 25px !important;
+      font-size: 1.5625rem !important;
+      margin-left: 5%; } }
 
 @media (min-width: 480) {
   .story {
@@ -235,8 +240,11 @@ p {
 
 @media (min-width: 768px) {
   .story-abbey {
-    margin-bottom: 180px;
-    margin-bottom: 11.25rem; } }
+    margin-bottom: 30%; } }
+
+@media (min-width: 992px) {
+  .story-abbey {
+    margin-bottom: 30%; } }
 
 .story__subtitle {
   margin: 1.125rem 1.25rem 1.5625rem 1.25rem;
@@ -263,6 +271,11 @@ p {
   width: 45%;
   margin-top: -6%; }
 
+.story__image-bg {
+  position: relative;
+  background-size: 70% auto;
+  background-repeat: no-repeat; }
+
 .story__image-grain {
   position: relative;
   width: 60%;
@@ -278,6 +291,9 @@ p {
   width: 50%;
   margin-left: 40%;
   margin-bottom: 5%; }
+  @media (min-width: 992px) {
+    .story__image-bouteilles {
+      width: 55%; } }
 
 .story__text-abbey {
   position: relative;
@@ -328,6 +344,9 @@ p {
       margin-top: -43%;
       font-size: 25px;
       font-size: 1.5625rem; } }
+  @media (min-width: 992px) {
+    .story__text-bouteille {
+      margin-top: -43%; } }
 
 .story__text-bouteille_litre {
   position: relative;
