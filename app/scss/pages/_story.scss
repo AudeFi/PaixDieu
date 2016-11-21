@@ -42,8 +42,8 @@ p{
     @media(min-width: 768px) {
       margin-bottom: 30%;
       }
-      @media(min-width: 992px) {
-        margin-bottom: 30%;
+      @media(min-width: 1200px) {
+        height: 80vh;
         }
 }
 
@@ -66,21 +66,24 @@ p{
     height: 0.3125rem;
     background-color: #d9af33; }
 
+.story__subtitle-abbey {
+  margin: 14.125rem 1.25rem 1.5625rem 3.70rem;
+  position: absolute;
+  font-size: 26px;
+  font-size: 1.625rem;
+  font-weight:bold ;
+  font-family: Kohinoor Devanagari; }
+
 .story__image-abbey{
   border-radius: 30%;
   width: 45%;
 
   margin-top: -6%;
-}
-
-.story__image-bg{
-  position: relative;
-
-  background-size: 70% auto;
-
-
-  background-repeat:no-repeat;
-
+  @media(min-width: 1200px) {
+    margin-top: 8%;
+    width: auto;
+    height: 72%;
+    }
 }
 
 .story__image-grain{
@@ -91,7 +94,6 @@ p{
       border-radius: 50%;
       margin-top: 10px;
       }
-
 }
 
 .story__image-bouteilles{
@@ -118,6 +120,22 @@ margin-top: -10%;
           margin-top: -35%;
           font-size: 20px;
           }
+            @media(min-width: 1200px) {
+              margin-right: 55%;
+              margin-top: -25%;
+              font-size: 20px;
+            }
+}
+
+.story__text-abbey_scroll{
+  display: none;
+  @media(min-width: 1200px) {
+    margin-right: 55%;
+    margin-top: -25%;
+    font-size: 20px;
+    color: $color-yellow;
+    display: inline-block;
+  }
 }
 
 .story__text-grain_1{
