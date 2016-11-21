@@ -82,9 +82,6 @@ var menuState = "swipe";
 
 var controlsButton = document.querySelectorAll('.controls_button');
 for (var i = 0; i < controlsButton.length; i++) {
-    // ON DESKTOP - MOUSE EVENT
-    /*controlsButton[i].addEventListener('mousedown', startingClickMenu );
-    controlsButton[i].addEventListener('mouseup', endingClickMenu );*/
     // ON MOBILE - TOUCH EVENT
     controlsButton[i].addEventListener('touchstart', startingClickMenu );
     controlsButton[i].addEventListener('touchend', endingClickMenu );
