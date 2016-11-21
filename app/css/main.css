@@ -202,14 +202,21 @@ body {
   background-color: #211D1E;
   color: white; }
 
+.accueil {
+  width: 100vh; }
+
+.accueil__logo {
+  margin: 0 0 0 15px;
+  margin: 0 0 0 0.9375rem; }
+  @media (min-width: 340px) {
+    .accueil__logo {
+      margin: 15px 0 0 15px;
+      margin: 0.9375rem 0 0 0.9375rem; } }
+
 .accueil__logo img {
-  margin: 50px 0 0 15px;
-  margin: 3.125rem 0 0 0.9375rem;
   width: 70%; }
   @media (min-width: 470px) {
     .accueil__logo img {
-      margin: 20px 0 0 15px;
-      margin: 1.25rem 0 0 0.9375rem;
       width: 40%; } }
 
 .accueil__presentation {
@@ -241,8 +248,12 @@ body {
 .accueil__presentation--bottles {
   background: -webkit-linear-gradient(top, rgba(33, 29, 30, 0.1), #211d1e);
   background: linear-gradient(to bottom, rgba(33, 29, 30, 0.1), #211d1e);
-  margin-top: 60px;
-  margin-top: 3.75rem; }
+  margin-top: 20px;
+  margin-top: 1.25rem; }
+  @media (min-width: 340px) {
+    .accueil__presentation--bottles {
+      margin-top: 80px;
+      margin-top: 5rem; } }
 
 .accueil__presentation--bottles img {
   margin: auto;
@@ -285,10 +296,10 @@ body {
           align-items: center; }
 
 .accueil__presentation--discover img {
-  width: 60%; }
+  width: 50%; }
   @media (min-width: 470px) {
     .accueil__presentation--discover img {
-      width: 50%; } }
+      /** width: 50%; **/ } }
 
 .accueil__presentation--discover a {
   text-decoration: none; }
@@ -296,13 +307,13 @@ body {
 .accueil__presentation--discover p {
   margin-top: 0;
   margin-left: 0;
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 17px;
+  font-size: 1.0625rem;
   font-family: Kohinoor Devanagari SemiBold; }
   @media (min-width: 470px) {
     .accueil__presentation--discover p {
-      font-size: 16px;
-      font-size: 1rem; } }
+      font-size: 20px;
+      font-size: 1.25rem; } }
 
 body {
   overflow: hidden;
