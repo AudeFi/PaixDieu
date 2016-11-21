@@ -47,35 +47,18 @@ var check = {}; // On met toutes nos fonctions dans un objet littéral
 check['form__name__input'] = function(id) {
 
     var name = document.getElementById(id),
-        alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','é','è','à','ù','ç','â','ê','î','ô','û','ë','ï','-'],
-        cpt = 0,
+        regex = /^[a-zA-Z ]{2,30}$/,
         tooltipStyle = getTooltip(name).style;
-
-    if (name.value.length >= 2) {
-
-        for(var i = 0; i < name.value.length; i++){
-            for(var j = 0; j < alphabet.length; j++){
-                if(name.value[i] == alphabet[j] || name.value[i] == " "){
-                    cpt++;
-                    i++;
-                    j = 0;
-                }
-                if(j+1 == alphabet.length && cpt < i){
-                    name.className += ' incorrect';
-                    tooltipStyle.display = 'block';
-                    return false;
-                }
-            }
-        }
-
-        name.className += ' correct';
-        tooltipStyle.display = 'none';
-        return true;
-    } 
-    else {
+    
+    if(!regex.test(name.value)){
         name.className += ' incorrect';
         tooltipStyle.display = 'block';
         return false;
+    }
+    else{
+        name.className += ' correct';
+        tooltipStyle.display = 'none';
+        return true;
     }
 
 };
@@ -84,100 +67,19 @@ check['form__email__input'] = function(id) {
 
     var email = document.getElementById(id),
         tooltipStyle = getTooltip(email).style,
-        alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9','.','_','-'],
-        cpt = 0;
+        regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
     
-    if(email.value == ""){
+    if(!regex.test(email.value)){
         email.className += ' incorrect';
         tooltipStyle.display = 'block';
         return false;
     }
-
-    for(var i = 0; i < email.value.length; i++){
-
-        if(email.value[i] == "@"){
-            var local_email = email.value.substring(0,i),
-                serv_email = email.value.substring(i+1);
-            i = email.value.length + 1;
-        }
-    }
-
-    if(i != email.value.length + 2 || local_email == "" || serv_email == ""){
-        email.className += ' incorrect';
-        tooltipStyle.display = 'block';
-        return false;
-    }
-
-    for(var i = 0; i < serv_email.length; i++){
-        if(serv_email[i] == "."){
-            var domain_email = serv_email.substring(i+1);
-            serv_email = serv_email.substring(0,i);
-            i = serv_email.length + 1;
-        }
-    }
-
-    if(i != serv_email.length + 2 || domain_email == ""){
-        email.className += ' incorrect';
-        tooltipStyle.display = 'block';
-        return false;
-    }
-
-    if (local_email.length >= 1 && serv_email.length >= 1 && domain_email.length >= 1) {
-
-        for(var i = 0; i < local_email.length; i++){
-            for(var j = 0; j < alphabet.length; j++){
-                if(local_email[i] == alphabet[j]){
-                    cpt++;
-                    i++;
-                    j = 0;
-                }
-                if(j+1 == alphabet.length && cpt < i){
-                    email.className += ' incorrect';
-                    tooltipStyle.display = 'block';
-                    return false;
-                }
-            }
-        }
-
-        for(var i = 0; i < serv_email.length; i++){
-            for(var j = 0; j < alphabet.length; j++){
-                if(serv_email[i] == alphabet[j]){
-                    cpt++;
-                    i++;
-                    j = 0;
-                }
-                if(j+1 == alphabet.length && cpt < i){
-                    email.className += ' incorrect';
-                    tooltipStyle.display = 'block';
-                    return false;
-                }
-            }
-        }
-
-        for(var i = 0; i < domain_email.length; i++){
-            for(var j = 0; j < alphabet.length; j++){
-                if(domain_email[i] == alphabet[j]){
-                    cpt++;
-                    i++;
-                    j = 0;
-                }
-                if(j+1 == alphabet.length && cpt < i){
-                    email.className += ' incorrect';
-                    tooltipStyle.display = 'block';
-                    return false;
-                }
-            }
-        }
-
+    else{
         email.className += ' correct';
         tooltipStyle.display = 'none';
         return true;
-    } 
-    else {
-        email.className += ' incorrect';
-        tooltipStyle.display = 'block';
-        return false;
     }
+    
 
 };
 
