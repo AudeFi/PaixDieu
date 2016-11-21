@@ -10,7 +10,9 @@ var mySwiper = new Swiper ('.swiper-container', { // Init swiper
     pagination: '.swiper-pagination',
     paginationType: 'bullets',
     nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev'
+    prevButton: '.swiper-button-prev',
+    keyboardControl : true,
+    preventClicks: true,
 });
 
 // EVENTS
