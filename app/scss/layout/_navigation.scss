@@ -48,7 +48,7 @@ body{
 }
 
 
-.controls {
+.controlsMobile {
   position: fixed;
   width: 100%;
   padding: 20px;
@@ -157,4 +157,73 @@ body{
       display: block;
     }
   }
+}
+
+.controlsDesktop {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .controlsMobile {
+    display: none;
+  }
+
+  .controlsDesktop {
+    display: block;
+    .controls_nextPrev {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      margin-top: -15px
+    }
+    .swiper-button-prev, .swiper-button-next {
+      background-image: none;
+      position: relative;
+      display: block;
+      left: 0px;
+      right: 0px;
+      width: 50px;
+      height: 50px;
+    }
+    .swiper-button-next {
+      margin-bottom: 30px;
+    }
+    .swiper-button-disabled {
+      opacity: 0.5;
+    }
+    .controls_mainPages {
+      z-index: 3;
+      position: fixed;
+      bottom: 30px;
+      width: 100%;
+      font-size: 20px;
+      text-align: center;
+      color: $yellow-disabled;
+      li {
+        display: inline;
+        height: 30px;
+        margin: auto 30px;
+        cursor: pointer;
+        &.active {
+          color: white;
+        }
+        &:hover {
+          color: white;
+        }
+      }
+    }
+    .controls_contactLink {
+      position: absolute;
+      z-index: 4;
+      bottom: 30px;
+      right: 45px;
+      &:active svg .svgColor, :focus svg .svgColor, svg .svgColor{
+        fill: $yellow-disabled;
+      }
+      &:hover svg .svgColor {
+        fill: $color-yellow;
+      }
+    }
+  }
+
 }
