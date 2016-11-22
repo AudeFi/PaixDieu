@@ -7,7 +7,14 @@ function displayAmbassadorPoint(ambassador, map) // on passe l'ambassadeur pour 
       map: map,
     });  
 
-    console.log(marker);
+    google.maps.event.addListener(marker, 'click', function() {
+    	console.log(ambassador.name);
+    	event.preventDefault();
+
+    	// Redirect instead with JavaScript
+    	window.location.href = window.location.href + '?bar='+ambassador.name;
+
+    });
 }
 
 
