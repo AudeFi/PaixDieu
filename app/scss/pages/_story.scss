@@ -1,216 +1,219 @@
-// block-name
-// block-name_modifier_name
-// block-name__element-name
-// block-name__element-name_modifier_name
+  .histoire {
 
-body {
-  background-color: $background-color;
-  color: white;
-}
-img {
-  width: 50%;
-  margin-left: 45%;
-}
+  // block-name
+  // block-name_modifier_name
+  // block-name__element-name
+  // block-name__element-name_modifier_name
 
-p{
-  font-size: 16px;
-  @media(min-width: 480px) {
+  body {
+    background-color: $background-color;
+    color: white;
+  }
+  img {
+    width: 50%;
+    margin-left: 45%;
+  }
+
+  p{
+    font-size: 16px;
+    @media(min-width: 480px) {
+      font-size: 26px;
+    }
+      @media(min-width: 768px) {
+        font-size: 20px !important;
+      }
+        @media(min-width: 1200px) {
+          font-size: 25px !important;
+          margin-left: 5%;
+        }
+  }
+
+  .story{
+    @media(min-width: 480) {
+      margin-bottom: 20px;
+    }
+      @media(min-width: 768px) {
+        margin-bottom: 80px;
+      }
+  }
+
+  .story-abbey{
+    @media(min-width: 480) {
+      margin-bottom: 60px;
+    }
+      @media(min-width: 768px) {
+        margin-bottom: 30%;
+      }
+        @media(min-width: 1200px) {
+          height: calc(100vh - 80px);
+
+        }
+  }
+
+  .story__subtitle {
+    margin: 1.125rem 1.25rem 1.5625rem 1.25rem;
+    position: relative;
     font-size: 26px;
-  }
-    @media(min-width: 768px) {
-      font-size: 20px !important;
-    }
-      @media(min-width: 1200px) {
-        font-size: 25px !important;
-        margin-left: 5%;
-      }
-}
+    font-size: 1.625rem;
+    font-family: Kohinoor Devanagari; }
+    .story__subtitle::before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      bottom: -0.625rem;
+      left: 0px;
+      left: 0rem;
+      width: 24px;
+      width: 1.5rem;
+      height: 5px;
+      height: 0.3125rem;
+      background-color: #d9af33; }
 
-.story{
-  @media(min-width: 480) {
-    margin-bottom: 20px;
-  }
-    @media(min-width: 768px) {
-      margin-bottom: 80px;
-    }
-}
-
-.story-abbey{
-  @media(min-width: 480) {
-    margin-bottom: 60px;
-  }
-    @media(min-width: 768px) {
-      margin-bottom: 30%;
-    }
-      @media(min-width: 1200px) {
-        height: calc(100vh - 80px);
-
-      }
-}
-
-.story__subtitle {
-  margin: 1.125rem 1.25rem 1.5625rem 1.25rem;
-  position: relative;
-  font-size: 26px;
-  font-size: 1.625rem;
-  font-family: Kohinoor Devanagari; }
-  .story__subtitle::before {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    bottom: -0.625rem;
-    left: 0px;
-    left: 0rem;
-    width: 24px;
-    width: 1.5rem;
-    height: 5px;
-    height: 0.3125rem;
-    background-color: #d9af33; }
-
-    .story__subtitle-abbey {
-      @media(min-width: 320px){
-        margin: 1.125rem 1.25rem 1.5625rem 1.25rem;
-        position: relative;
-        font-size: 26px;
-        font-size: 1.625rem;
-        font-family: Kohinoor Devanagari;
-      }
-        @media(min-width: 1200px){
-          margin: 8.125rem 1.25rem 1.5625rem 3.70rem;
-          position: absolute;
+      .story__subtitle-abbey {
+        @media(min-width: 320px){
+          margin: 1.125rem 1.25rem 1.5625rem 1.25rem;
+          position: relative;
           font-size: 26px;
           font-size: 1.625rem;
-          font-weight:bold ;
-          font-family: Kohinoor Devanagari; }
+          font-family: Kohinoor Devanagari;
         }
-        .story__subtitle-abbey::before {
-          @media(min-width: 320px) {
-            content: '';
+          @media(min-width: 1200px){
+            margin: 8.125rem 1.25rem 1.5625rem 3.70rem;
             position: absolute;
-            bottom: -10px;
-            bottom: -0.625rem;
-            left: 0px;
-            left: 0rem;
-            width: 24px;
-            width: 1.5rem;
-            height: 5px;
-            height: 0.3125rem;
-            background-color: #d9af33;
+            font-size: 26px;
+            font-size: 1.625rem;
+            font-weight:bold ;
+            font-family: Kohinoor Devanagari; }
           }
-          @media(min-width: 1200px) {
-            display: none;
+          .story__subtitle-abbey::before {
+            @media(min-width: 320px) {
+              content: '';
+              position: absolute;
+              bottom: -10px;
+              bottom: -0.625rem;
+              left: 0px;
+              left: 0rem;
+              width: 24px;
+              width: 1.5rem;
+              height: 5px;
+              height: 0.3125rem;
+              background-color: #d9af33;
+            }
+            @media(min-width: 1200px) {
+              display: none;
+            }
           }
-        }
 
-.story__image-abbey{
-border-radius: 30%;
-width: 45%;
+  .story__image-abbey{
+  border-radius: 30%;
+  width: 45%;
 
-margin-top: -6%;
-  @media(min-width: 1200px) {
-    margin-top: 2%;
-    width: auto;
-    height: 82%;
+  margin-top: -6%;
+    @media(min-width: 1200px) {
+      margin-top: 2%;
+      width: auto;
+      height: 82%;
+    }
   }
-}
 
-.story__image-grain{
-position: relative;
-width: 60%;
-margin-left: 20%;
-  @media(min-width: 480px) {
-    border-radius: 50%;
-    margin-top: 10px;
+  .story__image-grain{
+  position: relative;
+  width: 60%;
+  margin-left: 20%;
+    @media(min-width: 480px) {
+      border-radius: 50%;
+      margin-top: 10px;
+    }
   }
-}
 
-.story__image-bouteilles{
-position: relative;
-width: 50%;
-margin-left: 40%;
-margin-bottom: 5%;
-  @media(min-width: 992px) {
-    width: 55%;
+  .story__image-bouteilles{
+  position: relative;
+  width: 50%;
+  margin-left: 40%;
+  margin-bottom: 5%;
+    @media(min-width: 992px) {
+      width: 55%;
+    }
   }
-}
 
-.story__text-abbey{
-position: relative;
-margin-top: -10%;
-  @media(min-width: 480px) {
-    margin-right: 55%;
-    margin-top: -35%;
-    font-size: 20px;
-    margin-bottom: 15%;
-  }
-    @media(min-width: 768px) {
+  .story__text-abbey{
+  position: relative;
+  margin-top: -10%;
+    @media(min-width: 480px) {
       margin-right: 55%;
       margin-top: -35%;
       font-size: 20px;
+      margin-bottom: 15%;
     }
-      @media(min-width: 1200px) {
+      @media(min-width: 768px) {
         margin-right: 55%;
-        margin-top: -25%;
+        margin-top: -35%;
         font-size: 20px;
       }
-}
-
-.story__text-abbey_scroll{
-display: none;
-  @media(min-width: 1200px) {
-    margin-right: 55%;
-    margin-top: -25%;
-    font-size: 20px;
-    color: $color-yellow;
-    display: inline-block;
+        @media(min-width: 1200px) {
+          margin-right: 55%;
+          margin-top: -25%;
+          font-size: 20px;
+        }
   }
-}
 
-.story__text-grain_1{
-position: relative;
-  @media(min-width: 480px){
-    font-size: 20px;
-  }
-}
-
-.story__text-grain_2{
-position: relative;
-margin-left: 20px;
-margin-right: 20px;
-  @media(min-width: 480px) {
-    font-size: 20px;
-    margin-bottom:10%;
-  }
-}
-
-.story__text-bouteille{
-position: relative;
-margin-top: -45%;
-  @media(min-width: 480px) {
-    font-size: 20px;
-    margin-top: -40%;
-  }
-    @media(min-width: 768px) {
-      margin-top: -43%;
-      font-size: 25px;
+  .story__text-abbey_scroll{
+  display: none;
+    @media(min-width: 1200px) {
+      margin-right: 55%;
+      margin-top: -25%;
+      font-size: 20px;
+      color: $color-yellow;
+      display: inline-block;
     }
-      @media(min-width: 992px) {
+  }
+
+  .story__text-grain_1{
+  position: relative;
+    @media(min-width: 480px){
+      font-size: 20px;
+    }
+  }
+
+  .story__text-grain_2{
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+    @media(min-width: 480px) {
+      font-size: 20px;
+      margin-bottom:10%;
+    }
+  }
+
+  .story__text-bouteille{
+  position: relative;
+  margin-top: -45%;
+    @media(min-width: 480px) {
+      font-size: 20px;
+      margin-top: -40%;
+    }
+      @media(min-width: 768px) {
         margin-top: -43%;
+        font-size: 25px;
       }
-}
-
-.story__text-bouteille_litre{
-position: relative;
-margin-top: 30px;
-  @media(min-width: 480px) {
-    font-size: 20px;
+        @media(min-width: 992px) {
+          margin-top: -43%;
+        }
   }
-    @media(min-width: 768px) {
-      margin-top: 10%;
-      font-size: 25px;
-    }
-}
 
-.story__text-highlight{
-font-weight: bold;
+  .story__text-bouteille_litre{
+  position: relative;
+  margin-top: 30px;
+    @media(min-width: 480px) {
+      font-size: 20px;
+    }
+      @media(min-width: 768px) {
+        margin-top: 10%;
+        font-size: 25px;
+      }
+  }
+
+  .story__text-highlight{
+  font-weight: bold;
+  }
 }
