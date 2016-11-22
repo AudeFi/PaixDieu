@@ -34,9 +34,13 @@ body{
     background-color:$background-color;
     &.accueil{
         background-color:$background-color;
+
+        @media (min-width: 1024px) {
+          background-color:black;
+        }
     }
     &.histoire{
-      background-color:blue;
+        background-color:blue;
     }
     &.deguster{
         background-color:red;
