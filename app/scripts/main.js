@@ -15,7 +15,7 @@ var mySwiper = new Swiper ('.swiper-container', { // Init swiper
 // EVENTS
 
 //When I swipe manually (the hash change and I change the active menu item)
-window.onhashchange = function(){ 
+window.onhashchange = function(){
     var hash = document.location.hash.split('#')[1];
     var currentSwitch = document.querySelector('.swiper-pagination-switch.'+ hash );
 
@@ -27,7 +27,7 @@ window.onhashchange = function(){
     else {
         swipeEvent(currentSwitch);
     }
-    document.querySelector('.controls_pageTitle').innerHTML = document.querySelector('.swiper-pagination-switch.active').textContent;    
+    document.querySelector('.controls_pageTitle').innerHTML = document.querySelector('.swiper-pagination-switch.active').textContent;
 };
 //When I click on a section in the menu
 var allSwitcher = document.querySelectorAll('.swiper-pagination-switch');
@@ -45,6 +45,7 @@ function swipeEvent(target) {
     removeActiveClass();
     target.classList.add('active');
 }
+
 
 function removeActiveClass() {
     var allSwitcher = document.querySelectorAll('.swiper-pagination-switch');
@@ -87,11 +88,11 @@ function startingClickMenu() {
         mySwiper.unlockSwipes();
         menuState = "close";
     } else {
-        pressTimer = window.setTimeout(function() { 
+        pressTimer = window.setTimeout(function() {
             document.querySelector('.controls_menuOpen').classList.add('openned');
             menuState = "open";
             mySwiper.lockSwipes(); // If we oppened the menu with a long press on next button, don't swipe to next slide
-        },300); 
+        },300);
     }
     return false;
 }

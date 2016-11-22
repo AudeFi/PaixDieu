@@ -244,7 +244,8 @@ p {
 
 @media (min-width: 1200px) {
   .story-abbey {
-    height: 80vh; } }
+    height: calc(100vh - 80px);
+    height: calc(100vh - 5rem); } }
 
 .story__subtitle {
   margin: 1.125rem 1.25rem 1.5625rem 1.25rem;
@@ -276,7 +277,7 @@ p {
 
 @media (min-width: 1200px) {
   .story__subtitle-abbey {
-    margin: 14.125rem 1.25rem 1.5625rem 3.70rem;
+    margin: 8.125rem 1.25rem 1.5625rem 3.70rem;
     position: absolute;
     font-size: 26px;
     font-size: 1.625rem;
@@ -307,9 +308,9 @@ p {
   margin-top: -6%; }
   @media (min-width: 1200px) {
     .story__image-abbey {
-      margin-top: 8%;
+      margin-top: 2%;
       width: auto;
-      height: 72%; } }
+      height: 82%; } }
 
 .story__image-grain {
   position: relative;
