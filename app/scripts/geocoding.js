@@ -1,6 +1,10 @@
 // appel pour afficher le marker
 function displayAmbassadorPoint(ambassador, map) // on passe l'ambassadeur pour recup les infos pr afficher marker
 { 
+	var infowindow = new google.maps.InfoWindow({
+    	content: contentString
+  	});
+
     var marker = new google.maps.Marker({
       position: ambassador.coords,
       title: ambassador.name,
@@ -12,12 +16,26 @@ function displayAmbassadorPoint(ambassador, map) // on passe l'ambassadeur pour 
     	event.preventDefault();
 
     	// Redirect instead with JavaScript
-    	window.location.href = window.location.href + '?bar='+ambassador.name;
+    	urlParametersBrasserie(ambassador.name);
 
     });
+
+    function urlParametersBrasserie(index) {
+    _url = location.href;
+    idMark = _url.indexOf("?");
+    if (idMark != (-1) )
+        _url = _url.substring(0, idMark);
+    _url = _url + '?bar=' + index;
+    location.href = _url;
 }
 
-
+	// Check if url already on a specific bottle
+	if (paramBrasserie != 1) {
+	    setTimeout(function(){
+	        urlParametersBrasserie(paramBrasserie);
+	    }, 1000);
+	}
+}
 
 function getLocation(ambassador, success, map)
 {

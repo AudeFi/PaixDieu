@@ -68,6 +68,7 @@ function addClass(selector, className) {
 // Get the position in the page at first connection on the website and update the menu current item
 var hash = document.location.hash.split('#')[1];
 var paramBrassin = 1; // Default to first one
+var paramBrasserie;
 if (hash == undefined) {  // If I don't have a specific slide, put #accueil
     document.location.hash = 'accueil';
     hash = 'accueil';
@@ -77,8 +78,8 @@ if (hash.indexOf("brassins?") != -1 ) { // If i have parameters on a specific bo
     paramBrassin = hash.substring(hash.indexOf("=") + 1); //Save parameter
     hash = hash.substring(0, hash.indexOf("?")); // Get the hash without parameter
     swipeEvent( document.querySelector('.swiper-pagination-switch.'+ hash ) ); // Force swipe to the page
-} else if (hash.indexOf("degustez?") != -1 ) { // If i have parameters on a specific bar
-    var paramBrasserie = hash.substring(hash.indexOf("=") + 1); //Save parameter
+} else if (hash.indexOf("deguster?") != -1 ) { // If i have parameters on a specific bar
+    paramBrasserie = hash.substring(hash.indexOf("=") + 1); //Save parameter
     hash = hash.substring(0, hash.indexOf("?")); // Get the hash without parameter
     swipeEvent( document.querySelector('.swiper-pagination-switch.'+ hash ) ); // Force swipe to the page
 }
