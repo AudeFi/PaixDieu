@@ -9,7 +9,8 @@ var mySwiper = new Swiper ('.swiper-container', { // Init swiper
     hashnav:true,
     pagination: '.swiper-pagination',
     paginationType: 'bullets',
-    /*nextButton: '.swiper-button-next'*/
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev'
 });
 
 // EVENTS
@@ -21,8 +22,8 @@ window.onhashchange = function(){
 
     var backbutton = true; // back button options =! change url option (not the same event but I can't distinct them)
     if (backbutton == false) {
-        removeActiveClass();
-        currentSwitch.classList.add('active');
+        removeClass('.swiper-pagination-switch', 'active');
+        addClass('.swiper-pagination-switch.' + hash, 'active');
     }
     else {
         swipeEvent(currentSwitch);
@@ -34,7 +35,7 @@ var allSwitcher = document.querySelectorAll('.swiper-pagination-switch');
 for (var i = 0; i < allSwitcher.length; i++) {
     allSwitcher[i].addEventListener('click', function(){
         mySwiper.unlockSwipes(); //After opening the menu, unlock the ability to swipe next
-        document.querySelector('.controls_menuOpen').classList.remove('openned');
+        removeClass('.controls_menuOpen', 'openned');
         menuState = "swipe";
         swipeEvent( this );
     });
@@ -42,15 +43,23 @@ for (var i = 0; i < allSwitcher.length; i++) {
 
 function swipeEvent(target) {
     mySwiper.slideTo(target.dataset.indexnumber);
-    removeActiveClass();
-    target.classList.add('active');
+    removeClass('.swiper-pagination-switch', 'active');
+    addClass('[data-indexnumber="' + target.dataset.indexnumber + '"]', 'active');
 }
 
 
-function removeActiveClass() {
-    var allSwitcher = document.querySelectorAll('.swiper-pagination-switch');
-    for (var i = 0; i < allSwitcher.length; i++) {
-        allSwitcher[i].classList.remove('active');
+function removeClass(selector, className) {
+    var allElements = document.querySelectorAll(selector);
+    for (var i = 0; i < allElements.length; i++) {
+        allElements[i].classList.remove(className);
+    }
+}
+
+function addClass(selector, className) {
+    var allElements = document.querySelectorAll(selector);
+    for (var i = 0; i < allElements.length; i++) {
+        allElements[i].classList.add(className);
+
     }
 }
 
@@ -61,8 +70,8 @@ if (hash == undefined) {
     hash = 'accueil';
 }
 
-removeActiveClass();
-document.querySelector('.swiper-pagination-switch.'+ hash ).classList.add('active');
+removeClass('.swiper-pagination-switch', 'active');
+addClass('.swiper-pagination-switch.' + hash, 'active');
 document.querySelector('.controls_pageTitle').innerHTML = document.querySelector('.swiper-pagination-switch.active').textContent;
 
 
@@ -74,9 +83,6 @@ var menuState = "swipe";
 
 var controlsButton = document.querySelectorAll('.controls_button');
 for (var i = 0; i < controlsButton.length; i++) {
-    // ON DESKTOP - MOUSE EVENT
-    /*controlsButton[i].addEventListener('mousedown', startingClickMenu );
-    controlsButton[i].addEventListener('mouseup', endingClickMenu );*/
     // ON MOBILE - TOUCH EVENT
     controlsButton[i].addEventListener('touchstart', startingClickMenu );
     controlsButton[i].addEventListener('touchend', endingClickMenu );
@@ -84,12 +90,12 @@ for (var i = 0; i < controlsButton.length; i++) {
 
 function startingClickMenu() {
     if (menuState == "open") {
-        document.querySelector('.controls_menuOpen').classList.remove('openned');
+        removeClass('.controls_menuOpen', 'openned');
         mySwiper.unlockSwipes();
         menuState = "close";
     } else {
         pressTimer = window.setTimeout(function() {
-            document.querySelector('.controls_menuOpen').classList.add('openned');
+            addClass('.controls_menuOpen', 'openned');
             menuState = "open";
             mySwiper.lockSwipes(); // If we oppened the menu with a long press on next button, don't swipe to next slide
         },300);

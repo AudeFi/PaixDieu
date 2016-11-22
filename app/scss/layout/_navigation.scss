@@ -46,20 +46,21 @@ body{
   }
 }
 
+/* GLOBAL */
+.controls_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 
-.controls {
+.controlsMobile {
   position: fixed;
   width: 100%;
   padding: 20px;
   height: 80px;
   z-index: 2;
+  background-color: $background-color;
 
-  /* GLOBAL */
-  .controls_wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
   .swiper-pagination-bullet {
     border: 1px solid $color-yellow;
     opacity: 1;
@@ -156,4 +157,82 @@ body{
       display: block;
     }
   }
+}
+
+.controlsDesktop {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .controlsMobile {
+    display: none;
+  }
+
+  .controlsDesktop {
+    display: block;
+    .controls_nextPrev {
+      position: absolute;
+      top: 50%;
+      right: 50px;
+      margin-top: -15px
+    }
+    .swiper-button-prev, .swiper-button-next {
+      background-image: none;
+      position: relative;
+      display: block;
+      left: 0px;
+      right: 0px;
+      width: 50px;
+      height: 50px;
+    }
+    .swiper-button-next {
+      margin-bottom: 30px;
+    }
+    .swiper-button-disabled {
+      opacity: 0.5;
+    }
+
+    .controls_menuItems {
+      z-index: 3;
+      position: fixed;
+      bottom: 30px;
+      width: 100%;
+    }
+    .controls_mainPages {
+      width: 100%;
+      font-size: 20px;
+      text-align: center;
+      color: $yellow-disabled;
+      li {
+        display: inline;
+        height: 30px;
+        margin: auto 30px;
+        cursor: pointer;
+        &.active {
+          color: white;
+        }
+        &:hover {
+          color: $color-yellow;
+        }
+      }
+    }
+    .controls_otherPages {
+      position: absolute;
+      right: 35px;
+      bottom: -15px;
+      font-size: 12px;
+      text-align: center;
+      li {
+        margin: 10px auto;
+      }
+      a {
+        text-decoration: none;
+        color: $yellow-disabled;
+      }
+      a:hover{
+        color: $color-yellow;
+      }
+    }
+  }
+
 }
