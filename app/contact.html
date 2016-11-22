@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="name" content="content">
+        <meta name="viewport" content="device-width, initial-scale=1">
+        <meta property="og:description" content="Découvrez le seule bière brassée à la pleine lune" />
+        <meta property="og:image"       content="https://audeficheux.com/paix-dieu/images/sharePhoto.jpg" />
+        <!--build:css styles/style.min.css-->
+        <link rel="stylesheet" href="css/main.css" media="screen" charset="utf-8">
+        <!--endbuild-->
+        <title>Paix Dieu</title>
+    </head>
+    <body>
+
+        <section class="contact_wrapper">
+
+            <svg class="exitButton" width="40px" height="40px" viewBox="0 0 76 76">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-299.000000, -1786.000000)" fill="#DAB01F"><g transform="translate(299.000000, 1786.000000)"><g id="Group">
+                    <path d="M37.601,39.7553455 L48.8041821,50.5741327 L50.8878425,48.4164392 L40.2468834,38.1405845 L51.0139358,26.9909754 L48.8562248,24.9063151 L38.0891725,36.0559242 L37.601,36.5616801 L37.1128275,36.0559242 L26.3457752,24.9063151 L24.1880642,26.9909754 L34.9551166,38.1405845 L24.3141575,48.4164392 L26.3978179,50.5741327 L37.601,39.7553455 Z M37.75,0 C16.901,0 0,16.901 0,37.75 C0,58.599 16.901,75.5 37.75,75.5 C58.599,75.5 75.5,58.599 75.5,37.75 C75.5,16.901 58.598,0 37.75,0 Z" id="Combined-Shape"></path>
+                    </g></g></g></g>
+            </svg>
+
+
+            <h2 class="subtitle">Nous contacter
+                <span class="subtitle_underline"></span>
+            </h2>
+
+            <form id="form__group" class="form__group" method=POST>
+
+                <input id="form__statut-individual__input" class="form__group form__statut-individual__input" type="radio" name="statut_user" value="form__statut-individual__input" checked="checked"/>
+                <label class="form__group form__statut-individual__label" for="form__statut-individual__input">particulier</label>
+
+                <input id="form__statut-professional__input" class="form__group form__statut-professional__input" type="radio" name="statut_user" value="form__statut-professional__input"/>
+                <label class="form__group form__statut-professional__label" for="form__statut-professional__input">professionnel</label>
+                <span class="tooltip">Vous devez selectionner votre statut ! êtes vous un particulier ou un professionnel</span>
+
+                <input id="form__name__input" class="form__group form__name__input" type="text" placeholder="nom" name="form__name__input"/>
+                <span class="tooltip">Le nom doit contenir au moins 2 caractères et ne peut contenir de nombres ou caractères spéciaux [0,9]-[!,@]</span>
+
+
+                <input id="form__email__input" class="form__group form__email__input" type="email" placeholder="adresse e-mail" name="form__email__input"/>
+                <span class="tooltip">L'email saisi n'est pas valide</span>
+
+                <textarea id="form__message__textarea" class="form__group form__message__textarea" placeholder="message" name="form__message__input"></textarea>
+                <span class="tooltip">Votre message est vide</span>
+
+                <input id="form__submit__input" class="form__group form__submit__input" type="submit" value="ENVOYER" action="#"/>
+
+            </form>
+        </section>
+
+        <script>
+            document.querySelector('.exitButton').addEventListener('click', function(){
+                window.history.back(); 
+                // If the user comes from another website, it won't work
+                // Need to simply go back to home page
+            });
+        </script>
+        <!--build:js script/main.min.js -->
+        <script src="scripts/contact.js"></script>
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+    </body>
+
+</html>
+
+
