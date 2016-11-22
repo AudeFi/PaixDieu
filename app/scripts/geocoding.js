@@ -1,6 +1,21 @@
 // appel pour afficher le marker
 function displayAmbassadorPoint(ambassador, map) // on passe l'ambassadeur pour recup les infos pr afficher marker
 { 
+
+	var contentString = '<div id="content">'+
+      	'<div id="siteNotice">'+
+      	'</div>'+
+      	'<h1 id="firstHeading" class="firstHeading">'+ ambassador.name +'</h1>'+
+      	'<div id="bodyContent">'+
+      	'Adresse : ' + ambassador.place +
+      	'<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+      	'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+      	'(last visited June 22, 2009).</p>'+
+      	'</div>'+
+      	'</div>';
+
+    var currentInfowindow = null;
+
 	var infowindow = new google.maps.InfoWindow({
     	content: contentString
   	});
@@ -10,6 +25,14 @@ function displayAmbassadorPoint(ambassador, map) // on passe l'ambassadeur pour 
       title: ambassador.name,
       map: map,
     });  
+
+	google.maps.event.addListener(marker, 'click', function() { 
+    	if (currentInfowindow != null) { 
+    	    currentInfowindow.close(); 
+    	} 
+    	infowindow.open(map, marker); 
+    	currentInfowindow = infowindow; 
+	}); 
 
     google.maps.event.addListener(marker, 'click', function() {
     	console.log(ambassador.name);
