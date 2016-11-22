@@ -1,21 +1,25 @@
-<div id="your_age" class="page">
-  <section class="your_age--question">
-    <h1 class="subtitle">Paix Dieu</h1>
-    <p>Pour visiter ce site, veuillez confirmer que vous ayez bien l'âge légal.</p>
-  </section>
+<div class="modal your_age">
+  <div class="modal-inner">
+    <div class="modal-content">
+      <div class="your_age--question">
+        <h1 class="subtitle">Paix Dieu</h1>
+        <p>Pour visiter ce site, veuillez confirmer que vous ayez bien l'âge légal.</p>
+      </div>
 
-  <section class="your_age--answer">
-    <button><a href="">Oui, j'ai plus de 18 ans</a></button>
-    <button><a href="underaged.html">Non, j'ai moins de 18 ans</a></button>
-  </section>
-</div>
+      <div class="your_age--answer">
+        <button><a rel="modal:close">Oui, j'ai plus de 18 ans</a></button>
+        <button><a href="underaged.html">Non, j'ai moins de 18 ans</a></button>
+      </div>
+    </div>
 
-<div id="underaged" class="page hidden">
-  <section class="underaged--text">
-    <p>Désolé, vous n'avez pas l'âge légal pour accéder à ce site.</p>
-  </section>
+    <div class="underaged hidden">
+      <div class="underaged--text">
+        <p>Désolé, vous n'avez pas l'âge légal pour accéder à ce site.</p>
+      </div>
 
-  <section class="underaged--return_button">
-    <button href="www.google.fr">Retour</button>
-  </section>
+      <div class="underaged--return_button">
+        <button href="www.google.fr">Retour</button>
+      </div>
+    </div>
+  </div>
 </div>
