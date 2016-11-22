@@ -35,6 +35,7 @@ body{
     background-color:$background-color;
     @media (min-width: 1024px) {
       background-color:black;
+      transition: all 1.5s;
       padding: 50px;
     }
 
