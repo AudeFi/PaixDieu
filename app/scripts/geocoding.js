@@ -53,7 +53,7 @@ function displayAmbassadorPoint(ambassador, map) // on passe l'ambassadeur pour 
 }
 
 	// Check if url already on a specific bottle
-	if (paramBrasserie != 1) {
+	if (paramBrasserie != undefined) {
 	    setTimeout(function(){
 	        urlParametersBrasserie(paramBrasserie);
 	    }, 1000);
