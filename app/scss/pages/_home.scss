@@ -3,8 +3,8 @@ body {
   color: white;
 }
 
-.accueil {
-    width: 100vh;     
+.accueil__section {
+    width: 100vw;
 }
 
 .accueil__logo {
@@ -142,6 +142,10 @@ body {
 }
 
 .accueil__discover {
+   @media (min-width: 570px) {
+        background: rgba(33, 29, 30, 1);
+   }
+
    @media (min-width: 860px) {
         display: flex;
         justify-content: center;

@@ -199,11 +199,256 @@ p {
 
 /* Layout */
 body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0; }
+
+::-webkit-scrollbar {
+  width: 8px;
+  width: 0.5rem;
+  height: 8px;
+  height: 0.5rem; }
+
+::-webkit-scrollbar-track {
+  /* background: rgba(255,255,255,0.8);  */ }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border-radius: 0.625rem;
+  background: rgba(100, 100, 100, 0.8); }
+
+.swiper-container {
+  width: 100vw;
+  height: 100vh; }
+  .swiper-container section.swiper-slide {
+    overflow-y: scroll;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 80px;
+    padding-top: 5rem;
+    background-color: #211D1E; }
+    .swiper-container section.swiper-slide.accueil {
+      background-color: #211D1E; }
+    .swiper-container section.swiper-slide.histoire {
+      background-color: blue; }
+    .swiper-container section.swiper-slide.deguster {
+      background-color: red; }
+    .swiper-container section.swiper-slide.brassins {
+      background-color: pink; }
+    @media (min-width: 870px) {
+      .swiper-container section.swiper-slide {
+        padding-top: 30px;
+        padding-top: 1.875rem; } }
+
+/* GLOBAL */
+.controls_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.controlsMobile {
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  padding: 1.25rem;
+  height: 80px;
+  height: 5rem;
+  z-index: 2;
+  background-color: #211D1E;
+  /* CLOSE */
+  /* OPEN */ }
+  .controlsMobile .swiper-pagination-bullet {
+    border: 1px solid #d9af33;
+    border: 0.0625rem solid #d9af33;
+    opacity: 1;
+    background: none;
+    width: 10px;
+    width: 0.625rem;
+    height: 10px;
+    height: 0.625rem;
+    margin-right: 3px;
+    margin-right: 0.1875rem; }
+  .controlsMobile .swiper-pagination-bullet-active, .controlsMobile .swiper-pagination-switch.active span {
+    border: 1px solid white;
+    border: 0.0625rem solid white;
+    background: white;
+    width: 13px;
+    width: 0.8125rem;
+    height: 13px;
+    height: 0.8125rem; }
+  .controlsMobile .controls_button {
+    position: absolute;
+    top: 0px;
+    top: 0rem;
+    right: 0px;
+    right: 0rem;
+    width: 40px;
+    width: 2.5rem;
+    /* Don't forget to change the svg size */
+    height: 40px;
+    height: 2.5rem; }
+  .controlsMobile .controls_menuClose .swiper-pagination {
+    z-index: 2;
+    /* Overwrite swiper properties by default*/ }
+  .controlsMobile .controls_menuClose .controls_pageTitle {
+    position: absolute;
+    top: 26px;
+    top: 1.625rem;
+    font-size: 20px;
+    font-size: 1.25rem;
+    color: white;
+    z-index: 2; }
+  .controlsMobile .controls_menuOpen {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: -20px;
+    left: -1.25rem;
+    top: -20px;
+    top: -1.25rem;
+    padding: 20px;
+    padding: 1.25rem;
+    /* background-color:$background-color; */
+    background-color: rgba(33, 29, 30, 0.9);
+    font-size: 20px;
+    font-size: 1.25rem;
+    color: #7a7778;
+    z-index: 3; }
+    .controlsMobile .controls_menuOpen .controls_mainPages {
+      position: absolute;
+      right: 60px;
+      right: 3.75rem;
+      top: 0px;
+      top: 0rem;
+      height: 40px;
+      height: 2.5rem;
+      width: 100px;
+      width: 6.25rem; }
+      .controlsMobile .controls_menuOpen .controls_mainPages li {
+        height: 30px;
+        height: 1.875rem;
+        text-align: right;
+        cursor: pointer; }
+        .controlsMobile .controls_menuOpen .controls_mainPages li.active {
+          color: white; }
+        .controlsMobile .controls_menuOpen .controls_mainPages li:hover {
+          color: white; }
+        .controlsMobile .controls_menuOpen .controls_mainPages li.histoire {
+          margin-right: -10px;
+          margin-right: -0.625rem; }
+        .controlsMobile .controls_menuOpen .controls_mainPages li.deguster {
+          margin-right: -30px;
+          margin-right: -1.875rem; }
+        .controlsMobile .controls_menuOpen .controls_mainPages li.brassins {
+          margin-right: -50px;
+          margin-right: -3.125rem; }
+        .controlsMobile .controls_menuOpen .controls_mainPages li span {
+          margin-left: 15px;
+          margin-left: 0.9375rem; }
+    .controlsMobile .controls_menuOpen .controls_otherPages {
+      position: absolute;
+      left: 0px;
+      left: 0rem;
+      bottom: 30px;
+      bottom: 1.875rem; }
+      .controlsMobile .controls_menuOpen .controls_otherPages li {
+        margin-top: 10px;
+        margin-top: 0.625rem; }
+      .controlsMobile .controls_menuOpen .controls_otherPages a {
+        text-decoration: none; }
+    .controlsMobile .controls_menuOpen.openned {
+      display: block; }
+
+.controlsDesktop {
+  display: none; }
+
+@media screen and (min-width: 1024px) {
+  .controlsMobile {
+    display: none; }
+  .controlsDesktop {
+    display: block; }
+    .controlsDesktop .controls_nextPrev {
+      position: absolute;
+      top: 50%;
+      right: 50px;
+      right: 3.125rem;
+      margin-top: -15px;
+      margin-top: -0.9375rem; }
+    .controlsDesktop .swiper-button-prev, .controlsDesktop .swiper-button-next {
+      background-image: none;
+      position: relative;
+      display: block;
+      left: 0px;
+      left: 0rem;
+      right: 0px;
+      right: 0rem;
+      width: 50px;
+      width: 3.125rem;
+      height: 50px;
+      height: 3.125rem; }
+    .controlsDesktop .swiper-button-next {
+      margin-bottom: 30px;
+      margin-bottom: 1.875rem; }
+    .controlsDesktop .swiper-button-disabled {
+      opacity: 0.5; }
+    .controlsDesktop .controls_menuItems {
+      z-index: 3;
+      position: fixed;
+      bottom: 30px;
+      bottom: 1.875rem;
+      width: 100%; }
+    .controlsDesktop .controls_mainPages {
+      width: 100%;
+      font-size: 20px;
+      font-size: 1.25rem;
+      text-align: center;
+      color: rgba(217, 175, 51, 0.5); }
+      .controlsDesktop .controls_mainPages li {
+        display: inline;
+        height: 30px;
+        height: 1.875rem;
+        margin: auto 30px;
+        margin: auto 1.875rem;
+        cursor: pointer; }
+        .controlsDesktop .controls_mainPages li.active {
+          color: white; }
+        .controlsDesktop .controls_mainPages li:hover {
+          color: #d9af33; }
+    .controlsDesktop .controls_otherPages {
+      position: absolute;
+      right: 35px;
+      right: 2.1875rem;
+      bottom: -15px;
+      bottom: -0.9375rem;
+      font-size: 12px;
+      font-size: 0.75rem;
+      text-align: center; }
+      .controlsDesktop .controls_otherPages li {
+        margin: 10px auto;
+        margin: 0.625rem auto; }
+      .controlsDesktop .controls_otherPages a {
+        text-decoration: none;
+        color: rgba(217, 175, 51, 0.5); }
+      .controlsDesktop .controls_otherPages a:hover {
+        color: #d9af33; } }
+
+/* Pages */
+body {
   background-color: #211D1E;
   color: white; }
 
-.accueil {
-  width: 100vh; }
+@media (min-width: 860px) {
+  .accueil .swiper-slide .swiper-slide-active {
+    padding-top: 30px;
+    padding-top: 1.875rem; } }
+
+.accueil__section {
+  width: 100vw; }
 
 .accueil__logo {
   margin: 0 0 0 15px;
@@ -349,6 +594,10 @@ body {
       margin: 0;
       opacity: 0.3; } }
 
+@media (min-width: 570px) {
+  .accueil__discover {
+    background: #211d1e; } }
+
 @media (min-width: 860px) {
   .accueil__discover {
     display: -webkit-box;
@@ -430,163 +679,18 @@ body {
       font-size: 15px;
       font-size: 0.9375rem; } }
 
-body {
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-  display: block;
-  position: relative;
-  top: 0;
-  left: 0; }
-
-::-webkit-scrollbar {
-  width: 8px;
-  width: 0.5rem;
-  height: 8px;
-  height: 0.5rem; }
-
-::-webkit-scrollbar-track {
-  /* background: rgba(255,255,255,0.8);  */ }
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  border-radius: 0.625rem;
-  background: rgba(100, 100, 100, 0.8); }
-
-.swiper-container {
-  width: 100vw;
-  height: 100vh; }
-  .swiper-container section.swiper-slide {
-    overflow-y: scroll;
-    width: 100vw;
-    height: 100vh;
-    padding-top: 80px;
-    padding-top: 5rem;
-    background-color: #211D1E; }
-    .swiper-container section.swiper-slide.accueil {
-      background-color: #211D1E; }
-      @media (min-width: 760px) {
-        .swiper-container section.swiper-slide.accueil {
-          background-color: #000; } }
-    .swiper-container section.swiper-slide.histoire {
-      background-color: blue; }
-    .swiper-container section.swiper-slide.deguster {
-      background-color: red; }
-    .swiper-container section.swiper-slide.brassins {
-      background-color: pink; }
-
-.controls {
-  position: fixed;
-  width: 100%;
+.legal_wrapper {
   padding: 20px;
   padding: 1.25rem;
-  height: 80px;
-  height: 5rem;
-  z-index: 2;
-  /* GLOBAL */
-  /* CLOSE */
-  /* OPEN */ }
-  .controls .controls_wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%; }
-  .controls .swiper-pagination-bullet {
-    border: 1px solid #d9af33;
-    border: 0.0625rem solid #d9af33;
-    opacity: 1;
-    background: none;
-    width: 10px;
-    width: 0.625rem;
-    height: 10px;
-    height: 0.625rem;
-    margin-right: 3px;
-    margin-right: 0.1875rem; }
-  .controls .swiper-pagination-bullet-active, .controls .swiper-pagination-switch.active span {
-    border: 1px solid white;
-    border: 0.0625rem solid white;
-    background: white;
-    width: 13px;
-    width: 0.8125rem;
-    height: 13px;
-    height: 0.8125rem; }
-  .controls .controls_button {
-    position: absolute;
-    top: 0px;
-    top: 0rem;
-    right: 0px;
-    right: 0rem;
+  width: 100%;
+  height: 100%; }
+  .legal_wrapper .exitButton {
+    position: fixed;
+    right: 20px;
+    right: 1.25rem;
+    top: 20px;
+    top: 1.25rem;
     width: 40px;
     width: 2.5rem;
-    /* Don't forget to change the svg size */
     height: 40px;
     height: 2.5rem; }
-  .controls .controls_menu.close .swiper-pagination {
-    z-index: 2;
-    /* Overwrite swiper properties by default*/ }
-  .controls .controls_menu.close .controls_pageTitle {
-    position: absolute;
-    top: 26px;
-    top: 1.625rem;
-    font-size: 20px;
-    font-size: 1.25rem;
-    color: white;
-    z-index: 2; }
-  .controls .controls_menu.open {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    left: -20px;
-    left: -1.25rem;
-    top: -20px;
-    top: -1.25rem;
-    padding: 20px;
-    padding: 1.25rem;
-    /* background-color:$background-color; */
-    background-color: rgba(33, 29, 30, 0.9);
-    font-size: 20px;
-    font-size: 1.25rem;
-    color: #7a7778;
-    z-index: 3; }
-    .controls .controls_menu.open .controls_mainPages {
-      position: absolute;
-      right: 60px;
-      right: 3.75rem;
-      top: 0px;
-      top: 0rem;
-      height: 40px;
-      height: 2.5rem;
-      width: 100px;
-      width: 6.25rem; }
-      .controls .controls_menu.open .controls_mainPages li {
-        height: 30px;
-        height: 1.875rem;
-        text-align: right;
-        cursor: pointer; }
-        .controls .controls_menu.open .controls_mainPages li.active {
-          color: white; }
-        .controls .controls_menu.open .controls_mainPages li:hover {
-          color: white; }
-        .controls .controls_menu.open .controls_mainPages li.histoire {
-          margin-right: -10px;
-          margin-right: -0.625rem; }
-        .controls .controls_menu.open .controls_mainPages li.deguster {
-          margin-right: -30px;
-          margin-right: -1.875rem; }
-        .controls .controls_menu.open .controls_mainPages li.brassins {
-          margin-right: -50px;
-          margin-right: -3.125rem; }
-        .controls .controls_menu.open .controls_mainPages li span {
-          margin-left: 15px;
-          margin-left: 0.9375rem; }
-    .controls .controls_menu.open .controls_otherPages {
-      position: absolute;
-      left: 0px;
-      left: 0rem;
-      bottom: 30px;
-      bottom: 1.875rem; }
-      .controls .controls_menu.open .controls_otherPages li {
-        margin-top: 10px;
-        margin-top: 0.625rem; }
-      .controls .controls_menu.open .controls_otherPages a {
-        text-decoration: none; }
