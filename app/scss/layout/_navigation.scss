@@ -35,8 +35,8 @@ body{
     background-color:$background-color;
     @media (min-width: 1024px) {
       background-color:black;
-      transition: all 1.5s;
-      padding: 50px;
+      transition: padding 1.5s;
+      padding: 50px 20px;
     }
 
     /*@media (min-width: 870px) {
@@ -175,6 +175,25 @@ body{
       right: 50px;
       margin-top: -15px
     }
+
+    
+    .logo {
+        @media(min-width: 470px) {
+            width: 40%;
+        }
+    
+        @media(min-width: 760px) {
+            margin: 40px 40px;
+            width: 35%;
+        }
+    
+        @media (min-width: 860px) {
+            width: 120px;
+            position: fixed;
+            z-index:20;
+        }
+    }
+
     .swiper-button-prev, .swiper-button-next {
       background-image: none;
       position: relative;

@@ -1,4 +1,4 @@
-  .histoire {
+.histoire {
 
   // block-name
   // block-name_modifier_name
@@ -23,8 +23,9 @@
         font-size: 20px !important;
       }
         @media(min-width: 1200px) {
-          font-size: 25px !important;
+          font-size: 20px !important;
           margin-left: 5%;
+          line-height: 35px;
         }
   }
 
@@ -37,6 +38,10 @@
       }
   }
 
+  .story-container{
+     background-color: $background-color;
+  }
+
   .story-abbey{
     @media(min-width: 480) {
       margin-bottom: 60px;
@@ -46,7 +51,6 @@
       }
         @media(min-width: 1200px) {
           height: calc(100vh - 80px);
-
         }
   }
 
@@ -107,12 +111,12 @@
   .story__image-abbey{
   border-radius: 30%;
   width: 45%;
-
   margin-top: -6%;
     @media(min-width: 1200px) {
       margin-top: 2%;
+      margin-right: 0;
       width: auto;
-      height: 82%;
+      height: 60vh;
     }
   }
 
@@ -151,7 +155,7 @@
         font-size: 20px;
       }
         @media(min-width: 1200px) {
-          margin-right: 55%;
+          margin-right: 50%;
           margin-top: -25%;
           font-size: 20px;
         }

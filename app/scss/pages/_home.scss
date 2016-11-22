@@ -7,41 +7,6 @@ body {
     width: 100vw;
 }
 
-.accueil__logo {
-    margin: 0 0 0 15px;
-
-    @media(min-width: 340px) {
-        margin: 15px 0 0 15px;
-    }
-
-    @media (min-width: 370px) {
-        margin: 45px 0 0 15px;
-    }
-
-    @media (min-width: 760px) {
-        margin: 60px 0 0 30px;
-    }
-
-    @media (min-width: 860px) {
-        margin: 0 0 0 50px;
-    }
-}
-
-.accueil__logo img {
-    width: 70%;
-
-    @media(min-width: 470px) {
-        width: 40%;
-    }
-
-    @media(min-width: 760px) {
-        width: 35%;
-    }
-
-    @media (min-width: 860px) {
-        width: 10%;
-    }
-}
 
 .accueil__content {
     background-size: 100%;
