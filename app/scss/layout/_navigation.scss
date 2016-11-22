@@ -33,26 +33,14 @@ body{
     height:100vh;
     padding-top: 80px;
     background-color:$background-color;
-    &.accueil{
-        background-color:$background-color;
-
-        @media (min-width: 1024px) {
-          background-color:black;
-        }
-    }
-    &.histoire{
-       /*  background-color:blue; */
-    }
-    &.deguster{
-        background-color:$background-color;
-    }
-    &.brassins{
-        background-color:pink;
+    @media (min-width: 1024px) {
+      background-color:black;
+      padding: 50px;
     }
 
-    @media (min-width: 870px) {
+    /*@media (min-width: 870px) {
         padding-top: 30px;
-    }
+    }*/
   }
 }
 
