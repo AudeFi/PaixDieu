@@ -10,11 +10,21 @@
                 width: 100vw;
                 transition-property: transform opacity;
                 transition-duration: 0.8s;
+                @media screen and (min-width: 800px) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin: 0 30px;
+                }
+                @media screen and (min-width: 1024px) {
+                    justify-content: flex-start;
+                }
                 .carousel_title{
                     transition-property: opacity;
                     transition-duration: 0.8s;
                     padding : 40px 1.25rem 0 1.25rem;
                     opacity: 0;
+                    width: 100%;
                     h1{
                         font-size: 32px;
                         color:white;
@@ -37,15 +47,13 @@
                     @media screen and (min-width: 800px) {
                         height:410px;
                         overflow: hidden;
-                        display: inline;
-                        float: left;
                         padding:30px 0;
                     }
                     @media screen and (min-width: 800px) {
                         width:52vw;
                     }
                     @media screen and (min-width: 1024px) {
-                        width:60vw;
+                        width:58vw;
                     }
                     .carousel_background{
                         background-color: black;
@@ -94,16 +102,6 @@
                                 }
                             }
                         }
-                    }
-                }
-                .carousel_rightColumn{
-                    @media screen and (min-width: 800px) {
-                        width: 48vw;
-                        display: inline;
-                        float: right;
-                    }
-                    @media screen and (min-width: 800px) {
-                        width: 38vw;
                     }
                 }
                 .carousel_icons{
@@ -190,6 +188,9 @@
                                     left: -2vw;
                                     @media screen and (min-width: 800px) {
                                         left: -7vw;
+                                    }
+                                    @media screen and (min-width: 1024px) {
+                                        left: -5vw;
                                     }
                                 }
                             }
