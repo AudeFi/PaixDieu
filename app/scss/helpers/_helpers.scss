@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'KohinoorDevanagari-Medium';
+  src: url('../fonts/KohinoorDevanagari-Medium.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KohinoorDevanagari-Semibold';
+  src: url('../fonts/KohinoorDevanagari-Semibold.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KohinoorDevanagari-Regular';
+  src: url('../fonts/KohinoorDevanagari-Regular.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KohinoorDevanagari-Bold';
+  src: url('../fonts/KohinoorDevanagari-Bold.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KohinoorDevanagari-Light';
+  src: url('../fonts/KohinoorDevanagari-Light.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KohinoorDevanagari-Medium';
+  src: url('KohinoorDevanagari-Medium.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.subtitle {
+  margin: 50px 20px 25px 20px;
+  position: relative;
+  font-size: 26px;
+  font-family:Kohinoor Devanagari;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -10px; left: 0px;
+    width: 24px;
+    height: 5px;
+    background-color: $color-yellow;
+  }
+}
+
+p {
+  font-family: KohinoorDevanagari-Light;
+  margin-left: 20px;
+  margin-right: 20px;
+}

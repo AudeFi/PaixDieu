@@ -45,6 +45,10 @@ body{
     &.brassins{
         background-color:pink;
     }
+
+    @media (min-width: 870px) {
+        padding-top: 30px;
+    }
   }
 }
 

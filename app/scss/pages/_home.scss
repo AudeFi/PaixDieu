@@ -1,0 +1,219 @@
+body {
+  background-color: $background-color;
+  color: white;
+}
+
+.accueil__section {
+    width: 100vw;
+}
+
+.accueil__logo {
+    margin: 0 0 0 15px;
+
+    @media(min-width: 340px) {
+        margin: 15px 0 0 15px;
+    }
+
+    @media (min-width: 370px) {
+        margin: 45px 0 0 15px;
+    }
+
+    @media (min-width: 760px) {
+        margin: 60px 0 0 30px;
+    }
+
+    @media (min-width: 860px) {
+        margin: 0 0 0 50px;
+    }
+}
+
+.accueil__logo img {
+    width: 70%;
+
+    @media(min-width: 470px) {
+        width: 40%;
+    }
+
+    @media(min-width: 760px) {
+        width: 35%;
+    }
+
+    @media (min-width: 860px) {
+        width: 10%;
+    }
+}
+
+.accueil__content {
+    background-size: 100%;
+    background-image: url("/../images/abbey_mobile.jpg");
+    background-repeat: no-repeat;
+    
+    @media (min-width: 760px) {
+        background-size: 120%;
+        background-image: url("/../images/abbey.jpg");
+    }
+    
+    @media (min-width: 860px) {
+        background-size: 100%;
+        background-position: center;
+        margin: 0 30px;
+    }
+}
+
+.accueil__presentation {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 860px) {
+        flex-direction: row;
+    }
+}
+
+.accueil__presentation p {
+    margin-top: 20px;
+    font-size: 29px;
+    font-family: Kohinoor Devanagari Light;
+    line-height: 35px;
+
+    @media(min-width: 470px) {
+        margin-top: 15px;
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    @media (min-width: 760px) {
+        margin: 15px 0 0 30px;
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    @media (min-width: 860px) {
+        font-size: 26px;
+        line-height: 30px;
+        padding: 60px 0 0 40px;
+    }
+}
+
+.accueil__presentation--text {
+    background: linear-gradient(to bottom, rgba(33, 29, 30, 1), rgba(33, 29, 30, 0.1));
+
+    @media (min-width: 370px) {
+        background: linear-gradient(to bottom, rgba(33, 29, 30, 1), rgba(33, 29, 30, 0.2));
+    }
+
+    @media (min-width: 860px) {
+        flex-basis: 100%;
+        background: linear-gradient(to right, rgba(33, 29, 30, 1), rgba(33, 29, 30, 0.8));
+    }
+}
+
+.accueil__presentation--bottles {
+    background: linear-gradient(to bottom, rgba(33, 29, 30, 0.1), rgba(33, 29, 30, 1));
+    margin-top: 20px;
+
+    @media(min-width: 340px) {
+        margin-top: 80px;
+    }
+
+    @media(min-width: 760px) {
+        margin-top: 130px;
+    }
+
+    @media (min-width: 860px) {
+        margin: 0;
+        padding: 55px 0 70px 135px;
+        background: linear-gradient(to left, rgba(33, 29, 30, 0.1), rgba(33, 29, 30, 0.8));
+    }
+}
+
+.accueil__presentation--bottles img {
+    margin: auto;
+    width: 35%;
+    display: flex;
+
+    @media(min-width: 470px) {
+        width: 30%;
+    }
+
+    @media (min-width: 860px) {
+        margin: 0;
+        opacity: 0.3;
+    }
+}
+
+.accueil__discover {
+   @media (min-width: 570px) {
+        background: rgba(33, 29, 30, 1);
+   }
+
+   @media (min-width: 860px) {
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(to right, rgba(33, 29, 30, 1), rgba(33, 29, 30, 0.3));
+   }
+}
+
+.button-flex {
+    background-color: $color-yellow;
+    width: 85%;
+    margin: auto;
+    padding: 8px;
+    border-radius: 5px;
+
+    @media(min-width: 470px) {
+        width: 65%;
+    }
+
+    @media (min-width: 860px) {
+        background-color: transparent;
+        width: 100%;
+        border-style: solid;
+        border-width: 1px 1px 4px 1px;
+        border-color: $color-yellow;
+        border-radius: 0;
+        padding: 4px;
+    }
+}
+
+.button-flex, .flex-item:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.accueil__discover img {
+    width: 50%;
+
+    @media(min-width: 760px) {
+        width: 70%;
+    }
+
+    @media (min-width: 860px) {
+        width: 40%;
+    }
+}
+
+.accueil__discover a {
+    text-decoration: none;
+}
+
+.accueil__discover p {
+    margin-top: 0;
+    margin-left: 0;
+    font-size: 17px;
+    font-family: Kohinoor Devanagari SemiBold;
+
+    @media(min-width: 470px) {
+        font-size: 20px;
+    }
+
+    @media(min-width: 760px) {
+        font-size: 26px;
+    }
+
+    @media (min-width: 860px) {
+        font-family: Kohinoor Devanagari Light;
+        font-size: 15px;
+    }
+}
