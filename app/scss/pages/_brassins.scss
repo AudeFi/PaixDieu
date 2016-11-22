@@ -1,0 +1,258 @@
+.brassins{
+    background-color:#211d1e !important;
+    .carousel{
+        .carousel_listProducts{
+            /* —— Bottles —— */
+            li.carousel_product{
+                opacity: 0;
+                position: absolute;
+                left:0;
+                width: 100vw;
+                transition-property: transform opacity;
+                transition-duration: 0.8s;
+                .carousel_title{
+                    transition-property: opacity;
+                    transition-duration: 0.8s;
+                    padding : 40px 1.25rem 0 1.25rem;
+                    opacity: 0;
+                    h1{
+                        font-size: 32px;
+                        color:white;
+                        font-weight: 900;
+                        &:after{
+                            content:"";
+                            height: 5px;
+                            width:30px;
+                            background-color: #d8af33;
+                            margin-top:10px;
+                            display:block;
+                        }
+                    }
+                }
+                .carousel_bottles{
+                    height:200px;
+                    @media screen and (min-width: 800px) {
+                        height:300px;
+                        overflow: hidden
+                    }
+                    display: block;
+                    padding:20px 0;
+                    width:100vw;
+                    @media screen and (min-width: 800px) {
+                        width:52vw;
+                    }
+                    @media screen and (min-width: 1024px) {
+                        width:72vw;
+                    }
+                    .carousel_background{
+                        background-color: black;
+                        height:180px;
+                        @media screen and (min-width: 800px) {
+                            height:280px;
+                            width:95%;
+
+                        }
+                        margin:10px 0;
+                        position: relative;
+                        .carousel_item{
+                            position:absolute;
+                            margin-top:-10px;
+                            img{
+                                position: absolute;
+                                &.carousel_mainImg{
+                                    height: 200px;
+                                    z-index:2;
+                                    left: 100vw;
+                                    transition-property: transform opacity left;
+                                    transition-duration: 0.5s;
+                                    transform: scale(0.8);
+                                }
+                                &.carousel_backImg{
+                                    transition-property: opacity;
+                                    transition-duration: 0.8s;
+                                    height:120px;
+                                    margin-top:32px;
+                                    left: 25vw;
+                                    z-index:1;
+                                    opacity: 0;
+                                    @media screen and (min-width: 800px) {
+                                        left: 10vw;
+                                    }
+                                    @media screen and (min-width: 1024px) {
+                                        left: 18vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .carousel_icons{
+                    transition-property: opacity;
+                    transition-duration: 0.8s;
+                    opacity: 0;
+                    padding : 40px 1.25rem 0 1.25rem;
+                    @media screen and (min-width: 800px) {
+                        width: 50vw;
+                        float: right;
+                    }
+                    @media screen and (min-width: 1024px) {
+                        width: 30vw;
+                    }
+                    ul{
+                        text-align: center;
+                        li{
+                            width:24%;
+                            display: inline-block;
+                            .carousel_round{
+                                float:left;
+                                margin: 0 10px;
+                                border : 2px solid #777576;
+                                height: 60px;
+                                width: 60px;
+                                text-align: center;
+                                border-radius: 200px;
+                                img{
+                                    max-height:70%;
+                                    max-width:70%;
+                                    margin: 30% auto;
+                                }
+                                p {
+                                    color: white;
+                                    margin-top: calc(40%);
+                                }
+                            }
+                        }
+                    }
+                }
+                .carousel_shareButtons {
+                    z-index: 10;
+                    display: none;
+                    margin: 20px auto;
+                    width: 200px;
+                    iframe {
+                        display: none;
+                        vertical-align: bottom
+                    }
+                }
+                .carousel_shareButtons > *{
+                    z-index: 5;
+                }
+                .carousel_description{
+                    transition-property: opacity;
+                    transition-duration: 0.8s;
+                    opacity: 0;
+                    padding : 40px 1.25rem 80px 1.25rem;
+                    @media screen and (min-width: 800px) {
+                        width: 50vw;
+                        float: right;
+                    }
+                    @media screen and (min-width: 1024px) {
+                        width: 30vw;
+                    }
+                    p{
+                        color:white;
+                    }
+                }
+            }
+            /* —— Hidden Previous bottles —— */
+            li.carousel_product.active{
+                opacity: 1;
+                .carousel_bottles{
+                    .carousel_background{
+                        .carousel_item{
+                            img{
+                                &.carousel_mainImg{
+                                    left: -20vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            /* —— Previous bottles —— */
+            li.carousel_product.active + li.carousel_product{
+                opacity: 1;
+                .carousel_bottles{
+                    .carousel_background{
+                        .carousel_item{
+                            img{
+                                &.carousel_mainImg{
+                                    z-index:2;
+                                    opacity: 0.6;
+                                    left: -2vw;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            /* —— Active bottle —— */
+            li.carousel_product.active + li.carousel_product + li.carousel_product{
+                opacity: 1;
+                .carousel_title{
+                    opacity: 1;
+                }
+                .carousel_bottles{
+                    .carousel_background{
+                        .carousel_item{
+                            img{
+                                &.carousel_mainImg{
+                                    z-index:3;
+                                    transform: scale(1);
+                                    opacity: 1;
+                                    left: 42vw;
+                                    @media screen and (min-width: 800px) {
+                                        left: 22vw;
+                                    }
+                                    @media screen and (min-width: 1024px) {
+                                        left: 34vw;
+                                    }
+                                }
+                                &.carousel_backImg{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+                .carousel_icons{
+                    opacity: 1;
+                }
+                .carousel_shareButtons {
+                    display: block;
+                    z-index: 5;
+                    iframe {
+                        display: inline;
+                    }
+                }
+                .carousel_description{
+                    opacity: 1;
+                }
+            }
+            /* —— Next bottles —— */
+            li.carousel_product.active + li.carousel_product + li.carousel_product + li.carousel_product{
+                opacity: 1;
+                .carousel_bottles{
+                    .carousel_background{
+                        background:none;
+                        .carousel_item{
+                            img{
+                                &.carousel_mainImg{
+                                    z-index:2;
+                                    opacity: 0.6;
+                                    left: 87vw;
+                                    @media screen and (min-width: 800px) {
+                                        left: 44vw;
+                                    }
+                                    @media screen and (min-width: 1024px) {
+                                        left: 61vw;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
