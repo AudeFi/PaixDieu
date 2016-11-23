@@ -19,8 +19,10 @@ if (document.querySelector('.swiper-container')!=undefined) {
     // EVENTS
 
     //When I swipe manually (the hash change and I change the active menu item)
+
     window.onhashchange = function(){
-        var hash = document.location.hash.split('#')[1];
+        /*var hash = document.location.hash.split('#')[1];*/
+        var hash = document.location.hash.split('#')[1].replace('-', ' ');
         var controls_button = document.querySelector('.controls_button');
         if (hash.indexOf("?") != -1 )
             hash = hash.substring(0, hash.indexOf("?"));
@@ -107,10 +109,10 @@ if (document.querySelector('.swiper-container')!=undefined) {
     var menuState = "swipe";
     var startEvent = 'mousedown';
     var endEvent = 'mouseup';
-
+    
     setTouchEvent();
     function setTouchEvent() {
-        if (Modernizr.touchevent) {
+        if (Modernizr.touchevents) {
             startEvent = 'touchstart';
             endEvent = 'touchend';
         }
@@ -130,6 +132,7 @@ if (document.querySelector('.swiper-container')!=undefined) {
             menuState = "close";
         } else {
             pressTimer = window.setTimeout(function() {
+                console.log("long click");
                 addClass('.controls_menuOpen', 'openned');
                 menuState = "open";
                 mySwiper.lockSwipes(); // If we oppened the menu with a long press on next button, don't swipe to next slide
