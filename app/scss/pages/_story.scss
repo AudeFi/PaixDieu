@@ -1,53 +1,34 @@
-  .histoire {
+.histoire {
 
   // block-name
   // block-name_modifier_name
   // block-name__element-name
   // block-name__element-name_modifier_name
 
-  body {
-    background-color: $background-color;
-    color: white;
-  }
-  img {
-    width: 50%;
-    margin-left: 45%;
-  }
-
-  p{
-    font-size: 16px;
-    @media(min-width: 480px) {
-      font-size: 26px;
-    }
-      @media(min-width: 768px) {
-        font-size: 20px !important;
-      }
-        @media(min-width: 1200px) {
-          font-size: 25px !important;
-          margin-left: 5%;
-        }
-  }
-
   .story{
-    @media(min-width: 480) {
-      margin-bottom: 20px;
+    @media(min-width: 480px) {
+      margin-bottom: $font-big;
     }
-      @media(min-width: 768px) {
-        margin-bottom: 80px;
-      }
+    @media(min-width: 768px) {
+      margin-bottom: 80px;
+    }
   }
 
+  .story p {
+    line-height: $line-height;
+  }
   .story-abbey{
-    @media(min-width: 480) {
+    @media(min-width: 480px) {
       margin-bottom: 60px;
     }
-      @media(min-width: 768px) {
-        margin-bottom: 30%;
-      }
-        @media(min-width: 1200px) {
-          height: calc(100vh - 80px);
-
-        }
+    @media(min-width: 768px) {
+      margin-bottom: 30%;
+    }
+    @media(min-width: 1200px) {
+      height: calc(100vh - 80px);
+      background-image: url('/images/abbaye_fond.png');
+      background-size: cover;
+    }
   }
 
   .story__subtitle {
@@ -77,38 +58,40 @@
           font-size: 1.625rem;
           font-family: Kohinoor Devanagari;
         }
-          @media(min-width: 1200px){
-            margin: 8.125rem 1.25rem 1.5625rem 3.70rem;
+        @media(min-width: 1200px){
+          margin: 8.125rem 1.25rem 1.5625rem 3.70rem;
+          position: absolute;
+          font-size: 26px;
+          font-size: 1.625rem;
+          font-weight:bold ;
+          font-family: Kohinoor Devanagari; }
+        }
+        .story__subtitle-abbey::before {
+          @media(min-width: 320px) {
+            content: '';
             position: absolute;
-            font-size: 26px;
-            font-size: 1.625rem;
-            font-weight:bold ;
-            font-family: Kohinoor Devanagari; }
+            bottom: -10px;
+            bottom: -0.625rem;
+            left: 0px;
+            left: 0rem;
+            width: 24px;
+            width: 1.5rem;
+            height: 5px;
+            height: 0.3125rem;
+            background-color: $color-yellow;
           }
-          .story__subtitle-abbey::before {
-            @media(min-width: 320px) {
-              content: '';
-              position: absolute;
-              bottom: -10px;
-              bottom: -0.625rem;
-              left: 0px;
-              left: 0rem;
-              width: 24px;
-              width: 1.5rem;
-              height: 5px;
-              height: 0.3125rem;
-              background-color: #d9af33;
-            }
-            @media(min-width: 1200px) {
-              display: none;
-            }
+          @media(min-width: 1200px) {
+            display: none;
           }
+        }
 
   .story__image-abbey{
-  border-radius: 30%;
-  width: 45%;
 
-  margin-top: -6%;
+    margin-left: 45%;
+    border-radius: 30%;
+    width: 45%;
+
+    margin-top: -6%;
     @media(min-width: 1200px) {
       margin-top: 2%;
       width: auto;
@@ -117,103 +100,105 @@
   }
 
   .story__image-grain{
-  position: relative;
-  width: 60%;
-  margin-left: 20%;
+    margin-left: 45%;
+    position: relative;
+    width: 60%;
+    margin-left: 20%;
     @media(min-width: 480px) {
       border-radius: 50%;
       margin-top: 10px;
     }
   }
 
+
   .story__image-bouteilles{
-  position: relative;
-  width: 50%;
-  margin-left: 40%;
-  margin-bottom: 5%;
+    position: relative;
+    width: 50%;
+    margin-left: 40%;
+    margin-bottom: 5%;
     @media(min-width: 992px) {
       width: 55%;
     }
   }
 
   .story__text-abbey{
-  position: relative;
-  margin-top: -10%;
+    position: relative;
+    margin-top: -10%;
     @media(min-width: 480px) {
       margin-right: 55%;
       margin-top: -35%;
-      font-size: 20px;
+      font-size: $font-big;
       margin-bottom: 15%;
     }
-      @media(min-width: 768px) {
-        margin-right: 55%;
-        margin-top: -35%;
-        font-size: 20px;
-      }
-        @media(min-width: 1200px) {
-          margin-right: 55%;
-          margin-top: -25%;
-          font-size: 20px;
-        }
-  }
-
-  .story__text-abbey_scroll{
-  display: none;
+    @media(min-width: 768px) {
+      margin-right: 55%;
+      margin-top: -35%;
+      font-size: $font-big;
+    }
     @media(min-width: 1200px) {
       margin-right: 55%;
       margin-top: -25%;
-      font-size: 20px;
+      font-size: $font-big;
+    }
+  }
+
+  .story__text-abbey_scroll{
+    display: none;
+    @media(min-width: 1200px) {
+      margin-right: 55%;
+      margin-top: -25%;
+      font-size: $font-big;
       color: $color-yellow;
       display: inline-block;
     }
   }
 
   .story__text-grain_1{
-  position: relative;
+    position: relative;
     @media(min-width: 480px){
-      font-size: 20px;
+      font-size: $font-big;
     }
   }
 
   .story__text-grain_2{
-  position: relative;
-  margin-left: 20px;
-  margin-right: 20px;
+    position: relative;
+    margin-left: $margin-20px;
+    margin-right: $margin-20px;
     @media(min-width: 480px) {
-      font-size: 20px;
+      font-size: $font-big;
       margin-bottom:10%;
     }
   }
 
   .story__text-bouteille{
-  position: relative;
-  margin-top: -45%;
+    position: relative;
+    margin-top: -45%;
     @media(min-width: 480px) {
-      font-size: 20px;
+      font-size: $font-big;
       margin-top: -40%;
     }
-      @media(min-width: 768px) {
-        margin-top: -43%;
-        font-size: 25px;
-      }
-        @media(min-width: 992px) {
-          margin-top: -43%;
-        }
+    @media(min-width: 768px) {
+      margin-top: -43%;
+      font-size: 25px;
+    }
+    @media(min-width: 992px) {
+      margin-top: -43%;
+    }
   }
 
   .story__text-bouteille_litre{
-  position: relative;
-  margin-top: 30px;
+    position: relative;
+    margin-top: 30px;
     @media(min-width: 480px) {
-      font-size: 20px;
+      font-size: $font-big;
     }
-      @media(min-width: 768px) {
-        margin-top: 10%;
-        font-size: 25px;
-      }
+    @media(min-width: 768px) {
+      margin-top: 10%;
+      font-size: 25px;
+    }
   }
 
   .story__text-highlight{
-  font-weight: bold;
+    font-weight: bold;
   }
 }
