@@ -1,3 +1,17 @@
+// this function localizes an address chosen by the user
+function closestPlaces() {
+    var input = document.getElementById("userAddress").value;
+    console.log(input);
+}
+
+// this functions counts the ambassadors
+function ambassadorsCount() {
+	var div = document.getElementById('ambassadors_number');
+	div.innerHTML += 'Parmi ' + ambassadors.length + ' ambassadeurs';
+}
+
+ambassadorsCount();
+
 // appel pour afficher le marker
 function displayAmbassadorPoint(ambassador, map) // on passe l'ambassadeur pour recup les infos pr afficher marker
 { 
@@ -86,15 +100,12 @@ function getLocation(ambassador, success, map)
         }
     );
 }
+    
+    // var twitter = document.querySelector('.twitter-share-button');
+    // twitter.setAttribute('data-href', 'frfr');
+    // console.log(twitter);
 
-	// console.log('loc: ' + location.href);
-	var twitter = document.getElementsByClassName('testTwitter');
-	console.log(twitter);
-	var testtt = 3;
-	twitter.innerHTML = "https://twitter;";
-	//twitter.innerHTML = '<a class="twitter-share-button deguster_tweet" href="https://twitter.com/intent/tweet" data-show-count="true" data-text=' + testtt + '>Tweet</a>';
-	//twitter.dataset.text = "J\'ai choisi cette #brasserie pour déguster ma @paixdieu !" + location.href;
 
-	var div = document.getElementById('ambassadors_number');
-	div.innerHTML += 'Parmi ' + ambassadors.length + ' ambassadeurs';
-	console.log('test: ' + ambassadors.length);
+
+	
+

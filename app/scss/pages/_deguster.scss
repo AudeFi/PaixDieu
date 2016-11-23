@@ -2,6 +2,9 @@
 	width:100%;
 	height:100%;
 	padding : 40px 1.25rem 0 1.25rem;
+	@media screen and (max-width: 400px) {
+        padding-top: 0;
+    }
 }
 
 .deguster .wrapper form {
@@ -52,7 +55,7 @@ input:-ms-input-placeholder {
 	@media screen and (max-width: 400px) {
         display:block;
         width: 100%;
-        height:30%;
+        height:20%;
     }
 }
 
@@ -89,4 +92,20 @@ input:-ms-input-placeholder {
     }
 }
 
+.deguster_facebook,
+.deguster_twitter {
+    color: white;
+    padding: 5px 10px;
+    min-height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.deguster_facebook {
+    background: #3c5a96;
+}
+
+.deguster_twitter {
+    background: #2a87eb;
+}
 

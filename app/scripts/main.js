@@ -20,7 +20,7 @@ if (document.querySelector('.swiper-container')!=undefined) {
 
     //When I swipe manually (the hash change and I change the active menu item)
     window.onhashchange = function(){ 
-        var hash = document.location.hash.split('#')[1];
+        var hash = document.location.hash.split('#')[1].replace('-', ' ');
         if (hash.indexOf("?") != -1 )
             hash = hash.substring(0, hash.indexOf("?"));
         var currentSwitch = document.querySelector('.swiper-pagination-switch.'+ hash );

@@ -4,7 +4,7 @@ var ambassadors = [
 		"place": "8 Chaussée de Boondael, Ixelles, 1050"
 	},
 	{
-		"name": "Pub Mac Ewan's",
+		"name": "Pub MacEwans",
 		"place": "8 Place Sébastopol, Lille, 59800"
 	},
 	{
