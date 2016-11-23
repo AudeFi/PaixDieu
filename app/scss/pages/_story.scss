@@ -32,6 +32,10 @@
     }
   }
 
+
+
+
+
   .story__subtitle {
     margin: 1.125rem 1.25rem 1.5625rem 1.25rem;
     position: relative;
@@ -82,7 +86,7 @@
             background-color: $color-yellow;
           }
           @media(min-width: 1200px) {
-            
+
           }
         }
 
@@ -151,12 +155,12 @@
       font-size: $font-big;
       color: $color-yellow;
       display: inline-block;
+      transition: opacity 0.5s;
     }
   }
   .story__text-abbey_scroll img {
     width: 8%;
     transform: translate(10px, 15px);
-
   }
 
   .story__text-grain_1{
