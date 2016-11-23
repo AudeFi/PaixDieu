@@ -1,4 +1,4 @@
-if (document.querySelector('.contact_wrapper' != undefined)) {
+if (document.querySelector('.contact_wrapper')) {
     // Fonction de désactivation de l'affichage des "tooltips"
     function desactivateTooltips() {
 
@@ -8,6 +8,15 @@ if (document.querySelector('.contact_wrapper' != undefined)) {
         for (var i = 0; i < tooltipsLength; i++) {
             tooltips[i].style.display = 'none';
         }
+
+    }
+    
+    // Fonction de désactivation de l'affichage des "tooltips"
+    function activateTooltips__Correct() {
+
+        var tooltips = document.querySelectorAll('.tooltip__correct');
+
+        tooltips[0].style.display = 'inline-block';
 
     }
 
@@ -53,7 +62,7 @@ if (document.querySelector('.contact_wrapper' != undefined)) {
         
         if(!regex.test(name.value)){
             name.className += ' incorrect';
-            tooltipStyle.display = 'block';
+            tooltipStyle.display = 'inline-block';
             return false;
         }
         else{
@@ -72,7 +81,7 @@ if (document.querySelector('.contact_wrapper' != undefined)) {
         
         if(!regex.test(email.value)){
             email.className += ' incorrect';
-            tooltipStyle.display = 'block';
+            tooltipStyle.display = 'inline-block';
             return false;
         }
         else{
@@ -96,7 +105,7 @@ if (document.querySelector('.contact_wrapper' != undefined)) {
         } 
         else {
             message.className += ' incorrect';
-            tooltipStyle.display = 'block';
+            tooltipStyle.display = 'inline-block';
             return false;
         }
 
@@ -111,7 +120,7 @@ if (document.querySelector('.contact_wrapper' != undefined)) {
             inputsLength = form__inputs.length;
 
         for (var i = 0; i < inputsLength; i++) {
-            form__inputs[i].addEventListener('blur', function(e) {
+            form__inputs[i].addEventListener('keyup', function(e) {
 
                 removeClass(e.target);
 
@@ -131,7 +140,10 @@ if (document.querySelector('.contact_wrapper' != undefined)) {
             }
 
             if (result) {
-                console.log('Le formulaire est bien rempli.');
+                
+                activateTooltips__Correct();
+                
+                window.alert('Le formulaire est bien rempli.');
             }
 
             e.preventDefault();
