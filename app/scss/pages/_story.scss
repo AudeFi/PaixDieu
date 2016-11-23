@@ -77,6 +77,14 @@
     font-weight:bold ;
     font-family: Kohinoor Devanagari; }
   }
+  @media(min-width: 1400px) {
+    margin-top: 11%;
+    position: absolute;
+    font-size: 26px;
+    font-size: 1.625rem;
+    font-weight:bold ;
+    font-family: Kohinoor Devanagari; }
+  }
   .story__subtitle-abbey::before {
     @media(min-width: 320px) {
       content: '';
@@ -195,7 +203,7 @@
       0% {mask-position: 0 0; }
       100% { mask-position: 100% 0; }
     }
-    
+
 .story__text-bouteille {
   position: relative;
   margin-top: -45%;
