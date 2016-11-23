@@ -80,7 +80,9 @@ gulp.task('useref', function(){
   return gulp.src('app/index.html')
     .pipe(useref())
     // Minifies only if it's a JavaScript file
-    .pipe(gulpIf('*.js', uglify()))
+    .pipe(gulpIf('*.js', uglify().on('error', function(e){
+            console.log(e);
+         })))
     // Minifies only if it's a CSS file
     .pipe(gulpIf('*.css', cssnano({zindex: false})))
     .pipe(gulp.dest('dist'))
@@ -90,9 +92,9 @@ gulp.task('useref', function(){
 gulp.task('images', function(){
   return gulp.src('app/images/**/*.+(png|jpg|gif|svg)')
   // Caching images that ran through imagemin
-  .pipe(cache(imagemin({
+  /*.pipe(cache(imagemin({
       interlaced: true
-    })))
+    })))*/
   .pipe(gulp.dest('dist/images'))
 });
 
