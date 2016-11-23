@@ -19,7 +19,7 @@ if (document.querySelector('.swiper-container')!=undefined) {
     // EVENTS
 
     //When I swipe manually (the hash change and I change the active menu item)
-    window.onhashchange = function(){ 
+    window.onhashchange = function(){
         var hash = document.location.hash.split('#')[1];
         var controls_button = document.querySelector('.controls_button');
         if (hash.indexOf("?") != -1 )
@@ -124,26 +124,21 @@ if (document.querySelector('.swiper-container')!=undefined) {
     }
 
     function startingClickMenu() {
-        event.stopPropagation();
-        event.preventDefault();
         if (menuState == "open") {
             removeClass('.controls_menuOpen', 'openned');
             mySwiper.unlockSwipes();
             menuState = "close";
         } else {
-            pressTimer = window.setTimeout(function() { 
-                console.log('longpress');
+            pressTimer = window.setTimeout(function() {
                 addClass('.controls_menuOpen', 'openned');
                 menuState = "open";
                 mySwiper.lockSwipes(); // If we oppened the menu with a long press on next button, don't swipe to next slide
-            },300); 
+            },300);
         }
         return false;
     }
 
     function endingClickMenu() {
-        event.stopPropagation();
-        event.preventDefault();
         if( menuState == "close"){
             menuState = "swipe";
         }
