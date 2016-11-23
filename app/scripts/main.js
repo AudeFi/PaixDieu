@@ -98,15 +98,27 @@ if (document.querySelector('.swiper-container')!=undefined) {
     //bind to determined event(s)
     var pressTimer;
     var menuState = "swipe";
+    var startEvent = 'mousedown';
+    var endEvent = 'mouseup';
+
+    setTouchEvent();
+    function setTouchEvent() {
+        if (Modernizr.touchevent) {
+            startEvent = 'touchstart';
+            endEvent = 'touchend';
+        }
+    }
 
     var controlsButton = document.querySelectorAll('.controls_button');
     for (var i = 0; i < controlsButton.length; i++) {
         // ON MOBILE - TOUCH EVENT
-        controlsButton[i].addEventListener('touchstart', startingClickMenu );
-        controlsButton[i].addEventListener('touchend', endingClickMenu );
+        controlsButton[i].addEventListener(startEvent , startingClickMenu );
+        controlsButton[i].addEventListener(endEvent , endingClickMenu );
     }
 
     function startingClickMenu() {
+        event.stopPropagation();
+        event.preventDefault();
         if (menuState == "open") {
             removeClass('.controls_menuOpen', 'openned');
             mySwiper.unlockSwipes();
@@ -122,6 +134,8 @@ if (document.querySelector('.swiper-container')!=undefined) {
     }
 
     function endingClickMenu() {
+        event.stopPropagation();
+        event.preventDefault();
         if( menuState == "close"){
             menuState = "swipe";
         }
