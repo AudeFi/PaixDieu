@@ -34,7 +34,7 @@ function displayAmbassadorPoint(ambassador, map) // on passe l'ambassadeur pour 
     location.href = _url;
 
 
-	let ambassador = getAmbassador(index.replace('-', ' '));
+	var ambassador = getAmbassador(index.replace('-', ' '));
 	displayInformations(ambassador);
 }
 
@@ -69,9 +69,9 @@ function getLocation(ambassador, success, map)
 }
 
 function displayInformations(ambassador) {
-  let container = document.querySelector('.ambassador-infos');
-  let name = document.querySelector('.ambassador-name');
-  let place = document.querySelector('.ambassador-place');
+  var container = document.querySelector('.ambassador-infos');
+  var name = document.querySelector('.ambassador-name');
+  var place = document.querySelector('.ambassador-place');
 
   if (!container.classList.contains('active')) {
     container.classList.add('active');

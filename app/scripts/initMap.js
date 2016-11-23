@@ -36,17 +36,17 @@ function initMap() {
   document.querySelector('.deguster_twitter').addEventListener('click', function (e) {
     e.preventDefault();
 
-    const url = encodeURI(window.location.href.replace(' ', '-')).replace('#', '%23');
-    const texte = encodeURI('Venez déguster de la bonne biere');
-    const toShare = 'https://twitter.com/share?url='+ url +'&text='+ texte;
+    var url = encodeURI(window.location.href.replace(' ', '-')).replace('#', '%23');
+    var texte = encodeURI("J'ai choisi cette #brasserie pour déguster ma @paixdieu !");
+    var toShare = 'https://twitter.com/share?url='+ url +'&text='+ texte;
     window.open(toShare, '', 'width=500,height=400');
   });
 
   document.querySelector('.deguster_facebook').addEventListener('click', function (e) {
     e.preventDefault();
 
-    const url = encodeURI(window.location.href.replace(' ', '-')).replace('#', '%23');
-    const toShare = 'https://www.facebook.com/sharer/sharer.php?sdk=joey&u='+ url;
+    var url = encodeURI(window.location.href.replace(' ', '-')).replace('#', '%23');
+    var toShare = 'https://www.facebook.com/sharer/sharer.php?sdk=joey&u='+ url;
     window.open(toShare, '', 'width=500,height=400');
   });
 
