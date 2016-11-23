@@ -1,6 +1,9 @@
 .brassins{
-    background-color:#211d1e !important;
     .carousel{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: $background-color;
         .carousel_listProducts{
             /* —— Bottles —— */
             li.carousel_product{

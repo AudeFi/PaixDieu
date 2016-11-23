@@ -35,7 +35,7 @@ body{
     background-color:$background-color;
     @media (min-width: 1024px) {
       background-color:black;
-      transition: padding 1.5s;
+      transition: padding 0.5s;
       padding: 50px 20px;
     }
 
@@ -214,10 +214,23 @@ body{
     .controls_menuItems {
       z-index: 3;
       position: fixed;
-      bottom: 30px;
+      bottom: 0px;
+      height: 60px;
       width: 100%;
     }
+    .controls_bgAnimation {
+      transition: height 0.5s ease;
+      background-color: black;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+      position: absolute;
+      bottom: 0;
+    }
     .controls_mainPages {
+      position: absolute;
+      z-index: 3;
+      padding-top: 20px;
       width: 100%;
       font-size: 20px;
       text-align: center;
@@ -236,9 +249,10 @@ body{
       }
     }
     .controls_otherPages {
+      z-index: 3;
       position: absolute;
       right: 35px;
-      bottom: -15px;
+      bottom: 5px;
       font-size: 12px;
       text-align: center;
       li {
