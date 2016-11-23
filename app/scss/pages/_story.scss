@@ -130,7 +130,7 @@
 }
 
 .story__text-abbey_scroll {
-  display: none;
+  /* display: none; */
   @media(min-width: 1200px) {
     margin-right: 55%;
     margin-top: -25%;
@@ -141,7 +141,7 @@
   }
 }
 
-.story__text-abbey_scroll img {
+.story__text-abbey_scroll svg {
   width: 8%;
   transform: translate(10px, 15px);
 }
