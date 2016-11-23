@@ -12,7 +12,8 @@
 	margin-bottom: 2%;
 }
 
-.deguster .wrapper form input {
+.input-box {
+    position: relative;
 	border: 1px solid #625F60;
 	border-radius: 5px;
 	padding: 15px;
@@ -21,6 +22,20 @@
 	@media screen and (max-width: 400px) {
         width: 100%;
     }
+}
+
+.input-box input {
+    width: calc(100% - 20px);
+}
+
+.input-box button {
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    width: 20px;
+    height: 20px;
+    background: url('../images/search.svg');
+    background-size: 20px;
 }
 
 input::-webkit-input-placeholder {
@@ -96,7 +111,7 @@ input:-ms-input-placeholder {
 .deguster_twitter {
     color: white;
     padding: 5px 10px;
-    min-height: 30px;
+    min-height: 40px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -109,3 +124,10 @@ input:-ms-input-placeholder {
     background: #2a87eb;
 }
 
+.ambassador-infos {
+    display: none
+}
+
+.ambassador-infos.active {
+    display: block;
+}

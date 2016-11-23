@@ -7,32 +7,15 @@ function closestPlaces() {
 // this functions counts the ambassadors
 function ambassadorsCount() {
 	var div = document.getElementById('ambassadors_number');
-	div.innerHTML += 'Parmi ' + ambassadors.length + ' ambassadeurs';
+	div.innerHTML += 'Parmi ' + ambassadors.length + ' ambassadeurs.';
 }
 
 ambassadorsCount();
+closestPlaces();
 
 // appel pour afficher le marker
 function displayAmbassadorPoint(ambassador, map) // on passe l'ambassadeur pour recup les infos pr afficher marker
 { 
-
-	var contentString = '<div id="content">'+
-      	'<div id="siteNotice">'+
-      	'</div>'+
-      	'<h1 id="firstHeading" class="firstHeading">'+ ambassador.name +'</h1>'+
-      	'<div id="bodyContent">'+
-      	'Adresse : ' + ambassador.place +
-      	'<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-      	'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-      	'(last visited June 22, 2009).</p>'+
-      	'</div>'+
-      	'</div>';
-
-    var currentInfowindow = null;
-
-	var infowindow = new google.maps.InfoWindow({
-    	content: contentString
-  	});
 
     var marker = new google.maps.Marker({
       position: ambassador.coords,
@@ -40,16 +23,7 @@ function displayAmbassadorPoint(ambassador, map) // on passe l'ambassadeur pour 
       map: map,
     });  
 
-	google.maps.event.addListener(marker, 'click', function() { 
-    	if (currentInfowindow != null) { 
-    	    currentInfowindow.close(); 
-    	} 
-    	infowindow.open(map, marker); 
-    	currentInfowindow = infowindow; 
-	}); 
-
     google.maps.event.addListener(marker, 'click', function() {
-    	console.log(ambassador.name);
     	event.preventDefault();
 
     	// Redirect instead with JavaScript
@@ -64,6 +38,10 @@ function displayAmbassadorPoint(ambassador, map) // on passe l'ambassadeur pour 
         _url = _url.substring(0, idMark);
     _url = _url + '?bar=' + index;
     location.href = _url;
+
+
+	let ambassador = getAmbassador(index.replace('-', ' '));
+	displayInformations(ambassador);
 }
 
 	// Check if url already on a specific bottle
@@ -73,15 +51,10 @@ function displayAmbassadorPoint(ambassador, map) // on passe l'ambassadeur pour 
 	    }, 1000);
 	}
 
-	
-
 }
 
 function getLocation(ambassador, success, map)
 {
-
-	
-
     var geocoder = new google.maps.Geocoder();
     geocoder.geocode(
         { 'address': ambassador.place },
@@ -100,10 +73,29 @@ function getLocation(ambassador, success, map)
         }
     );
 }
-    
-    // var twitter = document.querySelector('.twitter-share-button');
-    // twitter.setAttribute('data-href', 'frfr');
-    // console.log(twitter);
+
+function displayInformations(ambassador) {
+  let container = document.querySelector('.ambassador-infos');
+  let name = document.querySelector('.ambassador-name');
+  let place = document.querySelector('.ambassador-place');
+
+  if (!container.classList.contains('active')) {
+    container.classList.add('active');
+  }
+
+  place.innerHTML = ambassador.place;
+  name.innerHTML = ambassador.name;
+}
+
+
+function getAmbassador(ambassador) {
+  for(var i = 0; i < ambassadors.length; i++) {
+    if (ambassador == ambassadors[i].name) {
+      return ambassadors[i];
+    }
+  }
+}
+
 
 
 

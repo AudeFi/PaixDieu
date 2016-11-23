@@ -7,12 +7,25 @@
     <div class="wrapper">
 
         <div class="infoWindow">
-            <form action="demo_form.asp" onsubmit="return false;">
-                <input type="text" name="fname" placeholder="Trouver près de chez moi" id="userAddress"><br>
-                <input style="position:absolute; top:50%; left:5%;" type="submit" onclick="closestPlaces();" />
+            <form onsubmit="closestPlaces();">
+                <div class="input-box">
+                    <input type="text" name="address" placeholder="Trouver près de chez moi" id="userAddress"><br>
+                    <button></button>
+                </div>
+
+                <div style="margin-top: 10px" id="ambassadors_number"></div>
             </form>
 
-            <div id="ambassadors_number">
+            <div class="ambassador-infos" style="margin-top: 30px;">
+                <h2 style="font-size: 30px" class="ambassador-name"></h2>
+                <div class="ambassador-place"></div>
+                
+                <br><br>
+
+                <div class="shareButtons">
+                    <button class="deguster_facebook">Partager sur facebook</button>
+                    <button class="deguster_twitter">Tweeter</button>
+                </div>
             </div>
         </div>
         
@@ -22,11 +35,6 @@
             </div>
         </div>
 
-    </div>
-    
-    <div class="shareButtons">
-        <button class="deguster_facebook">Share on facebook</button>
-        <button class="deguster_twitter">Tweet</button>
     </div>
 
 </section>
