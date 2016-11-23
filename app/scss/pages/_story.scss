@@ -42,6 +42,7 @@
      background-color: $background-color;
   }
 
+
   .story-abbey{
     @media(min-width: 480) {
       margin-bottom: 60px;
@@ -107,6 +108,29 @@
               display: none;
             }
           }
+
+  .story__image:hover{
+      mask: url(../../images/old-movie-mask.png);
+      mask-height: 160%;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      mask-position: left;
+      @include animation ('mask-playzero 2s steps(15) infinite') ;
+    }
+
+    @include keyframes(mask-playzero) {
+      0% {mask-position: 0 0; }
+      100% { mask-position: 100% 0; }
+    }
+    
+    .element {
+      width: 100px;
+      height: 100px;
+      background: black;
+      @include animation('slide-down 5s 3');
+    }
+
+
 
   .story__image-abbey{
   border-radius: 30%;

@@ -184,6 +184,7 @@ body{
     
         @media(min-width: 760px) {
             margin: 40px 40px;
+            transition: margin ease-out 1s;
             width: 35%;
         }
     
