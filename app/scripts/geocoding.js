@@ -1,9 +1,3 @@
-// this function localizes an address chosen by the user
-function closestPlaces() {
-    var input = document.getElementById("userAddress").value;
-    console.log(input);
-}
-
 // this functions counts the ambassadors
 function ambassadorsCount() {
 	var div = document.getElementById('ambassadors_number');

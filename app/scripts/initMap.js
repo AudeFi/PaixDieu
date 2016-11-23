@@ -8,7 +8,6 @@ function initMap() {
     center: {lat: 47.8708675, lng: 1.3574238},
     zoom: 6
   });
-  var infoWindow = new google.maps.InfoWindow({map: map});
 
   // Try HTML5 geolocation.
   if (navigator.geolocation) {
@@ -18,8 +17,6 @@ function initMap() {
         lng: position.coords.longitude
       };
 
-      infoWindow.setPosition(pos);
-      infoWindow.setContent('Vous êtes ici!!!');
       map.setCenter(pos);
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
@@ -51,6 +48,14 @@ function initMap() {
     const url = encodeURI(window.location.href.replace(' ', '-')).replace('#', '%23');
     const toShare = 'https://www.facebook.com/sharer/sharer.php?sdk=joey&u='+ url;
     window.open(toShare, '', 'width=500,height=400');
+  });
+
+  document.querySelector('#near-me').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var input = document.getElementById("userAddress").value;
+    getLocation({place: input}, function(te, map) {
+      map.setCenter(te.coords);
+    }, map);
   });
 }
 
