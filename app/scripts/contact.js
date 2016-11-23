@@ -36,7 +36,7 @@ if (document.querySelector('.contact_wrapper')) {
 
     // la fonction ci-dessous permet de supprimer les classe correct et incorrect
 
-    function removeClass(targetClass){
+    function removeStatutClass(targetClass){
 
         for(var i = 0; i < targetClass.classList.length; i++){
             if(targetClass.classList[i] == "incorrect"){
@@ -122,7 +122,7 @@ if (document.querySelector('.contact_wrapper')) {
         for (var i = 0; i < inputsLength; i++) {
             form__inputs[i].addEventListener('keyup', function(e) {
 
-                removeClass(e.target);
+                removeStatutClass(e.target);
 
                 check[e.target.id](e.target.id); // "e.target" représente l'input actuellement modifié
 
