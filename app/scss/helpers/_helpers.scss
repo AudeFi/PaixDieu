@@ -1,50 +1,19 @@
-@font-face {
-  font-family: 'KohinoorDevanagari-Medium';
-  src: url('../fonts/KohinoorDevanagari-Medium.otf') format('otf');
-  font-weight: normal;
-  font-style: normal;
-}
+@include font-face(Kohinoor, '../fonts/KohinoorDevanagari-Medium', normal);
+@include font-face(Kohinoor, '../fonts/KohinoorDevanagari-Semibold', bold);
+@include font-face(Kohinoor, '../fonts/KohinoorDevanagari-Regular', normal);
+@include font-face(Kohinoor, '../fonts/KohinoorDevanagari-Bold', bolder);
+@include font-face(Kohinoor, '../fonts/KohinoorDevanagari-Light', lighter);
 
-@font-face {
-  font-family: 'KohinoorDevanagari-Semibold';
-  src: url('../fonts/KohinoorDevanagari-Semibold.otf') format('otf');
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'KohinoorDevanagari-Regular';
-  src: url('../fonts/KohinoorDevanagari-Regular.otf') format('otf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'KohinoorDevanagari-Bold';
-  src: url('../fonts/KohinoorDevanagari-Bold.otf') format('otf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'KohinoorDevanagari-Light';
-  src: url('../fonts/KohinoorDevanagari-Light.otf') format('otf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'KohinoorDevanagari-Medium';
-  src: url('KohinoorDevanagari-Medium.otf') format('otf');
-  font-weight: normal;
-  font-style: normal;
+html {
+  font-family: Kohinoor;
 }
 
 .subtitle {
   margin: 50px 20px 25px 20px;
   position: relative;
   font-size: 26px;
-  font-family:Kohinoor Devanagari;
+  font-weight: lighter;
   &::before {
     content: '';
     position: absolute;
@@ -56,8 +25,7 @@
 }
 
 p {
-  font-family: KohinoorDevanagari-Light;
+  font-family: Kohinoor;
   margin-left: 20px;
   margin-right: 20px;
-
 }

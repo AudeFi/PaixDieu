@@ -13,11 +13,21 @@
                 width: 100vw;
                 transition-property: transform opacity;
                 transition-duration: 0.8s;
+                @media screen and (min-width: 800px) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    /* justify-content: space-between; */
+                    margin: 0 30px;
+                }
+                @media screen and (min-width: 1024px) {
+                    justify-content: flex-start;
+                }
                 .carousel_title{
                     transition-property: opacity;
                     transition-duration: 0.8s;
                     padding : 40px 1.25rem 0 1.25rem;
                     opacity: 0;
+                    width: 100%;
                     h1{
                         font-size: 32px;
                         color:white;
@@ -34,26 +44,27 @@
                 }
                 .carousel_bottles{
                     height:200px;
-                    @media screen and (min-width: 800px) {
-                        height:300px;
-                        overflow: hidden
-                    }
                     display: block;
                     padding:20px 0;
                     width:100vw;
                     @media screen and (min-width: 800px) {
+                        height:410px;
+                        overflow: hidden;
+                        padding:30px 0;
+                    }
+                    @media screen and (min-width: 800px) {
                         width:52vw;
                     }
                     @media screen and (min-width: 1024px) {
-                        width:72vw;
+                        width:55vw;
                     }
                     .carousel_background{
                         background-color: black;
                         height:180px;
                         @media screen and (min-width: 800px) {
-                            height:280px;
-                            width:95%;
-
+                            height:360px;
+                            width:100%;
+                            margin: auto;
                         }
                         margin:10px 0;
                         position: relative;
@@ -69,6 +80,12 @@
                                     transition-property: transform opacity left;
                                     transition-duration: 0.5s;
                                     transform: scale(0.8);
+                                    @media screen and (min-width: 800px) {
+                                        height: 380px;
+                                    }
+                                    @media screen and (min-width: 1024px) {
+                                        height: 380px;
+                                    }
                                 }
                                 &.carousel_backImg{
                                     transition-property: opacity;
@@ -80,40 +97,49 @@
                                     opacity: 0;
                                     @media screen and (min-width: 800px) {
                                         left: 10vw;
+                                        height:160px;
                                     }
                                     @media screen and (min-width: 1024px) {
-                                        left: 18vw;
+                                        left: 16vw;
                                     }
                                 }
                             }
                         }
                     }
                 }
+                .carousel_rightColumn {
+                    @media screen and (min-width: 800px) {
+                        width:45vw;
+                    }
+                    @media screen and (min-width: 1024px) {
+                        width:42vw;
+                    }
+                }
                 .carousel_icons{
                     transition-property: opacity;
                     transition-duration: 0.8s;
                     opacity: 0;
-                    padding : 40px 1.25rem 0 1.25rem;
-                    @media screen and (min-width: 800px) {
-                        width: 50vw;
-                        float: right;
-                    }
-                    @media screen and (min-width: 1024px) {
-                        width: 30vw;
-                    }
+                    padding : 40px 1.25rem 0 1.25rem;;
                     ul{
                         text-align: center;
+                        width: 320px;
+                        margin: auto;
+                        @media screen and (min-width: 400px) {
+                            width: 360px;
+                        }
                         li{
-                            width:24%;
                             display: inline-block;
                             .carousel_round{
                                 float:left;
-                                margin: 0 10px;
+                                margin: 0 5px;
                                 border : 2px solid #777576;
                                 height: 60px;
                                 width: 60px;
                                 text-align: center;
                                 border-radius: 200px;
+                                @media screen and (min-width: 400px) {
+                                    margin: 0 10px;
+                                }
                                 img{
                                     max-height:70%;
                                     max-width:70%;
@@ -128,10 +154,13 @@
                     }
                 }
                 .carousel_shareButtons {
+                    transition-property: opacity;
+                    transition-duration: 0.8s;
+                    opacity: 0;
                     z-index: 10;
-                    display: none;
                     margin: 20px auto;
                     width: 200px;
+                    height: 25px;
                     iframe {
                         display: none;
                         vertical-align: bottom
@@ -143,17 +172,24 @@
                 .carousel_description{
                     transition-property: opacity;
                     transition-duration: 0.8s;
-                    opacity: 0;
-                    padding : 40px 1.25rem 80px 1.25rem;
+                    padding : 10px 1.25rem 80px 1.25rem;
+                    width: 340px;
+                    margin: auto;
                     @media screen and (min-width: 800px) {
-                        width: 50vw;
-                        float: right;
+                        padding : 40px 1.25rem 80px 1.25rem;
                     }
-                    @media screen and (min-width: 1024px) {
-                        width: 30vw;
-                    }
+                    opacity: 0;
                     p{
                         color:white;
+                        margin: 0;
+                    }
+                    h3 {
+                        margin: 20px 0;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                    }
+                    @media screen and (min-width: 1024px) {
+                        padding-right: 100px;
                     }
                 }
             }
@@ -180,9 +216,16 @@
                         .carousel_item{
                             img{
                                 &.carousel_mainImg{
+                                    cursor: pointer;
                                     z-index:2;
                                     opacity: 0.6;
                                     left: -2vw;
+                                    @media screen and (min-width: 800px) {
+                                        left: -7vw;
+                                    }
+                                    @media screen and (min-width: 1024px) {
+                                        left: -5vw;
+                                    }
                                 }
                             }
                         }
@@ -208,7 +251,7 @@
                                         left: 22vw;
                                     }
                                     @media screen and (min-width: 1024px) {
-                                        left: 34vw;
+                                        left: 25vw;
                                     }
                                 }
                                 &.carousel_backImg{
@@ -222,7 +265,7 @@
                     opacity: 1;
                 }
                 .carousel_shareButtons {
-                    display: block;
+                    opacity: 1;
                     z-index: 5;
                     iframe {
                         display: inline;
@@ -241,14 +284,15 @@
                         .carousel_item{
                             img{
                                 &.carousel_mainImg{
+                                    cursor: pointer;
                                     z-index:2;
                                     opacity: 0.6;
                                     left: 87vw;
                                     @media screen and (min-width: 800px) {
-                                        left: 44vw;
+                                        left: 47vw;
                                     }
                                     @media screen and (min-width: 1024px) {
-                                        left: 61vw;
+                                        left: 50vw;
                                     }
                                 }
                             }

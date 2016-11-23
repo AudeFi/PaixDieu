@@ -23,3 +23,14 @@
   -o-animation: #{$str};
   animation: #{$str};      
 }
+
+@mixin font-face($font-family, $file-path, $font-weight) {
+    @font-face {
+        font-family: $font-family;
+        src: url('#{$file-path}.eot');
+        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+        url('#{$file-path}.woff') format('woff'),
+        url('#{$file-path}.ttf') format('truetype');
+        font-weight: $font-weight;
+    }
+}
