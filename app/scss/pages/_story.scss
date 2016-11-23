@@ -1,3 +1,13 @@
+.story_wrapper {
+  background-color: $background-color;
+  @media(min-width: 1024px) {
+    padding: 40px;
+  }
+  @media(min-width: 480px) {
+    padding: 20px;
+  }
+}
+
 .story {
   @media(min-width: 480px) {
     margin-bottom: 20px;
