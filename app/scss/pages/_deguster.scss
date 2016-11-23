@@ -1,25 +1,92 @@
 .deguster .wrapper {
 	width:100%;
 	height:100%;
+	padding : 40px 1.25rem 0 1.25rem;
+}
+
+.deguster .wrapper form {
+	width:100%;
+	margin-bottom: 2%;
+}
+
+.deguster .wrapper form input {
+	border: 1px solid #625F60;
+	border-radius: 5px;
+	padding: 15px;
+	width:60%;
+	height:8%;
+	@media screen and (max-width: 400px) {
+        width: 100%;
+    }
+}
+
+input::-webkit-input-placeholder {
+	color: #625F60;
+	font-size:20px;
+	font-family: sans-serif;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+	color: #625F60;
+	font-size:20px;
+	font-family: sans-serif;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+	color: #625F60;
+	font-size:20px;
+	font-family: sans-serif;  
+}
+ 
+input:-ms-input-placeholder {  
+	color: #625F60; 
+	font-size:20px;
+	font-family: sans-serif; 
 }
 
 .deguster .wrapper .infoWindow {
-	width:300px;
-	height:300px;
-	border: 1px solid white;
+	width: 35%;
+	height:60%;
 	float:left;
+	margin-right:2%;
+	@media screen and (max-width: 400px) {
+        display:block;
+        width: 100%;
+        height:30%;
+    }
 }
 
 .deguster .wrapper .swiper-no-swiping {
-	height:100%;
-	width:50%;
+	height: 60%;
+	width: 55%;
 	display: inline-block;
+	@media screen and (max-width: 400px) {
+        display:block;
+        width: 100%;
+    }
 }
 
 .deguster .wrapper .swiper-no-swiping #map {
-	height:60%;
-	width:100%;
-	margin-right:0;
-	left: calc(50% - 50px);
+	height: 100%;
+	width: 100%;
 }
+
+.deguster_title{
+    padding : 40px 1.25rem 0 1.25rem;
+    margin-bottom: 20px;
+    h1{
+        font-size: 32px;
+        color:white;
+        font-weight: 900;
+        &:after{
+            content:"";
+            height: 5px;
+            width:30px;
+            background-color: #d8af33;
+            margin-top:10px;
+            display:block;
+        }
+    }
+}
+
 

@@ -58,10 +58,16 @@ function displayAmbassadorPoint(ambassador, map) // on passe l'ambassadeur pour 
 	        urlParametersBrasserie(paramBrasserie);
 	    }, 1000);
 	}
+
+	
+
 }
 
 function getLocation(ambassador, success, map)
 {
+
+	
+
     var geocoder = new google.maps.Geocoder();
     geocoder.geocode(
         { 'address': ambassador.place },
@@ -80,3 +86,15 @@ function getLocation(ambassador, success, map)
         }
     );
 }
+
+	// console.log('loc: ' + location.href);
+	var twitter = document.getElementsByClassName('testTwitter');
+	console.log(twitter);
+	var testtt = 3;
+	twitter.innerHTML = "https://twitter;";
+	//twitter.innerHTML = '<a class="twitter-share-button deguster_tweet" href="https://twitter.com/intent/tweet" data-show-count="true" data-text=' + testtt + '>Tweet</a>';
+	//twitter.dataset.text = "J\'ai choisi cette #brasserie pour déguster ma @paixdieu !" + location.href;
+
+	var div = document.getElementById('ambassadors_number');
+	div.innerHTML += 'Parmi ' + ambassadors.length + ' ambassadeurs';
+	console.log('test: ' + ambassadors.length);
