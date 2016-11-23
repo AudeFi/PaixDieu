@@ -2,7 +2,7 @@ $font-stack: " Kohinoor;", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 
 .contact_wrapper {
-    font-size: 16px;
+    font-size: 22px;
     background-color: $background-color;
     color: white;
     font-family: $font-stack;
@@ -24,7 +24,7 @@ $font-stack: " Kohinoor;", "Helvetica Neue", Helvetica, Arial, sans-serif;
 * Title
 */
 h2.subtitle {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-weight: 800;
     text-align: left;
     margin-top: 2rem;
@@ -32,27 +32,84 @@ h2.subtitle {
     margin-left: 1rem;
     text-decoration : none;
 }
-.subtitle_underline{
-    display: block;
-    width: 6%;
-    padding : 5px 0 0 0;
-    border-bottom : 4px solid $color-yellow;
-}
 
 /**
 * Inputs
 */
-form {
-
-    margin: 2rem auto;
+form{
 
     .form__group {
         display: block;
-        width: calc(100% - 3rem);
         border: 1px solid;
         border-radius: 10px;
         opacity: 0.51;
     }  
+
+    .form__statut{
+        margin: 2rem;
+    }
+
+    .form__data{
+        margin: 0.5rem auto;
+    }
+    .form__submit{
+        margin: 0.5rem auto;
+    }
+    .form__correct{
+        margin: 0.5rem auto;
+    }
+
+    @media(min-width: 760px) {
+
+        .form__group {
+            display: block;
+            border: 1px solid;
+            border-radius: 10px;
+            opacity: 0.51;
+        }  
+
+        .form__statut{
+            margin: 2rem 10rem;
+        }
+
+        .form__data{
+            margin: 0.5rem 5rem;
+        }
+        .form__submit{
+            margin: 1.5rem 9rem;
+        }
+        .form__correct{
+            margin: 0.5rem 5rem;
+        }
+
+    }
+
+    @media (min-width: 860px) {
+
+        .form__group {
+            display: block;
+            border: 1px solid;
+            border-radius: 10px;
+            opacity: 0.51;
+        }  
+
+        .form__statut{
+            margin: 5rem 50rem;
+        }
+
+        .form__data{
+            margin: 5rem 40rem;
+        }
+        .form__submit{
+            margin: 1.5rem 50rem;
+        }
+        .form__correct{
+            margin: 5rem 40rem;
+        }
+
+    }
+
+
 }
 
 #form__statut-individual__input, 
@@ -65,23 +122,29 @@ form {
 .form__statut-professional__label, 
 {
     margin: 0.5rem auto;
-    padding: 0.5rem 1rem;
+    width: 100%;
+    padding: 1.5rem 1rem;
+
 }
 
 .form__name__input,
 .form__email__input{
-    margin: 1.5rem auto;
-    padding: 1rem 1rem;
+    margin: 0.5rem auto;
+    width: 100%;
+    padding: 1.5rem 1rem;
 }
 
 .form__message__textarea{
-    margin: 1.5rem auto;
-    padding: 0.5rem 1rem;
+    margin: 0.5rem auto;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    min-height: 10rem;
 }
 
 .form__statut-individual__input:checked + .form__statut-individual__label, 
 .form__statut-professional__input:checked + .form__statut-professional__label{
     opacity: 1;
+    border: 2px solid;
 }
 
 .form__name__input:focus, 
@@ -91,12 +154,9 @@ form {
     opacity: 1;
 }
 
-.form__message__textarea {
-    min-height: 7rem;
-}
-
 #form__submit__input{
     margin: 1.5rem auto;
+    width: 100%;
     border: none;
     font-weight: 800;
     background-color: $color-yellow;
@@ -121,7 +181,7 @@ form{
 
 
 .tooltip {
-    font-size: 11px;
+    font-size: 16px;
     display: inline-block;
     margin: 1rem auto;
     padding: 0.2rem 0.4rem;
@@ -129,5 +189,17 @@ form{
     border: 1px solid red;
     background-color: transparent;
     color: red;
+    border-radius: 7px;
+}
+
+.tooltip__correct {
+    font-size: 16px;
+    display: none;
+    margin: 1rem auto;
+    padding: 0.2rem 0.4rem;
+    width: calc(100% - 2rem);
+    border: 1px solid green;
+    background-color: transparent;
+    color: green;
     border-radius: 7px;
 }

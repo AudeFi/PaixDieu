@@ -25,6 +25,10 @@ body {
     @media (min-width: 860px) {
         margin: 0 0 0 50px;
     }
+
+    @media (min-width: 1023px) {
+        visibility: hidden;
+    }
 }
 
 .accueil__logo img {
@@ -69,7 +73,32 @@ body {
     }
 }
 
-.accueil__presentation p {
+.accueil__presentation--text {
+    background: linear-gradient(to bottom, rgba(33, 29, 30, 1), rgba(33, 29, 30, 0.1));
+
+    @media (min-width: 370px) {
+        background: linear-gradient(to bottom, rgba(33, 29, 30, 1), rgba(33, 29, 30, 0.2));
+    }
+
+    @media (min-width: 860px) {
+        flex-basis: 65%;
+        background: linear-gradient(to right, rgba(33, 29, 30, 1), rgba(33, 29, 30, 0.8));
+    }
+
+    @media (min-width: 960px) {
+        flex-basis: 60%;
+    }
+
+    @media (min-width: 1024px) {
+        flex-basis: 55%;
+    }
+
+    @media (min-width: 1240px) {
+        flex-basis: 43%;
+    }
+}
+
+.accueil__presentation--text p {
     margin-top: 20px;
     font-size: 29px;
     font-family: Kohinoor;
@@ -93,18 +122,13 @@ body {
         line-height: 30px;
         padding: 60px 0 0 40px;
     }
-}
 
-.accueil__presentation--text {
-    background: linear-gradient(to bottom, rgba(33, 29, 30, 1), rgba(33, 29, 30, 0.1));
-
-    @media (min-width: 370px) {
-        background: linear-gradient(to bottom, rgba(33, 29, 30, 1), rgba(33, 29, 30, 0.2));
+    @media (min-width: 1024px) {
+        padding: 60px 45px 0 40px;
     }
 
-    @media (min-width: 860px) {
-        flex-basis: 100%;
-        background: linear-gradient(to right, rgba(33, 29, 30, 1), rgba(33, 29, 30, 0.8));
+    @media (min-width: 1240px) {
+        padding: 60px 125px 0 40px;
     }
 }
 
@@ -122,8 +146,12 @@ body {
 
     @media (min-width: 860px) {
         margin: 0;
-        padding: 55px 0 70px 135px;
+        padding: 55px 0 70px 5px;
         background: linear-gradient(to left, rgba(33, 29, 30, 0.1), rgba(33, 29, 30, 0.8));
+    }
+
+    @media (min-width: 1240px) {
+        padding: 55px 0 60px 0;
     }
 }
 
