@@ -60,8 +60,8 @@
           font-family: Kohinoor Devanagari;
         }
         @media(min-width: 1200px){
-          // margin:  1.25rem 1.5625rem 3.70rem;
-          position: relative;
+          margin-top: 15%;
+          position: absolute;
           font-size: 26px;
           font-size: 1.625rem;
           font-weight:bold ;
@@ -82,7 +82,7 @@
             background-color: $color-yellow;
           }
           @media(min-width: 1200px) {
-            display: none;
+            
           }
         }
 
@@ -92,9 +92,9 @@
     border-radius: 30%;
     width: 45%;
 
-    margin-top: -6%;
+    margin-top: -4%;
     @media(min-width: 1200px) {
-      margin-top: 2%;
+      margin-top: 6%;
       width: auto;
       height: 82%;
     }
@@ -156,7 +156,6 @@
   .story__text-abbey_scroll img {
     width: 8%;
     transform: translate(10px, 15px);
-
 
   }
 
