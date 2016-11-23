@@ -1,22 +1,32 @@
 <section data-hash="deguster" class="deguster swiper-slide">
 
-    <form action="demo_form.asp">
-        <input type="text" name="fname"><br>
-        <input type="submit" value="Submit">
-    </form>
-	
-    <div class="swiper-no-swiping">
-        <div id="map" >
-        </div>
+    <div class="deguster_title">
+        <h1>DÉGUSTER</h1>
     </div>
-    <!-- <div class="shareButtons">
-        <div class="fb-send" data-href="https://audeficheux.com/paix-dieu/#deguster"></div>
-        <div class="fb-share-button" 
-            data-href="https://audeficheux.com/paix-dieu/#deguster" 
-            data-layout="button_count"
-            data-mobile_iframe="true">
+
+    <div class="wrapper">
+
+        <div class="infoWindow">
+            <form action="demo_form.asp" onsubmit="return false;">
+                <input type="text" name="fname" placeholder="Trouver près de chez moi" id="userAddress"><br>
+                <input style="position:absolute; top:50%; left:5%;" type="submit" onclick="closestPlaces();" />
+            </form>
+
+            <div id="ambassadors_number">
+            </div>
         </div>
-        <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-show-count="true" data-text="Découvrez la nouvelle Paix Dieu">Tweet</a>
-    </div> -->
+        
+    
+        <div class="swiper-no-swiping">
+            <div id="map" >
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="shareButtons">
+        <button class="deguster_facebook">Share on facebook</button>
+        <button class="deguster_twitter">Tweet</button>
+    </div>
 
 </section>

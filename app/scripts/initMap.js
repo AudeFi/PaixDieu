@@ -35,6 +35,23 @@ function initMap() {
 
     getLocation(ambassador, displayAmbassadorPoint, map);
   }
+
+  document.querySelector('.deguster_twitter').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const url = encodeURI(window.location.href.replace(' ', '-')).replace('#', '%23');
+    const texte = encodeURI('Venez déguster de la bonne biere');
+    const toShare = 'https://twitter.com/share?url='+ url +'&text='+ texte;
+    window.open(toShare, '', 'width=500,height=400');
+  });
+
+  document.querySelector('.deguster_facebook').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const url = encodeURI(window.location.href.replace(' ', '-')).replace('#', '%23');
+    const toShare = 'https://www.facebook.com/sharer/sharer.php?sdk=joey&u='+ url;
+    window.open(toShare, '', 'width=500,height=400');
+  });
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {

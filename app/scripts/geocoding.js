@@ -1,3 +1,17 @@
+// this function localizes an address chosen by the user
+function closestPlaces() {
+    var input = document.getElementById("userAddress").value;
+    console.log(input);
+}
+
+// this functions counts the ambassadors
+function ambassadorsCount() {
+	var div = document.getElementById('ambassadors_number');
+	div.innerHTML += 'Parmi ' + ambassadors.length + ' ambassadeurs';
+}
+
+ambassadorsCount();
+
 // appel pour afficher le marker
 function displayAmbassadorPoint(ambassador, map) // on passe l'ambassadeur pour recup les infos pr afficher marker
 { 
@@ -58,10 +72,16 @@ function displayAmbassadorPoint(ambassador, map) // on passe l'ambassadeur pour 
 	        urlParametersBrasserie(paramBrasserie);
 	    }, 1000);
 	}
+
+	
+
 }
 
 function getLocation(ambassador, success, map)
 {
+
+	
+
     var geocoder = new google.maps.Geocoder();
     geocoder.geocode(
         { 'address': ambassador.place },
@@ -80,3 +100,12 @@ function getLocation(ambassador, success, map)
         }
     );
 }
+    
+    // var twitter = document.querySelector('.twitter-share-button');
+    // twitter.setAttribute('data-href', 'frfr');
+    // console.log(twitter);
+
+
+
+	
+

@@ -7,7 +7,7 @@ body {
     width: 100vw;
 }
 
-.accueil__logo {
+/* .accueil__logo {
     margin: 0 0 0 15px;
 
     @media(min-width: 340px) {
@@ -45,7 +45,7 @@ body {
     @media (min-width: 860px) {
         width: 10%;
     }
-}
+} */
 
 .accueil__content {
     background-size: 100%;
@@ -101,7 +101,8 @@ body {
 .accueil__presentation--text p {
     margin-top: 20px;
     font-size: 29px;
-    font-family: Kohinoor Devanagari Light;
+    font-family: Kohinoor;
+    font-weight: lighter;
     line-height: 35px;
 
     @media(min-width: 470px) {
@@ -230,7 +231,8 @@ body {
     margin-top: 0;
     margin-left: 0;
     font-size: 17px;
-    font-family: Kohinoor Devanagari SemiBold;
+    font-family: Kohinoor;
+    font-weight: bold;
 
     @media(min-width: 470px) {
         font-size: 20px;
@@ -241,7 +243,8 @@ body {
     }
 
     @media (min-width: 860px) {
-        font-family: Kohinoor Devanagari Light;
+        font-family: Kohinoor;
+        font-weight: lighter;
         font-size: 15px;
     }
 }
