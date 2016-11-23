@@ -54,8 +54,7 @@
     margin: 1.125rem 1.25rem 1.5625rem 1.25rem;
     position: relative;
     font-size: 26px;
-    font-size: 1.625rem;
-    font-family: Kohinoor Devanagari; }
+    font-size: 1.625rem;}
     .story__subtitle::before {
       content: '';
       position: absolute;
@@ -75,15 +74,13 @@
           position: relative;
           font-size: 26px;
           font-size: 1.625rem;
-          font-family: Kohinoor Devanagari;
         }
           @media(min-width: 1200px){
             margin: 8.125rem 1.25rem 1.5625rem 3.70rem;
             position: absolute;
             font-size: 26px;
             font-size: 1.625rem;
-            font-weight:bold ;
-            font-family: Kohinoor Devanagari; }
+            font-weight:bold ; }
           }
           .story__subtitle-abbey::before {
             @media(min-width: 320px) {
