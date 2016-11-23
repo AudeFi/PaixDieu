@@ -21,6 +21,7 @@ if (document.querySelector('.swiper-container')!=undefined) {
     //When I swipe manually (the hash change and I change the active menu item)
     window.onhashchange = function(){
         var hash = document.location.hash.split('#')[1];
+        var controls_button = document.querySelector('.controls_button');
         if (hash.indexOf("?") != -1 )
             hash = hash.substring(0, hash.indexOf("?"));
         var currentSwitch = document.querySelector('.swiper-pagination-switch.'+ hash );
@@ -34,8 +35,13 @@ if (document.querySelector('.swiper-container')!=undefined) {
         else {
             swipeEvent(currentSwitch);
         }
-        if (hash == "brassins")
+        if (hash == "brassins"){
             urlParameters(paramBrassin);
+            controls_button.style.opacity = 0.5;
+        }
+        else{
+            controls_button.style.opacity = 1;
+        }
         document.querySelector('.controls_pageTitle').innerHTML = document.querySelector('.swiper-pagination-switch.active').textContent;
     };
     //When I click on a section in the menu
@@ -81,7 +87,7 @@ if (document.querySelector('.swiper-container')!=undefined) {
     if (hash.indexOf("brassins?") != -1 ) { // If i have parameters on a specific bottle
         paramBrassin = hash.substring(hash.indexOf("=") + 1); //Save parameter
         hash = hash.substring(0, hash.indexOf("?")); // Get the hash without parameter
-        swipeEvent( document.querySelector('.swiper-pagination-switch.'+ hash ) ); // Force swipe to the page
+        swipeEvent( document.querySelector('.swiper-pagination-switch.'+ hash ) ); // Force swipe to the page        
     } else if (hash.indexOf("deguster?") != -1 ) { // If i have parameters on a specific bar
         paramBrasserie = hash.substring(hash.indexOf("=") + 1); //Save parameter
         hash = hash.substring(0, hash.indexOf("?")); // Get the hash without parameter
