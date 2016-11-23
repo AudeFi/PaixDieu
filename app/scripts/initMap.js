@@ -30,8 +30,8 @@ function initMap() {
   }
 
   // Init markers
-  for (let i = 0; i < ambassadors.length; i++) {
-    let ambassador = ambassadors[i];
+  for (var i = 0; i < ambassadors.length; i++) {
+    var ambassador = ambassadors[i];
 
     getLocation(ambassador, displayAmbassadorPoint, map);
   }
