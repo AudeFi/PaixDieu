@@ -3,4 +3,8 @@
  * POP UP AGE OF THE USER
  *
  */
-const modal = new VanillaModal(options);
+var VanillaModal = require('vanilla-modal');
+
+const modal = new VanillaModal();
+modal.open('#foo');
+
