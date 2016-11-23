@@ -145,6 +145,7 @@ body{
     .controls_otherPages {
       position: absolute;
       left:0px;
+      color: white;
       bottom: 30px;
       li {
         margin-top: 10px;
@@ -177,18 +178,18 @@ body{
       margin-top: -15px
     }
 
-    
+
     .logo {
         @media(min-width: 470px) {
             width: 40%;
         }
-    
+
         @media(min-width: 760px) {
             margin: 40px 40px;
             transition: margin ease-out 1s;
             width: 35%;
         }
-    
+
         @media (min-width: 860px) {
             width: 120px;
             position: fixed;

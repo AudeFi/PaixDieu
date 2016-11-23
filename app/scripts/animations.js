@@ -5,8 +5,7 @@ if (document.querySelector('.swiper-container')!=undefined) {
      *
      */
 	document.querySelector('.swiper-slide-active').addEventListener('scroll', function() {
-	   console.log('scrolling');
-	
+
 	  	if (document.querySelector('.swiper-slide-active').scrollTop > 50) {
 	  		document.querySelector('.logo').style.margin = "-340px 40px";
             document.querySelector('.swiper-slide-active').style.padding = "0px";
@@ -20,7 +19,7 @@ if (document.querySelector('.swiper-container')!=undefined) {
             document.querySelector('.story__text-abbey_scroll').style.opacity = "1";
 	  	}
 	});
-	
+
 
 
 }

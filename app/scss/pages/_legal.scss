@@ -13,3 +13,36 @@
     }
 }
 
+/**
+* Title
+*/
+h2.subtitle {
+    font-size: 1.7rem;
+    font-weight: 800;
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: .625rem;
+    margin-left: 1rem;
+    text-decoration : none;
+}
+
+.legal__txt{
+    
+    margin: auto 3rem;
+    padding: 2rem;
+    width: 80%;
+    
+    h3{
+        padding-top: 1.2rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+    
+    p{
+        margin: 1rem auto;
+    }
+    a{
+        color : #d9af33 !important;
+    }
+    
+}

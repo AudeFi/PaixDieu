@@ -47,7 +47,8 @@
   position: relative;
   font-size: 26px;
   font-size: 1.625rem;
-  font-family: Kohinoor Devanagari; }
+  font-family: Kohinoor Devanagari;
+}
   .story__subtitle::before {
     content: '';
     position: absolute;
@@ -59,7 +60,8 @@
     width: 1.5rem;
     height: 5px;
     height: 0.3125rem;
-    background-color: #d9af33; }
+    background-color: #d9af33;
+  }
 
 .story__subtitle-abbey {
   @media(min-width: 320px) {
@@ -75,8 +77,25 @@
     font-size: 26px;
     font-size: 1.625rem;
     font-weight:bold ;
-    font-family: Kohinoor Devanagari; }
+    font-family: Kohinoor Devanagari;
   }
+  @media(min-width: 1300px) {
+    margin-top: 11%;
+    position: absolute;
+    font-size: 26px;
+    font-size: 1.625rem;
+    font-weight:bold ;
+    font-family: Kohinoor Devanagari;
+  }
+  @media(min-width: 1450px) {
+    margin-top: 8%;
+    position: absolute;
+    font-size: 26px;
+    font-size: 1.625rem;
+    font-weight:bold ;
+    font-family: Kohinoor Devanagari;
+  }
+}
   .story__subtitle-abbey::before {
     @media(min-width: 320px) {
       content: '';
@@ -130,7 +149,7 @@
 }
 
 .story__text-abbey_scroll {
-  display: none;
+  /* display: none; */
   @media(min-width: 1200px) {
     margin-right: 55%;
     margin-top: -25%;
@@ -141,7 +160,7 @@
   }
 }
 
-.story__text-abbey_scroll img {
+.story__text-abbey_scroll svg {
   width: 8%;
   transform: translate(10px, 15px);
 }
@@ -195,7 +214,7 @@
       0% {mask-position: 0 0; }
       100% { mask-position: 100% 0; }
     }
-    
+
 .story__text-bouteille {
   position: relative;
   margin-top: -45%;
