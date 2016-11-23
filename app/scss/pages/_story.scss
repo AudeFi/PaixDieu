@@ -1,0 +1,239 @@
+.story_wrapper {
+  background-color: $background-color;
+  @media(min-width: 1024px) {
+    padding: 40px;
+  }
+  @media(min-width: 480px) {
+    padding: 20px;
+  }
+}
+
+.story {
+  @media(min-width: 480px) {
+    margin-bottom: 20px;
+  }
+  @media(min-width: 768px) {
+    margin-bottom: 120px;
+  }
+  @media(min-width: 1024px) {
+    margin-bottom: 200px;
+  }
+}
+
+.story p {
+  line-height: $line-height;
+}
+
+.story-abbey {
+  @media(min-width: 480px) {
+    margin-bottom: 30%;
+  }
+  @media(min-width: 768px) {
+    margin-bottom: 30%;
+  }
+  @media(min-width: 992px) {
+    margin-bottom: 35%;
+  }
+  @media(min-width: 1200px) {
+    height: calc(100vh - 80px);
+    background-image: url('/images/abbaye_fond.png');
+    background-size: cover;
+    margin-bottom: 10%;
+  }
+}
+
+.story__subtitle {
+  margin: 1.125rem 1.25rem 1.5625rem 1.25rem;
+  position: relative;
+  font-size: 26px;
+  font-size: 1.625rem;
+  font-family: Kohinoor Devanagari; }
+  .story__subtitle::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    bottom: -0.625rem;
+    left: 0px;
+    left: 0rem;
+    width: 24px;
+    width: 1.5rem;
+    height: 5px;
+    height: 0.3125rem;
+    background-color: #d9af33; }
+
+.story__subtitle-abbey {
+  @media(min-width: 320px) {
+    margin: 1.125rem 1.25rem 1.5625rem 1.25rem;
+    position: relative;
+    font-size: 26px;
+    font-size: 1.625rem;
+    font-family: Kohinoor Devanagari;
+  }
+  @media(min-width: 1200px) {
+    margin-top: 17%;
+    position: absolute;
+    font-size: 26px;
+    font-size: 1.625rem;
+    font-weight:bold ;
+    font-family: Kohinoor Devanagari; }
+  }
+  .story__subtitle-abbey::before {
+    @media(min-width: 320px) {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      bottom: -0.625rem;
+      left: 0px;
+      left: 0rem;
+      width: 24px;
+      width: 1.5rem;
+      height: 5px;
+      height: 0.3125rem;
+      background-color: $color-yellow;
+    }
+  }
+
+.story__text-abbey {
+  position: relative;
+  margin-top: -10%;
+  margin-bottom: 20%;
+  @media(min-width: 480px) {
+    margin-right: 55%;
+    margin-top: -35%;
+    font-size: $font-big;
+    margin-bottom: 15%;
+  }
+  @media(min-width: 768px) {
+    margin-right: 55%;
+    margin-top: -35%;
+    font-size: $font-big;
+  }
+  @media(min-width: 1200px) {
+    margin-right: 55%;
+    margin-top: -30%;
+    font-size: $font-big;
+  }
+}
+
+.story__image-abbey {
+
+  margin-left: 45%;
+  border-radius: 30%;
+  width: 45%;
+
+  margin-top: -4%;
+  @media(min-width: 1200px) {
+    margin-top: 6%;
+    width: auto;
+    height: 82%;
+  }
+}
+
+.story__text-abbey_scroll {
+  display: none;
+  @media(min-width: 1200px) {
+    margin-right: 55%;
+    margin-top: -25%;
+    font-size: $font-big;
+    color: $color-yellow;
+    display: inline-block;
+    transition: opacity 0.5s;
+  }
+}
+
+.story__text-abbey_scroll img {
+  width: 8%;
+  transform: translate(10px, 15px);
+}
+
+
+.story__text-grain_1 {
+  position: relative;
+  @media(min-width: 480px) {
+    font-size: $font-big;
+  }
+}
+
+.story__text-grain_2 {
+  position: relative;
+  margin-bottom: 20%;
+  margin-left: $margin-20px;
+  margin-right: $margin-20px;
+  @media(min-width: 480px) {
+    font-size: $font-big;
+    margin-bottom:25%;
+  }
+  @media(min-width: 768px) {
+    margin-bottom:30%;
+  }
+  @media(min-width: 992px) {
+    margin-bottom: 18%;
+  }
+}
+
+.story__image-grain {
+  margin-left: 45%;
+  position: relative;
+  width: 60%;
+  margin-left: 20%;
+  @media(min-width: 480px) {
+    border-radius: 50%;
+    margin-top: 10px;
+  }
+}
+
+.story__image:hover{
+      mask: url(../../images/old-movie-mask.png);
+      mask-height: 160%;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      mask-position: left;
+      @include animation ('mask-playzero 2s steps(15) infinite') ;
+    }
+
+    @include keyframes(mask-playzero) {
+      0% {mask-position: 0 0; }
+      100% { mask-position: 100% 0; }
+    }
+    
+.story__text-bouteille {
+  position: relative;
+  margin-top: -45%;
+  @media(min-width: 480px) {
+    font-size: $font-big;
+    margin-top: -40%;
+  }
+  @media(min-width: 768px) {
+    margin-top: -43%;
+    font-size: 25px;
+  }
+  @media(min-width: 992px) {
+    margin-top: -43%;
+  }
+}
+
+.story__text-bouteille_litre {
+  position: relative;
+  margin-top: 30px;
+  @media(min-width: 480px) {
+    font-size: $font-big;
+  }
+  @media(min-width: 768px) {
+    margin-top: 10%;
+    font-size: 25px;
+  }
+}
+
+.story__text-highlight {
+  font-weight: bold;
+}
+
+.story__image-bouteilles {
+  position: relative;
+  width: 50%;
+  margin-left: 40%;
+  margin-bottom: 5%;
+  @media(min-width: 992px) {
+    width: 55%;
+  }
+}

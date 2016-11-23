@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="name" content="content">
-        <meta name="viewport" content="device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta property="og:description" content="Découvrez le seule bière brassée à la pleine lune" />
         <meta property="og:image"       content="https://audeficheux.com/paix-dieu/images/sharePhoto.jpg" />
         <!--build:css styles/style.min.css-->
@@ -22,30 +22,43 @@
             </svg>
 
 
-            <h2 class="subtitle">Nous contacter
-                <span class="subtitle_underline"></span>
-            </h2>
+            <h2 class="subtitle">Nous contacter</h2>
 
-            <form id="form__group" class="form__group" method=POST>
+            <form id="form__group" class="form__group">
 
-                <input id="form__statut-individual__input" class="form__group form__statut-individual__input" type="radio" name="statut_user" value="form__statut-individual__input" checked="checked"/>
-                <label class="form__group form__statut-individual__label" for="form__statut-individual__input">particulier</label>
+               <fieldset class="form__correct">
+                   <span class="tooltip__correct">Votre formulaire a été envoyé</span>
+               </fieldset>
 
-                <input id="form__statut-professional__input" class="form__group form__statut-professional__input" type="radio" name="statut_user" value="form__statut-professional__input"/>
-                <label class="form__group form__statut-professional__label" for="form__statut-professional__input">professionnel</label>
-                <span class="tooltip">Vous devez selectionner votre statut ! êtes vous un particulier ou un professionnel</span>
+                <fieldset class="form__statut">
+                    <legend>Vous êtes :</legend>
 
-                <input id="form__name__input" class="form__group form__name__input" type="text" placeholder="nom" name="form__name__input"/>
-                <span class="tooltip">Le nom doit contenir au moins 2 caractères et ne peut contenir de nombres ou caractères spéciaux [0,9]-[!,@]</span>
+                    <input id="form__statut-individual__input" class="form__group form__statut-individual__input" type="radio" name="statut_user" value="form__statut-individual__input" checked="checked"/>
+                    <label class="form__group form__statut-individual__label" for="form__statut-individual__input">
+                        particulier
+                    </label>
 
+                    <input id="form__statut-professional__input" class="form__group form__statut-professional__input" type="radio" name="statut_user" value="form__statut-professional__input"/>
+                    <label class="form__group form__statut-professional__label" for="form__statut-professional__input">
+                        professionnel
+                    </label>
 
-                <input id="form__email__input" class="form__group form__email__input" type="email" placeholder="adresse e-mail" name="form__email__input"/>
-                <span class="tooltip">L'email saisi n'est pas valide</span>
+                </fieldset>
 
-                <textarea id="form__message__textarea" class="form__group form__message__textarea" placeholder="message" name="form__message__input"></textarea>
-                <span class="tooltip">Votre message est vide</span>
+                <fieldset class="form__data">
+                    <input id="form__name__input" class="form__group form__name__input" type="text" placeholder="nom" name="form__name__input"/>
+                    <span class="tooltip">Le nom doit contenir au moins 2 caractères et ne peut contenir de nombres ou caractères spéciaux [0,9]-[!,@]</span>
 
-                <input id="form__submit__input" class="form__group form__submit__input" type="submit" value="ENVOYER" action="#"/>
+                    <input id="form__email__input" class="form__group form__email__input" type="email" placeholder="adresse e-mail" name="form__email__input"/>
+                    <span class="tooltip">L'email saisi n'est pas valide</span>
+
+                    <textarea id="form__message__textarea" class="form__group form__message__textarea" placeholder="message" name="form__message__input"></textarea>
+                    <span class="tooltip">Votre message est vide</span>
+                </fieldset>
+
+               <fieldset class="form__submit">
+                   <input id="form__submit__input" class="form__group form__submit__input" type="submit" value="ENVOYER" />
+               </fieldset>
 
             </form>
         </section>

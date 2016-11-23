@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="name" content="content">
-    <meta name="viewport" content="device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
     <meta property="og:description" content="Découvrez le seule bière brassée à la pleine lune" />
     <meta property="og:image"       content="https://audeficheux.com/paix-dieu/images/sharePhoto.jpg" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css">
@@ -14,6 +14,9 @@
   </head>
   <body>
 
+
+
+
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -23,11 +26,12 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
-  
+
+
   <div class="controlsMobile">
     <div class="controls_wrapper">
 
-      <div class='controls_menuClose'>  
+      <div class='controls_menuClose'>
         <div class="controls_pagination swiper-pagination"></div>
         <h1 class="controls_pageTitle"></h1>
 
@@ -46,7 +50,7 @@
               <path d="M37.601,39.7553455 L48.8041821,50.5741327 L50.8878425,48.4164392 L40.2468834,38.1405845 L51.0139358,26.9909754 L48.8562248,24.9063151 L38.0891725,36.0559242 L37.601,36.5616801 L37.1128275,36.0559242 L26.3457752,24.9063151 L24.1880642,26.9909754 L34.9551166,38.1405845 L24.3141575,48.4164392 L26.3978179,50.5741327 L37.601,39.7553455 Z M37.75,0 C16.901,0 0,16.901 0,37.75 C0,58.599 16.901,75.5 37.75,75.5 C58.599,75.5 75.5,58.599 75.5,37.75 C75.5,16.901 58.598,0 37.75,0 Z" id="Combined-Shape"></path>
             </g></g></g></g>
           </svg>
-      
+
           <ul class="controls_mainPages">
             <li class='accueil swiper-pagination-switch active' data-indexnumber="0">Accueil<span class="swiper-pagination-bullet"></span></li>
             <li class='histoire swiper-pagination-switch' data-indexnumber="1">Histoire<span class="swiper-pagination-bullet"></span></li>
@@ -70,7 +74,8 @@
   <div class="controlsDesktop">
 
         <h1 class="controls_pageTitle"></h1>
-        
+        <img class="logo" src="images/logo.png" name="logo mobile paix dieu">
+
         <div class="controls_nextPrev">
           <svg class="swiper-button-next" width="50px" height="50px" viewBox="0 0 76 76">
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-135.000000, -1513.000000)" fill="#DAB01F"><g transform="translate(135.000000, 1513.000000)"><g>
@@ -101,20 +106,22 @@
               <li class='contact'><a href="contact.html">Contact</a></li>
               <li class='legal'><a href="legal.html">Mentions légales</a></li>
             </ul>
+            <div class="controls_bgAnimation"></div>
           </div>
         </div>
   </div>
-
-
+  
+  <!-- @@include('your_age.html') -->
 
 
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      
+
       @@include('home.html')
       @@include('story.html')
       @@include('map.html')
       @@include('brassins.html')
+
 
       <!-- @@include('contact.html') Contact will be an independant file -->
 
@@ -123,18 +130,23 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/js/swiper.min.js"></script>
-    
+  <!-- <script src="/../node_modules/vanilla-modal/index.js"></script> -->
+
+
 	<!--build:js script/main.min.js -->
-	<script src="scripts/main.js"></script>
+  <script src="scripts/modernizr-custom.js"></script>
+  <script src="scripts/main.js"></script>
   <script src="scripts/brassins.js"></script>
+  <script src="scripts/animations.js"></script>
   <script src="scripts/contact.js"></script>
   <script src="scripts/ambassadors.js"></script>
-  <script src="scripts/geocoding.js"></script>    
+  <script src="scripts/geocoding.js"></script>
   <script src="scripts/initMap.js"></script>
+  <script src="scripts/story.js"></script>
 	<!-- endbuild -->
+
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyDV9DXqBj0r1bEhK1HD593vJbNvfaxhj4Q&callback=initMap"></script>
   <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   </body>
-  
 </html>

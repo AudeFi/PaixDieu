@@ -18,7 +18,7 @@ body{
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: rgba(100,100,100,0.8);  
+    background: rgba(100,100,100,0.8);
 }
 
 
@@ -33,26 +33,15 @@ body{
     height:100vh;
     padding-top: 80px;
     background-color:$background-color;
-    &.accueil{
-        background-color:$background-color;
-
-        @media (min-width: 1024px) {
-          background-color:black;
-        }
-    }
-    &.histoire{
-        background-color:blue;
-    }
-    &.deguster{
-        background-color:$background-color;
-    }
-    &.brassins{
-        background-color:pink;
+    @media (min-width: 1024px) {
+      background-color:black;
+      transition: padding 0.5s;
+      padding: 50px 20px;
     }
 
-    @media (min-width: 870px) {
+    /*@media (min-width: 870px) {
         padding-top: 30px;
-    }
+    }*/
   }
 }
 
@@ -86,6 +75,7 @@ body{
     height: 13px;
   }
   .controls_button {
+    cursor: pointer;
       position: absolute;
       top: 0px;
       right: 0px;
@@ -186,6 +176,26 @@ body{
       right: 50px;
       margin-top: -15px
     }
+
+    
+    .logo {
+        @media(min-width: 470px) {
+            width: 40%;
+        }
+    
+        @media(min-width: 760px) {
+            margin: 40px 40px;
+            transition: margin ease-out 1s;
+            width: 35%;
+        }
+    
+        @media (min-width: 860px) {
+            width: 120px;
+            position: fixed;
+            z-index:20;
+        }
+    }
+
     .swiper-button-prev, .swiper-button-next {
       background-image: none;
       position: relative;
@@ -205,10 +215,23 @@ body{
     .controls_menuItems {
       z-index: 3;
       position: fixed;
-      bottom: 30px;
+      bottom: 0px;
+      height: 60px;
       width: 100%;
     }
+    .controls_bgAnimation {
+      transition: height 0.5s ease;
+      background-color: black;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+      position: absolute;
+      bottom: 0;
+    }
     .controls_mainPages {
+      position: absolute;
+      z-index: 3;
+      padding-top: 20px;
       width: 100%;
       font-size: 20px;
       text-align: center;
@@ -227,9 +250,10 @@ body{
       }
     }
     .controls_otherPages {
+      z-index: 3;
       position: absolute;
       right: 35px;
-      bottom: -15px;
+      bottom: 5px;
       font-size: 12px;
       text-align: center;
       li {
