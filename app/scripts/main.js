@@ -101,10 +101,10 @@ if (document.querySelector('.swiper-container')!=undefined) {
     var menuState = "swipe";
     var startEvent = 'mousedown';
     var endEvent = 'mouseup';
-
+    
     setTouchEvent();
     function setTouchEvent() {
-        if (Modernizr.touchevent) {
+        if (Modernizr.touchevents) {
             startEvent = 'touchstart';
             endEvent = 'touchend';
         }
@@ -124,6 +124,7 @@ if (document.querySelector('.swiper-container')!=undefined) {
             menuState = "close";
         } else {
             pressTimer = window.setTimeout(function() {
+                console.log("long click");
                 addClass('.controls_menuOpen', 'openned');
                 menuState = "open";
                 mySwiper.lockSwipes(); // If we oppened the menu with a long press on next button, don't swipe to next slide
