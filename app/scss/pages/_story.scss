@@ -7,7 +7,7 @@
 
   .story{
     @media(min-width: 480px) {
-      margin-bottom: $font-big;
+      margin-bottom: 20px;
     }
     @media(min-width: 768px) {
       margin-bottom: 80px;
@@ -28,6 +28,7 @@
       height: calc(100vh - 80px);
       background-image: url('/images/abbaye_fond.png');
       background-size: cover;
+      margin-bottom: 10%;
     }
   }
 
@@ -59,8 +60,8 @@
           font-family: Kohinoor Devanagari;
         }
         @media(min-width: 1200px){
-          margin: 8.125rem 1.25rem 1.5625rem 3.70rem;
-          position: absolute;
+          // margin:  1.25rem 1.5625rem 3.70rem;
+          position: relative;
           font-size: 26px;
           font-size: 1.625rem;
           font-weight:bold ;
@@ -151,6 +152,12 @@
       color: $color-yellow;
       display: inline-block;
     }
+  }
+  .story__text-abbey_scroll img {
+    width: 8%;
+    transform: translate(10px, 15px);
+
+
   }
 
   .story__text-grain_1{
