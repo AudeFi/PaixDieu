@@ -3,8 +3,11 @@
  * POP UP AGE OF THE USER
  *
  */
-var VanillaModal = require('vanilla-modal');
 
-const modal = new VanillaModal();
-modal.open('#foo');
+// Get the modal
+var modal_intro = document.querySelector('.modal__intro');
 
+// When the user clicks on button yes, close the modal
+document.querySelector('.close').onclick = function(){
+    modal_intro.style.display = "none";
+};
