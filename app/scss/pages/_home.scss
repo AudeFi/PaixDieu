@@ -45,12 +45,12 @@ body {
 
 .accueil__content {
     background-size: 100%;
-    background-image: url("/../images/abbey_mobile.jpg");
+    background-image: url("../images/abbey_mobile.jpg");
     background-repeat: no-repeat;
     
     @media (min-width: 760px) {
         background-size: 120%;
-        background-image: url("/../images/abbey.jpg");
+        background-image: url("../images/abbey.jpg");
     }
     
     @media (min-width: 860px) {

@@ -25,6 +25,7 @@ if (document.querySelector('.swiper-container')!=undefined) {
             hash = hash.substring(0, hash.indexOf("?"));
         var currentSwitch = document.querySelector('.swiper-pagination-switch.'+ hash );
 
+
         var backbutton = true; // back button options =! change url option (not the same event but I can't distinct them)
         if (backbutton == false) {
             removeClass('.swiper-pagination-switch', 'active');

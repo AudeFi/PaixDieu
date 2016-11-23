@@ -18,7 +18,7 @@ body{
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: rgba(100,100,100,0.8);  
+    background: rgba(100,100,100,0.8);
 }
 
 
@@ -41,7 +41,7 @@ body{
         }
     }
     &.histoire{
-        background-color:blue;
+       /*  background-color:blue; */
     }
     &.deguster{
         background-color:$background-color;
