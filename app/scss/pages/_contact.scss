@@ -84,7 +84,84 @@ form{
 
     }
 
-    @media (min-width: 860px) {
+    
+    @media(min-width: 900px) {
+
+        .form__group {
+            display: block;
+            border: 1px solid;
+            border-radius: 10px;
+            opacity: 0.51;
+        }  
+
+        .form__statut{
+            margin: 3rem 20rem;
+        }
+
+        .form__data{
+            margin: 2rem 15rem;
+        }
+        .form__submit{
+            margin: 1.5rem 19rem;
+        }
+        .form__correct{
+            margin: 2rem 15rem;
+        }
+
+    }
+    
+    @media(min-width: 1200px) {
+
+        .form__group {
+            display: block;
+            border: 1px solid;
+            border-radius: 10px;
+            opacity: 0.51;
+        }  
+
+        .form__statut{
+            margin: 4rem 30rem;
+        }
+
+        .form__data{
+            margin: 3.5rem 25rem;
+        }
+        .form__submit{
+            margin: 1.5rem 29rem;
+        }
+        .form__correct{
+            margin: 3.5rem 25rem;
+        }
+
+    }
+
+        
+    @media(min-width: 1520px) {
+
+        .form__group {
+            display: block;
+            border: 1px solid;
+            border-radius: 10px;
+            opacity: 0.51;
+        }  
+
+        .form__statut{
+            margin: 4.5rem 40rem;
+        }
+
+        .form__data{
+            margin: 4.5rem 30rem;
+        }
+        .form__submit{
+            margin: 1.5rem 40rem;
+        }
+        .form__correct{
+            margin: 4.5rem 35rem;
+        }
+
+    }
+
+    @media (min-width: 1820px) {
 
         .form__group {
             display: block;
