@@ -1,4 +1,4 @@
-# hetic-p2019-05
+# hetic-p2019-05 - PaixDieu
 Fictionnal project on the redesign of Paix Dieu's Website
 
 ## Getting Started
